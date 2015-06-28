@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- Basic Page Needs –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <title>{{ .Title }} | {{.Site.Title }}</title>
+  {{ if .IsPage }}<meta name="description" content="{{ .Description }}" />{{ else }}<meta name="description" content="{{ .Site.Params.description }}" />{{ end}}
+  <!-- Open Graph date -->
+  <meta name="author" content="{{ .Site.Author.name }}">
+  <!-- Additional metadata -->
+  <meta property="og:title" content="{{ if ne .URL "/" }} {{ .Title }} | {{ end }} {{ .Site.Title }}" />
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  {{ if .IsPage }}
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" />
+    {{ range .Params.tags }}
+    <meta property="og:article:tag" content="{{ . }}" />
+    {{ end }}
+    {{ else }}
+    <meta property="og:type" content="website" />
+    {{ end }}
+  <meta property="og:image" content="{{.Site.BaseURL}}{{.Params.pageimage}}" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@josharcher">
+<meta name="twitter:creator" content="@josharcher">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ .Description }}">
+<meta name="twitter:image" content="{{.Site.BaseURL}}{{.Params.pageimage}}" >
+  <!-- RSS Feeds -->
+  <link rel="alternate" type="application/rss+xml" title="Full site feed" href="/index.xml"/>
+  <link rel="alternate" type="application/rss+xml" title="Main blog feed" href="/blog/index.xml"/>
+  <!-- Favicon, Touch Icon and Canonical -->
+  <link rel="shortcut icon" href="{{.Site.BaseURL}}/favicon.ico" />
+  <link rel="icon" sizes="192x192" href="{{.Site.BaseURL}}/nice-highres.png" />
+  <link rel="apple-touch-icon" href="{{.Site.BaseURL}}/apple-touch-icon.png" />
+  <link rel="canonical" href="{{ .Permalink }}" />
+  <!-- Mobile Specific Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="{{.Site.BaseURL}}/css/custom.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
+</head>
+<body>

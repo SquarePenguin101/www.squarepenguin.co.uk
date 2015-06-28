@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+<div class="page-container">
+  <div class="page-content">
+    <h1 style="margin: 0 0 30px;">Category: {{ .Title }}</h1>
+    <p>Thanks for checking out the '{{ .Title }}' category. You can simply click on a post from the list below to read the full article. Enjoy!</p>
+      <ul class="posts category-li">
+        {{ $baseurl := .Site.BaseURL }}
+        {{ range $name, $page := (.Paginator 25).Pages }}
+        <li>
+          <p class="footnote category"><time datetime="{{ $page.Date.Format "Monday, Jan 2, 2006" }}" class="pull-right post-list">{{ $page.Date.Format "Monday, Jan 2, 2006" }}</time></p>
+          <p class ="postlisttitle"><a href="{{ .Permalink }}">{{ $page.Title }}</a></p>
+        </li>
+        {{ end }}
+      </ul>
+     {{ $paginator := .Paginator }}
+     {{ partial "pagination.html" $paginator }}
+  </div>
+</div>
+{{ partial "footer.html" . }}

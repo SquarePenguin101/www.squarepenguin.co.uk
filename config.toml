@@ -1,0 +1,20 @@
+baseurl = "https://squrepenguin.co.uk"
+title = "get_iPlayer • Forums • Guides • Help"
+theme = "nofancy"
+canonifyurls = true
+paginate = 7
+
+[params]
+	DateForm = "Mon, Jan 2, 2006"
+	description = "Looking for get_iplayer? Look no further! Find beginners guides, downloads or get help and support in the get_iPlayer forums."
+
+[Author]
+	name = "Josh Archer"
+	email = "getiplayer@squarepenguin.co.uk"
+	twitter = "josharcher"
+	github = "puffinblue"
+
+[permalinks]
+
+[Blackfriday]
+plainIdAnchors = true

@@ -1,0 +1,42 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+<div class="page-container">
+	  <ul class="posts">
+		{{ $baseurl := .Site.BaseURL }}
+		{{ range $name, $page := .Paginator.Pages }}
+		{{ if eq .Type "blog" }}
+		<li>
+		  <p class="footnote"><time datetime="{{ $page.Date.Format "Monday, Jan 2, 2006" }}" class="pull-right post-list">{{ $page.Date.Format "Monday, Jan 2, 2006" }}</time></p>
+		  <p class ="postlisttitle"><a href="{{ .Permalink }}">{{ $page.Title }}</a></p>
+		  <p class="footnote">
+			{{ if or $page.Params.tags $page.Params.categories $page.Params.series }}
+			{{ end }}
+
+			{{ with $page.Params.tags }}
+			tags: [ {{ range $page.Params.tags}}<a href="{{ $baseurl }}/tags/{{ . | urlize }}"> {{ . }}</a> {{ end }}]
+			{{ end }}
+
+			{{ with $page.Params.categories }}
+			categories: [ {{ range $page.Params.categories }}<a href="{{ $baseurl }}/categories/{{ . | urlize }}"> {{ . }}</a> {{ end }}]
+			{{ end }}
+
+			{{ with $page.Params.series }}
+			series: [ {{ range $page.Params.series }}<a href="{{ $baseurl }}/series/{{ . | urlize }}"> {{ . }}</a> {{ end }}]
+			{{ end }}
+			</p>
+		<div class="summary">
+			{{ .Summary }}
+		  	{{ if .Truncated }}
+  			<div class="read-more-link">
+    		<a href="{{ .RelPermalink }}" class="readmore">Read full article...</a>
+  			</div>
+  			{{ end }}
+  		</div>
+		</li>
+		{{ end }}
+		{{ end }}
+	  </ul>
+	 {{ $paginator := .Paginator }}
+	 {{ partial "pagination.html" $paginator }}
+</div>
+{{ partial "footer.html" . }}

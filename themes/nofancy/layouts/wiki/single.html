@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+<div class="page-container">
+	<div class="page-content">
+    <div class="page-title">
+    		<h1>get_iplayer Wiki & Documentation</h1>
+    		<h2>A COMPREHENSIVE RESOURCE FOR GET_IPLAYER</h2>
+    </div>
+		<div id="post-title">
+	  	<h1>{{ .Title }}</h1>
+	  </div>
+    {{ .Content }}
+		<div style="text-align:center;margin-top:50px;padding-top:25px;border-top:2px solid #ccc;">
+			<h3>This page mirrors the official get_iplayer Wiki page on GitHub</h3>
+				<h5>See something that needs correcting? <a href="https://github.com/get-iplayer/get_iplayer{{ .RelPermalink }}">Edit this page on GitHub</a></h5>
+		</div>
+  </div>
+
+</div>
+
+{{ partial "footer.html" . }}

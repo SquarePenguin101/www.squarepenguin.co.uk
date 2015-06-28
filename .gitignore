@@ -1,0 +1,6 @@
+# OS X files
+.DS_Store
+
+# Hugo directories
+/public
+

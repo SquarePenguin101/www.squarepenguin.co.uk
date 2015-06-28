@@ -1,0 +1,33 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+<div class="page-container">
+	<div class="page-content">
+		<div class="page-title">
+			<h1>get_iplayer Forums blog</h1>
+			<h2>NOTICES | ANNOUNCEMENTS | UPDATES</h2>
+		</div>
+	  <div id="blog-title">
+	  	<p class="footnote" style="margin-bottom:5px;"><time class="">{{ .Date.Format "Monday, Jan 2, 2006" }}</time></p>
+	  	<h1>{{ .Title }}</h1>
+		<p class="footnote">
+		  {{ $baseurl := .Site.BaseURL }}
+
+		  {{ if isset .Params "tags" }}
+		  tags: [ {{ range .Params.tags }}<a href="{{ $baseurl }}/tags/{{ . | urlize }}"> {{ . }}</a> {{ end }}]
+		  {{ end }}
+
+		  {{ if isset .Params "categories" }}
+		  categories: [ {{ range .Params.categories }}<a href="{{ $baseurl }}/categories/{{ . | urlize }}"> {{ . }}</a> {{ end }}]
+		  {{ end }}
+
+		  {{ if isset .Params "series" }}
+		  series: [ {{ range .Params.series }}<a href="{{ $baseurl }}/series/{{ . | urlize }}"> {{ . }}</a> {{ end }}]
+		  {{ end }}
+		</p>
+	  </div>
+	  <div class="post">
+		{{ .Content }}
+	  </div>
+	</div>
+</div>
+{{ partial "footer.html" . }}
