@@ -15,16 +15,16 @@ All licensed icons used throughout this site will be attributed here.
 
 ## Front Page Icons
 
-<img src="/icons/github.png" style="max-width:125px;"/>
+<img src="/icons/github.png" style="max-width:125px;" alt="github-character-silhouette"/>
 
-[github-character-silhouette_23957](http://www.flaticon.com/free-icon/github-character-silhouette_23957)
+[github-character-silhouette](http://www.flaticon.com/free-icon/github-character-silhouette_23957)
 
 Icon made by <a href="http://www.icomoon.io" title="Icomoon">Icomoon</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>.
 
-<img src="/icons/download.png" style="max-width:125px;"/>
-<img src="/icons/guides.png" style="max-width:125px;background-color:grey;"/>
-<img src="/icons/faq.png" style="max-width:125px;background-color:grey;"/>
-<img src="/icons/forums.png" style="max-width:125px;background-color:grey;"/>
+<img src="/icons/download.png" style="max-width:125px;" alt="Circular down arrow button"/>
+<img src="/icons/guides.png" style="max-width:125px;background-color:grey;" alt="Options circular button"/>
+<img src="/icons/faq.png" style="max-width:125px;background-color:grey;" alt="Circular question mark button"/>
+<img src="/icons/forums.png" style="max-width:125px;background-color:grey;" alt="Avatar inside a circle"/>
 
 _Left > right_
 
@@ -37,7 +37,7 @@ Icons made by <a href="http://niceandserious.com" title="Nice and Serious">Nice 
 
 ## Site background image
 
-<img src="/icons/random_grey_variations.png" />
+<img src="/icons/random_grey_variations.png" alt="Random grey variations"/>
 
 [Random grey variations](http://subtlepatterns.com/random-grey-variations/)
 
@@ -45,16 +45,16 @@ Image made by <a href="http://www.mentalwarddesign.com/" title="Nice and Serious
 
 ## Wiki page
 
-<img src="/icons/knownissues.png" style="max-width:125px;"/>
-<img src="/icons/releasenotes.png" style="max-width:125px;"/>
-<img src="/icons/examplecommands.png" style="max-width:125px;"/>
-<img src="/icons/installguides.png" style="max-width:125px;"/>
-<img src="/icons/unixmanpage.png" style="max-width:125px;"/>
-<img src="/icons/options.png" style="max-width:125px;"/>
-<img src="/icons/metadatatagging.png" style="max-width:125px;"/>
-<img src="/icons/recordingmodes.png" style="max-width:125px;"/>
-<img src="/icons/contribute.png" style="max-width:125px;"/>
-<img src="/icons/encodings.png" style="max-width:125px;"/>
+<img src="/icons/knownissues.png" style="max-width:125px;" alt="Warning sign"/>
+<img src="/icons/releasenotes.png" style="max-width:125px;" alt="Pen and paper"/>
+<img src="/icons/examplecommands.png" style="max-width:125px;" alt="Written paper"/>
+<img src="/icons/installguides.png" style="max-width:125px;" alt="Share content"/>
+<img src="/icons/unixmanpage.png" style="max-width:125px;" alt="Three books"/>
+<img src="/icons/options.png" style="max-width:125px;" alt="System controller"/>
+<img src="/icons/metadatatagging.png" style="max-width:125px;" alt="Inclined tag"/>
+<img src="/icons/recordingmodes.png" style="max-width:125px;" alt="Multiple resolutions"/>
+<img src="/icons/contribute.png" style="max-width:125px;" alt="Avatar inside a circle"/>
+<img src="/icons/encodings.png" style="max-width:125px;" alt="Command window"/>
 
 _Top left > bottom right_
 
@@ -73,16 +73,16 @@ Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from 
 
 ## Guides page
 
-<img src="/icons/troubleshooting.png" style="max-width:125px;"/>
-<img src="/icons/tvdownload.png" style="max-width:125px;"/>
-<img src="/icons/radiodownload.png" style="max-width:125px;"/>
-<img src="/icons/pvrusage.png" style="max-width:125px;"/>
-<img src="/icons/pvrcron.png" style="max-width:125px;"/>
-<img src="/icons/webpvrmanager.png" style="max-width:125px;"/>
-<img src="/icons/advancedfilenaming.png" style="max-width:125px;"/>
-<img src="/icons/signedprogrammes.png" style="max-width:125px;"/>
-<img src="/icons/audiodescribed.png" style="max-width:125px;"/>
-<img src="/icons/examplecommands.png" style="max-width:125px;"/>
+<img src="/icons/troubleshooting.png" style="max-width:125px;" alt="Settings Tool"/>
+<img src="/icons/tvdownload.png" style="max-width:125px;" alt="TV Screen with Antenna"/>
+<img src="/icons/radiodownload.png" style="max-width:125px;" alt="Radio with antenna"/>
+<img src="/icons/pvrusage.png" style="max-width:125px;" alt="Play arrow"/>
+<img src="/icons/pvrcron.png" style="max-width:125px;" alt="Circular wall clock"/>
+<img src="/icons/webpvrmanager.png" style="max-width:125px;" alt="World Wide Web"/>
+<img src="/icons/advancedfilenaming.png" style="max-width:125px;" alt="Command window"/>
+<img src="/icons/signedprogrammes.png" style="max-width:125px;" alt="Hand showing palm outline"/>
+<img src="/icons/audiodescribed.png" style="max-width:125px;" alt="Ear lobe side view outline"/>
+<img src="/icons/examplecommands.png" style="max-width:125px;" alt="Written paper"/>
 
 _Top left > bottom right_
 
