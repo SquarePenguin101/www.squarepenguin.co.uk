@@ -9,7 +9,7 @@ title = "BBC kills live streaming feeds - EDIT - restored in v2.93"
 
 +++
 
-<img style="float:right;" src="/img/2015/06/dead-jim.jpg"  width="275" height="358" />
+<img style="float:right;" src="/img/2015/06/dead-jim.jpg"  alt="It's dead Jim...and maybe for good this time" width="275" height="358" />
 They're on a roll!
 
 EDIT - [v2.93 returns live streaming functionality](/blog/get_iplayer-v2-93-released/)
