@@ -107,7 +107,7 @@ a:hover {color: #aa0066;}
 
 .postlisttitle {
 	font-family:'Oswald', sans-serif;
-	font-size: 1.7em;
+	font-size: 1.8em;
 	margin-bottom:5px;
 	line-height:1.2;
 	padding-bottom:5px;
@@ -139,12 +139,12 @@ a:hover {color: #aa0066;}
 
 /* Footnotes */
 .footnote {
-	color:#888;
+	color:#555;
 	font-size:12px !important;
 	margin-bottom:0;
 }
 .footnote a {
-	color: #888 !important;
+	color: #555 !important;
 	font-size:12px !important;
 }
 .footnote a:hover{text-decoration:underline;color:#369;}
@@ -390,12 +390,12 @@ figcaption {
     margin:auto;
     font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
-    color: #9EABB3;
+    color: #666;
     text-align: center;
     padding:4em;
 }
 .pagination a {
-    color: #9EABB3;
+    color: #666;
     transition: all 0.2s ease;
 }
 
