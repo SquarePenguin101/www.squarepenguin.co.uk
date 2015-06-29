@@ -1,1 +1,0 @@
-Updating get_iplayer directly from GitHub is no longer recommended for Windows.  Use the [Windows installer](/wiki/winsetup) to install the latest release of get_iplayer.
