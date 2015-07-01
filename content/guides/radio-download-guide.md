@@ -2,7 +2,7 @@
 categories = ["", ""]
 date = "2015-06-27T01:32:12+01:00"
 description = "A complete beginners guide to downloading radio shows with get_iplayer - includes example commands to help you get started quickly & easily."
-draft = true
+draft = false
 pageimage = ""
 pagesubtitle = "COMPREHENSIVE GUIDES TO GET YOU STARTED QUICKLY"
 pagetitle = "get_iplayer Guides and Tutorials"
@@ -37,13 +37,17 @@ If you don't know the name of the show your would like to download I would recom
 
 To have get_iplayer search for the show we use the following command:
 
-    get_iplayer --type=radio "Programme Name"
+```bash
+get_iplayer --type=radio "Programme Name"
+```
 
 It is crucial that you use the " " marks when performing a search containing more than one word. If you don't, you'll either get an error or results will only be relevant to the first word you type.
 
 Get in the habit of using " quotation " marks for each and every search you do. In this case, the above command will search for...
 
-    Programme Name
+```bash
+Programme Name
+```
 
 That's is all there is to performing a basic search. I've not needed to use any of the more advanced options, but feel free to leave a comment in the forum if you need help with narrowing down your searches and I'll be happy to help you out.
 
@@ -55,15 +59,17 @@ There are two basic says to download radio programmes with get_iplayer, one uses
 
 This makes more sense when we type it out:
 
-    get_iplayer --type=radio --get "Programme Name"
+```bash
+get_iplayer --type=radio --get "Programme Name"
+```
 
 Once we execute this command, get_iplayer will begin to download all radio programmes that match this search string. Technically, the search term is a regular expression and acts as a sub-string, so if a programme is called:
 
-    This is a long programme name for a show
+```
+This is a long programme name for a show
+```
 
-Then the above command would download this show, because "programme name" exists in the show name. This is highlighted in red below:
-
-    This is a long programme name for a show
+Then the above command would download this show, because "programme name" exists in the show name.
 
 This behaviour is useful because it allows you to set up a PVR (explained in the [get_iplayer PVR Guide](/guides/get_iplayer-pvr-guide/)) for a programme and it doesn't matter if the name changes slightly over time, such as "Programme Name Series 1" to "Programme Name Series 2" because the search string will still match and the download still run as "Programme Name" is still there.
 
@@ -71,11 +77,15 @@ This behaviour is useful because it allows you to set up a PVR (explained in the
 
 The second method is to use the index number. We can use this number to tell get_iplayer to download specific programmes and nothing else. We do so using the following command:
 
-    get_iplayer --type=radio --get 1234
+```bash
+get_iplayer --type=radio --get 1234
+```
 
 ...where 1234 is the index number of the number you want to download. If you want to download more than one specific programme at a time, you can type the index numbers one after the other like so:
 
-    get_iplayer --type=radio --get 123 1234 12345
+```bash
+get_iplayer --type=radio --get 123 1234 12345
+```
 
 ### The PID
 
@@ -83,7 +93,9 @@ The PID functions very similarly to the index number. To find it you'll need to 
 
 Lets look at an example URL:
 
-    http://www.bbc.co.uk/programmes/b04mctvz
+```bash
+http://www.bbc.co.uk/programmes/b04mctvz
+```
 
 The PID in the example above is the seemingly random string of characters `b04mctvz`. In fact, many (possibly all) PIDs start with b0, so you can usually identify the PID pretty easily.
 
@@ -91,7 +103,9 @@ To download the programme using the PID we use the `--pid` command.
 
 An example of the above episode being downloaded in this fashion would be:
 
-    get_iplayer --pid=b04mctvz --type=radio
+```bash
+get_iplayer --pid=b04mctvz --type=radio
+```
 
 Don't forget to add `--type=radio` when downloading a radio programme.
 
@@ -103,11 +117,15 @@ You can now enter multiple PIDs in two ways:
 
 #### Comma-separated list
 
-    get_iplayer --pid PID1,PID2,PID3
+```bash
+get_iplayer --pid PID1,PID2,PID3
+```
 
 #### Multiple `--pid` options
 
-    get_iplayer --pid PID1 --pid PID2 --pid PID3
+```bash
+get_iplayer --pid PID1 --pid PID2 --pid PID3
+```
 
 *(Remember to include `--type=radio` with `--pid` when downloading radio programmes.)*
 
@@ -115,11 +133,15 @@ You can now enter multiple PIDs in two ways:
 
 You can also do the same thing with episode page URLs:
 
-    get_iplayer --url URL1,URL2,URL3
+```bash
+get_iplayer --url URL1,URL2,URL3
+```
 
 or alternatively...
 
-    get_iplayer --url URL1 --url URL2 --url URL3
+```bash
+get_iplayer --url URL1 --url URL2 --url URL3
+```
 
 *(Remember to include `--type=radio` with `--url` when downloading radio programmes.)*
 
@@ -145,19 +167,23 @@ As a default, get_iplayer will download the highest quality version of each radi
 
 If you want to make get_iplayer download a lower quality you should use the "--radiomode" command. The code is written like this
 
-    --radiomode=
+```bash
+--radiomode=
+```
 
 ...followed by the desired quality level. The full list of available settings to add to the above command is below:
 
-    default
-    best
-    better
-    good
-    flashaachigh
-    flashaacstd
-    flashaudio
-    flashaaclow
-    wma
+```bash
+default
+best
+better
+good
+flashaachigh
+flashaacstd
+flashaudio
+flashaaclow
+wma
+```
 
 **NOTE** - don't be concerned that the word 'flash' is used. This is purely for technical purposes to differentiate between the streams BBC iPlayer offers. When you download an file, it is automatically converted to AAC format.
 
@@ -169,11 +195,15 @@ The explanation is beyond the scope of this beginners guide and I recommend you 
 
 You can have get_iplayer automatically convert downloaded radio programmes to .mp3 format by adding the following command when you download a show:
 
-    --aactomp3
+```bash
+--aactomp3
+```
 
 If you don't want have to add this every time you do a download, you can set it as a global preference that will auto convert every download automatically by simply entering the command below into the command line:
 
-    get_iplayer --prefs-add --aactomp3
+```bash
+get_iplayer --prefs-add --aactomp3
+```
 
 This is adding the command to your preferences so it will remember to always perform the conversion, automatically, for every radio download you make.
 
@@ -183,11 +213,15 @@ We can set the output path of programmes get_iplayer downloads on a case by case
 
 To specify the directory/folder get_iplayer outputs downloaded files to, we use the "output" command which looks like this:
 
-    --output
+```bash
+--output
+```
 
 ...to which we simply add the folder path:
 
-    --output "/path/to/output/folder/goes/here/"
+```bash
+--output "/path/to/output/folder/goes/here/"
+```
 
 **DON'T FORGET THE QUOTATION MARKS!**
 
