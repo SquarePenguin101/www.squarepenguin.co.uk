@@ -26,7 +26,7 @@ For more information, read the [get_iplayer version 2.94 release notes](/wiki/re
 
   Downloading a signed programme with get_iplayer is almost identical to downloading a standard show. Make sure you view the TV Download Guide to get an understanding of the basics of downloading a programme.
 
-## Using the --versions command
+## Using the `--versions` command
 
 From the [Options Wiki page](/wiki/options/ "Options") we see that in order to obtain signed versions of TV programmes we need to use the `--versions` command. get_iplayer doesn't download these versions of the show by default, so we need to manually tell it to do so.
 
@@ -34,12 +34,16 @@ With this command you then use the argument 'signed' in order to tell get_iplaye
 
 Lets look at an example:
 
-    get_iplayer --get 123 --versions=signed
+```bash
+get_iplayer --get 123 --versions=signed
+```
 
 ## Common Errors
 
 If there is no signed version available you will likely see the following error:
 
-    WARNING: No programmes are available for this pid with version(s): signed (available versions: default)
+```
+WARNING: No programmes are available for this pid with version(s): signed (available versions: default)
+```
 
 This is not get_players fault - there simply isn't a signed version of this programme available from the BBC.

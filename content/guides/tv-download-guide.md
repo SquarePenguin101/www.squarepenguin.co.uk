@@ -60,6 +60,7 @@ get_iplayer has to update its list of these before it can match you search query
 ![get_iplayer-_Programme-Search_](/img/2015/06/get_iplayer-_Programme-Search_.png)
 
 To search for something more useful, we could type:
+
 ```bash
 get_iplayer "Top Gear"
 ```
@@ -203,6 +204,7 @@ flashstd
 flashnormal
 flashlow
 ```
+
 **NOTE** - don't be concerned that the word 'flash' is used. This is purely for technical purposes to differentiate between the streams BBC iPlayer offers. When you download an file, it is automatically converted to MP4 format and so is compatible with an entire galaxy of devices, video players and media systems. The top four options are known as 'mode shortcuts'.
 
 ### Want get_iplayer to download in HD?
@@ -296,6 +298,7 @@ For our purposes, we will be using the following three Substitution Parameters:
 <senum> = Series and Episode numbers in the s##e## format
 <episodeshort> = programme episode name with episode number stripped
 ```
+
 ### How do I make get_iplayer automatically rename downloaded programmes for use with XBMC and Plex?
 
 I use [Plex](http://www.plexapp.com/) as my media system because I find its [Server/Client](http://wiki.plexapp.com/index.php/Frequently_Asked_Questions) philosophy perfect for my needs.
@@ -327,7 +330,6 @@ Jonathan_Creek-s01e01-The_Clue_of_the_Savants_Thumb
 ```bash
 get_iplayer --get "Top Gear" --modes=best --type=tv --channel="BBC Two" --file-prefix="<nameshort><-senum><-episodeshort>"
 ```
-
 
 ## How do I change or specify where get_iplayer saves downloaded programmes?
 
@@ -368,6 +370,7 @@ So, adding the output folder path to our code so far gives us our final command:
 ```bash
 get_iplayer --get "Top Gear" --modes=best --type=tv --channel="BBC Two" --file-prefix="<nameshort><-senum><-episodeshort>" --output "/media/TV Shows 1/2 - TV Shows/Top Gear/Season 19"
 ```
+
 This complete code will be made available again in the Example Section, but you can use it from here to download, rename and output the file to a directory of your choice. Just make sure to replace the relevant search string, channel and output destination to suit you.
 
 **NOTE** - It's infinitely easier to do a simple search first, confirm that you have the correct search string for the programme you want, and then add/build the rest of the code after you are sure the search is correct.
