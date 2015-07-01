@@ -1,8 +1,8 @@
 +++
 categories = ["", ""]
 date = "2015-06-28T13:27:45+01:00"
-description = ""
-draft = true
+description = "Download the get_iplayer Windows installer for easy setup on your system."
+draft = false
 pageimage = ""
 pagesubtitle = "COMPREHENSIVE GUIDES TO GET YOU STARTED QUICKLY"
 pagetitle = "get_iplayer Guides and Tutorials"
