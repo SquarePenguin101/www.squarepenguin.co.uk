@@ -1,7 +1,7 @@
 +++
 categories = ["", ""]
 date = "2015-06-26T22:11:53+01:00"
-description = ""
+description = "Download Audio Described programmes with get_iplayer - it is almost identical to downloading a standard show."
 draft = false
 pageimage = ""
 pagesubtitle = "COMPREHENSIVE GUIDES TO GET YOU STARTED QUICKLY"

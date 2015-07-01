@@ -7,7 +7,7 @@ pageimage = ""
 pagesubtitle = "COMPREHENSIVE GUIDES TO GET YOU STARTED QUICKLY"
 pagetitle = "get_iplayer Guides and Tutorials"
 slug = "windowsinstall"
-title = "windowsinstall"
+title = "get_iplayer Windows installation guide"
 type = "page"
 
 +++

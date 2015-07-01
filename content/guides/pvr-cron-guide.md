@@ -1,7 +1,7 @@
 +++
 categories = ["", ""]
 date = "2015-06-27T01:42:06+01:00"
-description = ""
+description = "Now is the time to set up get_iplayer to act as a PVR (you know Sky+, TiVo, series-link, etc, etc)!"
 draft = false
 pageimage = ""
 pagesubtitle = "COMPREHENSIVE GUIDES TO GET YOU STARTED QUICKLY"

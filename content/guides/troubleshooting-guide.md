@@ -6,7 +6,7 @@ draft = false
 pageimage = ""
 pagesubtitle = "COMPREHENSIVE GUIDES TO GET YOU STARTED QUICKLY"
 pagetitle = "get_iplayer Guides and Tutorials"
-slug = ""
+slug = "get_iplayer-troubleshooting-guide"
 title = "get_iplayer not working? • Troubleshooting Guide"
 type = "page"
 
