@@ -252,7 +252,7 @@ Instead of downloading everything to one location, you might only want radio sho
 
 This will have get\_iplayer save **ONLY** radio shows in the "2 - Radio Shows" directory in the "Radio Shows 1" disc.
 
-The `--outputradio` option overrides the `--output` command, which means if you set the `--output` command, all downloads *apart from radio shows* will go to that location and all radio shows will go wherever `--outputtv` is set.
+The `--outputradio` option overrides the `--output` command, which means if you set the `--output` command, all downloads *apart from radio shows* will go to that location and all radio shows will go wherever `--outputradio` is set.
 
 You can set specific locations for the different types of files with the following commands. Each one will override the `--output` command for their specific file type, so you have a lot of flexibility in where you can save files:
 
