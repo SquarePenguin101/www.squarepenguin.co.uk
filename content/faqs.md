@@ -2,7 +2,7 @@
 date = "2015-06-24T11:27:34+01:00"
 description = "Some of the most commonly asked questions about get_iplayer answered."
 draft = false
-slug = "frequentlyaskedquestions"
+slug = "faqs"
 title = "Frequently Asked Questions • get_iplayer"
 type = "page"
 pagetitle = "get_iplayer Frequently Asked Questions"
