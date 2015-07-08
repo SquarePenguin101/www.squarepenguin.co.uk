@@ -4,7 +4,7 @@ date = "2015-06-02T00:22:28+01:00"
 description = ""
 draft = false
 pageimage = ""
-slug = "bbc-kills-live-streaming-feeds"
+aliases = "/bbc-kills-live-streaming-feeds"
 title = "BBC kills live streaming feeds - EDIT - restored in v2.93"
 
 +++

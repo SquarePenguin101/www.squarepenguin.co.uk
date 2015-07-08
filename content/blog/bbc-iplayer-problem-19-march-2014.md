@@ -4,7 +4,7 @@ date = "2014-03-19T22:26:39+01:00"
 description = "The BBC iPlayer site is experiencing technical issues tonight. This is preventing get_iplayer from downloading content and presenting the general error 'no specified modes'."
 draft = false
 pageimage = ""
-slug = "bbc-iplayer-problem-19-march-2014"
+aliases = "/bbc-iplayer-problem-19-march-2014"
 title = " BBC iPlayer problem 19 March 2014"
 
 +++

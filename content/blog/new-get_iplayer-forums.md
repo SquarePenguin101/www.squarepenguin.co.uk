@@ -3,7 +3,7 @@ categories = ["Announcements"]
 date = "2013-07-23T14:26:36+01:00"
 description = "Announcing the new get_iplayer forums at getiplayer.co.uk"
 draft = false
-slug = "new-get_iplayer-forums"
+aliases = "/new-get_iplayer-forums"
 title = "New get_iplayer Forums"
 +++
 

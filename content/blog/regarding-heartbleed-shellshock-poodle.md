@@ -4,7 +4,7 @@ date = "2014-10-20T23:10:44+01:00"
 description = ""
 draft = false
 pageimage = ""
-slug = "regarding-heartbleed-shellshock-poodle"
+aliases = "/regarding-heartbleed-shellshock-poodle"
 title = "Regarding Heartbleed, Shellshock and POODLE"
 
 +++

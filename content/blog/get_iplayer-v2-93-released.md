@@ -4,7 +4,7 @@ date = "2015-06-03T00:31:39+01:00"
 description = ""
 draft = false
 pageimage = ""
-slug = "get_iplayer-v2-93-released"
+aliases = "/get_iplayer-v2-93-released"
 title = "get_iplayer v2.93 released"
 
 +++

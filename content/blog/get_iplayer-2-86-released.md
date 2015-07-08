@@ -4,7 +4,7 @@ date = "2014-04-06T22:43:33+01:00"
 description = "get_iplayer has been updated to version 2.86."
 draft = false
 pageimage = ""
-slug = "get_iplayer-2-86-released"
+aliases = "/get_iplayer-2-86-released"
 title = "get_iplayer v2.86 released"
 
 +++

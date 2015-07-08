@@ -4,7 +4,7 @@ date = "2013-08-19T16:45:54+01:00"
 description = "Square Penguin was knocked offline yesterday for a period of 18 hours or so. That is a crazy amount of time for any site to go down, even a small one like this."
 draft = false
 pageimage = "/img/2015/06/wisdom_of_the_ancients.png"
-slug = "constant-hack-attempts-misconfigured-server-bad-times"
+aliases = "/constant-hack-attempts-misconfigured-server-bad-times"
 title = "Constant hack attempts + Misconfigured server = bad times"
 
 +++

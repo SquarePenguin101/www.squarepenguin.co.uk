@@ -4,7 +4,7 @@ date = "2014-02-21T21:50:27+01:00"
 description = "Over the past few days some of you are being falsely rejected from this site by an over aggressive spam plugin."
 draft = false
 pageimage = "/img/2015/06/spam.png"
-slug = "regarding-spam"
+aliases = "/regarding-spam"
 title = "Regarding Spam"
 
 +++

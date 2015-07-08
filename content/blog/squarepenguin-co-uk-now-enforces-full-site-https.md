@@ -4,7 +4,7 @@ date = "2014-09-14T22:59:16+01:00"
 description = "get_iplayer Forums at squarepenguin.co.uk now enforces full-site encryption via https (ssl), including support for Perfect Forward Secrecy."
 draft = false
 pageimage = ""
-slug = "squarepenguin-co-uk-now-enforces-full-site-https"
+aliases = "/squarepenguin-co-uk-now-enforces-full-site-https"
 title = "squarepenguin.co.uk now enforces full-site https"
 
 +++

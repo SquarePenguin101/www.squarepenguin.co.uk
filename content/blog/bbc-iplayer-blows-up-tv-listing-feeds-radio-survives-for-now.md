@@ -4,7 +4,7 @@ date = "2015-06-02T00:05:45+01:00"
 description = "Today, the BBC has shut down the feeds currently being used by get_iplayer to obtain TV listings."
 draft = false
 pageimage = ""
-slug = "bbc-iplayer-blows-up-tv-listing-feeds-radio-survives-for-now"
+aliases = "/bbc-iplayer-blows-up-tv-listing-feeds-radio-survives-for-now"
 title = "BBC iplayer blows up TV listing feeds - Radio survives for now"
 
 +++

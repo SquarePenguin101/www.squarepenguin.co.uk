@@ -4,7 +4,7 @@ date = "2014-10-23T23:16:15+01:00"
 description = "It's been about a year and a half since I threw this site together over a weekend. After all this time, some changes were needed."
 draft = false
 pageimage = "/img/2015/06/No-Change_1_20.jpg"
-slug = "im-sorry-broke-muscle-memory"
+aliases = "/im-sorry-broke-muscle-memory"
 title = "I'm sorry, I broke muscle memory!"
 
 +++

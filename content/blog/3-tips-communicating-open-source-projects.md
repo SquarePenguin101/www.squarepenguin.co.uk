@@ -4,8 +4,7 @@ date = "2014-12-13T23:43:02+01:00"
 description = "Three easy tips that will smooth your communication with open source projects and help you get fast and accurate support."
 draft = false
 pageimage = ""
-slug = "3-tips-communicating-open-source-projects"
-aliases = "/3-tips-communicating-open-source-projects/"
+aliases = "/3-tips-communicating-open-source-projects"
 title = "Support Requests: 3 tips for communicating with (some) open source projects"
 
 +++

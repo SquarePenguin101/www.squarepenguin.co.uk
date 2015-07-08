@@ -4,7 +4,7 @@ date = "2014-10-29T23:24:51+01:00"
 description = "Sad news - the BBC has removed the feed used by get_iplayer to downloads shows."
 draft = false
 pageimage = ""
-slug = "bbc-removes-programme-feeds-blow-get_iplayer"
+aliases = "/bbc-removes-programme-feeds-blow-get_iplayer"
 title = "BBC removes programme feeds - a blow to get_iplayer"
 
 +++
