@@ -30,7 +30,7 @@ The BBC do implement DRM on their iPhone and Adobe Air downloadable files and th
 ## Installing get_iplayer
 
 1.  [How do I install get_iplayer on Mac OS X?](/guides/mac-os-x-quick-install-guide/)
-2.  [How do I install get_iplayer on Windows?](/wiki/winsetup/)
+2.  [How do I install get_iplayer on Windows?](/guides/windowsinstall/)
 3.  [How do I install get_iplayer on Ubuntu based Linux?](/wiki/ubuntu/)
 4.  [How do I install get_iplayer on other Linux or BSD distros?](/downloads/#more-installation-guides)
 
@@ -49,12 +49,12 @@ The BBC do implement DRM on their iPhone and Adobe Air downloadable files and th
 
 ## Downloading radio programmes
 
-1. [How do I search for radio programmes using get_iplayer?](/guides/radio-download-guide/#How_do_I_search_for_radio_programmes_using_get_iplayer?)
-1. [How do I record a radio programme with get_iplayer?](/guides/radio-download-guide/#how-do-i-record-a-programme-with-get-iplayer)
-1. [Where does get_iplayer save downloaded radio programmes?](/guides/radio-download-guide/#Where_does_get_iplayer_save_downloaded_programmes?)
-1. [How do I specify or change the quality level of radio programmes downloaded in get_iplayer?](/guides/radio-download-guide/#How_do_I_specify_or_change_the_quality_level_of_programmes_downloaded_in_get_iplayer?)
-1. [How do I make get_iplayer automatically convert radio programmes to MP3?](/guides/radio-download-guide/#How_do_I_make_get_iplayer_automatically_convert_radio_programmes_to_MP3?)
-1. [How do I change or specify where get_iplayer saves downloaded radio programmes?](/guides/radio-download-guide/#How_do_I_change_or_specify_where_get_iplayer_saves_downloaded_programmes?)
+1. [How do I search for radio programmes using get_iplayer?](/guides/radio-download-guide/#how-do-i-search-for-radio-programmes-using-get-iplayer)
+1. [How do I record a radio programme with get_iplayer?](/guides/radio-download-guide/#how-do-i-record-a-radio-programme-with-get-iplayer)
+1. [Where does get_iplayer save downloaded radio programmes?](/guides/radio-download-guide/#where-does-get-iplayer-save-downloaded-radio-programmes)
+1. [How do I specify or change the quality level of radio programmes downloaded in get_iplayer?](/guides/radio-download-guide/#how-do-i-specify-or-change-the-quality-level-of-radio-programmes-downloaded-in-get-iplayer)
+1. [How do I make get_iplayer automatically convert radio programmes to MP3?](/guides/radio-download-guide/#how-do-i-make-get-iplayer-automatically-convert-radio-programmes-to-mp3)
+1. [How do I change or specify where get_iplayer saves downloaded radio programmes?](/guides/radio-download-guide/#how-do-i-change-or-specify-where-get-iplayer-saves-downloaded-radio-programmes)
 1. [How do I permanently change where get_ipayer saves downloaded radio programmes?](/guides/radio-download-guide/#how-do-i-permanently-change-where-get-ipayer-saves-downloaded-radio-programmes)
 
 ## Example commands
