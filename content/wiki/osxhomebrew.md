@@ -2,7 +2,7 @@
 
 Full information on installing get_iplayer with [Homebrew](http://brew.sh) can be found here:
 
-<https://github.com/get-iplayer/homebrew-get_iplayer/wiki>
+<https://github.com/dinkypumpkin/homebrew-get_iplayer/wiki>
 
 ### Perl Support
 

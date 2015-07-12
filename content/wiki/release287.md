@@ -21,7 +21,7 @@ The BBC recently made some changes to the iPlayer service and web site that affe
 
 Installation information for all platforms can be found here:
 
-<https://github.com/get-iplayer/get_iplayer/wiki/installation>
+[Installation guides](installation)
 
 **WARNING:** Do not use the self update facility (`get_iplayer -u`). It will result in a script that cannot be executed.  Follow the manual installation instructions at the link above.
 

@@ -2,13 +2,13 @@
 
 These instructions are for Ubuntu (all versions that have not reached end-of-life) / Mint 17 (Qiana).
 
-The get-iplayer versions incorporated in Ubuntu repositories are all out of date or broken, so Ubuntu/Mint users should install from the get_iplayer PPA.
+The get_iplayer versions incorporated in Ubuntu repositories are all out of date or broken, so Ubuntu/Mint users should install from the get-iplayer PPA.
 
 Ubuntu packages are maintained by volunteers and may not be updated for a short time after a new release of get_iplayer, thus the version of get_iplayer packaged for your system may be obsolete. You can find the version number of the latest get_iplayer release [here](https://github.com/get-iplayer/get_iplayer/releases). If the version packaged for your system is older than the latest release, it is likely that some functionality is broken. You may either wait a short while for a new release, usually less than 24 hours, or use the [manual installation instructions](/wiki/manual) to install the latest get_iplayer CLI and Web PVR Manager.
 
 Users of Ubuntu/Mint editions that have reached end-of-life ([Ubuntu](https://wiki.ubuntu.com/Releases), [Mint](http://www.linuxmint.com/oldreleases.php)), or that do not have a PPA build available, should use the [manual installation procedure](/wiki/manual).
 
-### get_iplayer PPA
+### get-iplayer PPA
 
 The [get-iplayer PPA](https://launchpad.net/~jon-hedgerows/+archive/get-iplayer) (Personal Package Archive) is maintained by Jon Davies.  Packages with up-to-date versions of get_iplayer and dependencies are available for supported Ubuntu releases.
 
@@ -25,11 +25,11 @@ The [get-iplayer PPA](https://launchpad.net/~jon-hedgerows/+archive/get-iplayer)
 
     	sudo apt-get update
 
-3. Install get_iplayer from PPA with dependencies:
+3. Install get_iplayer and its dependencies from the PPA:
 
     	sudo apt-get install get-iplayer
     
-    You may install from the PPA over an existing get_iplayer installation from the Ubuntu repositories.  Dependencies will be updated if necessary.
+    You may install from the PPA over an existing get-iplayer installation from the Ubuntu repositories.  Dependencies will be updated automatically.
 
 4. Optionally, install additional dependencies (only required for regional/local radio programmes)
 
