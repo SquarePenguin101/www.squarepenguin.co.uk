@@ -6,7 +6,7 @@ draft = false
 pageimage = ""
 aliases = "/3-tips-communicating-open-source-projects"
 title = "Support Requests: 3 tips for communicating with (some) open source projects"
-
+breadcrumb = "3 tips for communicating with (some) open source projects"
 +++
 
 A recent forum post by a new poster raised an ember of inspiration in me regarding the issue of a new user communicating with an open source project.

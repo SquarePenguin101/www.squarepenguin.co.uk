@@ -6,7 +6,7 @@ draft = false
 pageimage = ""
 aliases = "/bbc-iplayer-blows-up-tv-listing-feeds-radio-survives-for-now"
 title = "BBC iplayer blows up TV listing feeds - Radio survives for now"
-
+breadcrumb = "BBC iplayer blows up TV listing feeds"
 +++
 
 As the BBC marches ever onwards toward launching their new Nitro API they are slowly but surely shutting down the various feeds used by apps like get_iplayer to obtain relevant programme listings.
