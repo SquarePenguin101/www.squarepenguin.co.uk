@@ -133,6 +133,32 @@ a:hover {color: #aa0066;}
 
 #blog-title h1 {margin:0 0 5px;padding:0 0 5px;}
 
+/* Breadcrumbs */
+
+.breadcrumbs {
+	list-style: none;
+	overflow: hidden;
+  padding:0px;
+  margin:0 0 10px;
+  font-size: 1.1em;
+  font-family:'Oswald';
+}
+.breadcrumbs li {
+	float: left;
+}
+.breadcrumbs li a {
+	padding-right: 10px;
+	position: relative;
+	display: block;
+	float: left;
+}
+
+.breadcrumbs li + li::before {
+    content: ">>";
+    float:left;
+    padding:0 10px 0 0;
+}
+
 /* Single post pages - styles post and their links */
 .post {
 	z-index:9;
