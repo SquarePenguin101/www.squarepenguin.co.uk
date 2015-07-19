@@ -1,4 +1,3 @@
-Sitemap: http://your sitemap here/sitemap-index.xml
 User-Agent: *
 Disallow: /forum/archive/*
 Disallow: /forum/syndication.php*
