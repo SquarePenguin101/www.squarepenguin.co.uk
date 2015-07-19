@@ -6,6 +6,11 @@
 			<h1>get_iplayer Forums blog</h1>
 			<h2>NOTICES | ANNOUNCEMENTS | UPDATES</h2>
 		</div>
+<ol class="breadcrumbs">
+  <li><a href="/">home</a></li>
+	<li><a href="/blog/">blog</a></li>
+	{{ if .Params.breadcrumb }}<li>{{ .Params.breadcrumb }}</li>{{ else }}<li>{{ .Title }}</li>{{ end }}
+</ol>
 	  <div id="blog-title">
 	  	<p class="footnote"><time class="">{{ .Date.Format "Monday, Jan 2, 2006" }}</time></p>
 	  	<h1>{{ .Title }}</h1>
