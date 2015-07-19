@@ -31,10 +31,10 @@ The [get-iplayer PPA](https://launchpad.net/~jon-hedgerows/+archive/get-iplayer)
     
     You may install from the PPA over an existing get-iplayer installation from the Ubuntu repositories.  Dependencies will be updated automatically.
 
-4. Optionally, install additional dependencies (only required for regional/local radio programmes)
+4. If you install from the PPA over an existing get-iplayer installation from the Ubuntu repositories, you may find that rtmpdump is not automatically updated. To check, run `rtmpdump` without any arguments. If the version string in the output is `RTMPDump v2.4`, you still have the Ubuntu build.  The PPA build will show a version string similar to `RTMPDump v2.4-n87-gita9f353c-ppa8~saucy`.  If you still have the Ubuntu build, you can update rtmpdump separately:
 
-        sudo apt-get install mplayer
-    
+        sudo apt-get install rtmpdump
+
 5. Run CLI with:
 
     	get_iplayer [...]

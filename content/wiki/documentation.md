@@ -448,7 +448,7 @@ Now, to run the preset at any time I simply type:
 <a name="subtitles"></a>
 ### Subtitles
 
-**[Click Here for All Recording Options](/wiki/|manpage#recording-options)**
+**[Click Here for All Recording Options](/wiki/manpage#recording-options)**
 
 Record programme number 123 with subtitles (if available) and optionally insert a subtitle delay of 5 seconds:
 
