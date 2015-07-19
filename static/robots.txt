@@ -1,7 +1,7 @@
 User-Agent: *
-Disallow: /forumss/archive/*
-Disallow: /forumss/syndication.php*
-Disallow: /forumss/captcha.php
+Disallow: /forums/archive/*
+Disallow: /forums/syndication.php*
+Disallow: /forums/captcha.php
 Disallow: /forums/editpost.php
 Disallow: /forums/forumsdisplay.php*
 Disallow: /forums/memberlist.php
