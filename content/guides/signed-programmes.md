@@ -8,7 +8,7 @@ pagesubtitle = "COMPREHENSIVE GUIDES TO GET YOU STARTED QUICKLY"
 pagetitle = "get_iplayer Guides and Tutorials"
 slug = "download-signed-programmes-get_iplayer"
 title = "How to download signed programmes with get_iplayer"
-type = "page"
+Type = "guides"
 
 +++
 

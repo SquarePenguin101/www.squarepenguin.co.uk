@@ -8,7 +8,7 @@ pagesubtitle = "COMPREHENSIVE GUIDES TO GET YOU STARTED QUICKLY"
 pagetitle = "get_iplayer Guides and Tutorials"
 slug = "get_iplayer-pvr-guide"
 title = "How to use get_iplayer PVR"
-type = "page"
+Type = "guides"
 
 +++
 

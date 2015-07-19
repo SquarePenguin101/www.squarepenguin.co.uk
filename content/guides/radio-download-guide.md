@@ -8,7 +8,8 @@ pagesubtitle = "COMPREHENSIVE GUIDES TO GET YOU STARTED QUICKLY"
 pagetitle = "get_iplayer Guides and Tutorials"
 slug = "radio-download-guide"
 title = "Beginners guide to downloading radio shows • get_iplayer"
-type = "page"
+breadcrumb = "get_iplayer Radio Download Guide"
+Type = "guides"
 
 +++
 

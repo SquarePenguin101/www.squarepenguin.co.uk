@@ -8,8 +8,8 @@ pagesubtitle = "COMPREHENSIVE GUIDES TO GET YOU STARTED QUICKLY"
 pagetitle = "get_iplayer Guides and Tutorials"
 slug = "mac-os-x-quick-install-guide"
 title = "Mac OS X Quick Install Guide • get_iplayer"
-type = "page"
-
+Type = "guides"
+breadcrumb = "get_iplayer Mac OS X Quick Install Guide"
 +++
 
 # Mac OS X Quick Install Guide

@@ -7,9 +7,8 @@ pageimage = ""
 pagesubtitle = "COMPREHENSIVE GUIDES TO GET YOU STARTED QUICKLY"
 pagetitle = "get_iplayer Guides and Tutorials"
 slug = "downloading-audio-described-version-programmes"
-type = "page"
+Type = "guides"
 title = "Downloading Audio Described version of programmes"
-
 +++
 
 # Downloading Audio Described version of programmes

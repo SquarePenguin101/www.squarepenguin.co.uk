@@ -8,7 +8,7 @@ pagesubtitle = "COMPREHENSIVE GUIDES TO GET YOU STARTED QUICKLY"
 pagetitle = "get_iplayer Guides and Tutorials"
 slug = "using-get_iplayer-pvr-cron"
 title = "Using the get_iplayer PVR with cron"
-type = "page"
+Type = "guides"
 
 +++
 

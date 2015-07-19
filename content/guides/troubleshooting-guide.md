@@ -8,8 +8,8 @@ pagesubtitle = "COMPREHENSIVE GUIDES TO GET YOU STARTED QUICKLY"
 pagetitle = "get_iplayer Guides and Tutorials"
 slug = "get_iplayer-troubleshooting-guide"
 title = "get_iplayer not working? • Troubleshooting Guide"
-type = "page"
-
+Type = "guides"
+breadcrumb = "get_iplayer troubleshooting guide"
 +++
 # get_iplayer troubleshooting guide
 
