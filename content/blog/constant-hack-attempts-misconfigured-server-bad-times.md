@@ -6,7 +6,6 @@ draft = false
 pageimage = "/img/2015/06/wisdom_of_the_ancients.png"
 aliases = "/constant-hack-attempts-misconfigured-server-bad-times"
 title = "Constant hack attempts + Misconfigured server = bad times"
-
 +++
 
 <a href="http://xkcd.com/979/"><figure><img style="float:right;" alt="XKCD_wisdom_of_the_ancients" src="/img/2015/06/wisdom_of_the_ancients.png" width="485" height="270" /></figure></a>

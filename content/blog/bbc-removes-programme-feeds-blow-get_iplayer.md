@@ -6,7 +6,6 @@ draft = false
 pageimage = ""
 aliases = "/bbc-removes-programme-feeds-blow-get_iplayer"
 title = "BBC removes programme feeds - a blow to get_iplayer"
-
 +++
 
 Sad news - the [BBC has today removed the feeds](http://iplayerhelp.external.bbc.co.uk/tv/feeds) used by get_iplayer to download shows using the [search or index number methods](/guides/tv-download-guide/#how-do-i-record-a-programme-with-get-iplayer), which means you can no longer download programmes using two of the must useful methods get_iplayer provides.

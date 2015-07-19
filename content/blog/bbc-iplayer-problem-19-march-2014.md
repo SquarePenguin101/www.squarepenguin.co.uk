@@ -5,8 +5,7 @@ description = "The BBC iPlayer site is experiencing technical issues tonight. Th
 draft = false
 pageimage = ""
 aliases = "/bbc-iplayer-problem-19-march-2014"
-title = " BBC iPlayer problem 19 March 2014"
-
+title = "BBC iPlayer problem 19 March 2014"
 +++
 
 The BBC iPlayer site is experiencing technical issues tonight. This is preventing get_iplayer from downloading content and presenting the general error 'no specified modes'.
