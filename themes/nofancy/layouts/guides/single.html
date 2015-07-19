@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+<div class="page-container">
+	<div class="page-content">
+    <div class="page-title">
+    		<h1>{{ .Params.pagetitle }}</h1>
+    		<h2>{{ .Params.pagesubtitle }}</h2>
+    </div>
+    <ol class="breadcrumbs">
+      <li><a href="/">home</a></li>
+	    <li><a href="/guides/">guides</a></li>
+	    {{ if .Params.breadcrumb }}<li>{{ .Params.breadcrumb }}</li>{{ else }}<li>{{ .Title }}</li>{{ end }}
+    </ol>
+    {{ .Content }}
+  </div>
+</div>
+{{ partial "footer.html" . }}
