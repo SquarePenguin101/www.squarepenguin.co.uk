@@ -1,14 +1,16 @@
 @font-face {
-  font-family: 'Droid Serif';
+  font-family: 'Droid Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Droid Serif'), local('DroidSerif'), url(//fonts.gstatic.com/s/droidserif/v6/0AKsP294HTD-nvJgucYTaI4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2'), url(//fonts.gstatic.com/s/droidserif/v6/0AKsP294HTD-nvJgucYTaIbN6UDyHWBl620a-IRfuBk.woff) format('woff');
+  src: local('Droid Sans'), local('DroidSans'), url(https://fonts.gstatic.com/s/droidsans/v6/s-BiyweUPV0v-yRb-cjciAzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
-  font-family: 'Droid Serif';
+  font-family: 'Droid Sans';
   font-style: normal;
   font-weight: 700;
-  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url(//fonts.gstatic.com/s/droidserif/v6/QQt14e8dY39u-eYBZmppwYlIZu-HDpmDIZMigmsroc4.woff2) format('woff2'), url(//fonts.gstatic.com/s/droidserif/v6/QQt14e8dY39u-eYBZmppwTqR_3kx9_hJXbbyU8S6IN0.woff) format('woff');
+  src: local('Droid Sans Bold'), local('DroidSans-Bold'), url(https://fonts.gstatic.com/s/droidsans/v6/EFpQQyG9GqCrobXxL-KRMWaVI6zN22yiurzcBKxPjFE.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 @font-face {
   font-family: 'Droid Sans Mono';
@@ -48,7 +50,7 @@ body {
 	background-image: url(/icons/random_grey_variations.png);
 	color:#3a3a3a;
 	font-weight: 400;
-	font-family: 'Droid serif', serif;
+	font-family: 'Droid Sans', serif;
 	margin:0px;
 	font-size: 1.7em; /* currently ems cause chrome bug misinterpreting rems on body element */
  	line-height: 1.7;
@@ -422,7 +424,7 @@ figcaption {
     width: 80%;
     max-width: 710px;
     margin:auto;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Droid Sans", sans-serif;
     font-size: 1.3rem;
     color: #666;
     text-align: center;
