@@ -18,7 +18,7 @@ Windows users can go to **get_iplayer -> Help -> get_iplayer Example Commands** 
 
 User forums, along with guides for get_iplayer beginners, may be found at:
 
-<https://squarepenguin.co.uk/all-forums/>
+<https://squarepenguin.co.uk/forums/>
 
 ### Mailing List
 

@@ -19,8 +19,8 @@ On 02/06/2015 the BBC removed the listing feeds used by get_iplayer to populate 
 - You may find some TV programmes in search results that are older than 7 days.  This is because the schedule data used for indexing goes back to the beginning of the previous calendar week.
 - You may find some TV programmes in search results that are older than 7 days and no longer available (e.g., films). You may also find some future programmes that are not yet available.  This hopefully should be improved in a future release.
 - Fewer TV programmes will be indexed.  The TV schedule data does not contain old archive programmes lurking in the iPlayer site.  It also does not contain programmes broadcast exclusively on red button streams, some of which formerly may have been available.  It also does not include web-only programmes ("BBC iPlayer Exclusives").  Only programmes in the broadcast channel schedule listings will be indexed.
-- You can no longer search TV programmes for signed or audio described versions. That facility is unlikely ever to return. However, you should still be able to download those versions where available.
-- You can no longer search TV programmes by category. That facility is unlikely ever to return. Category information will not appear in search results (for the present a blank space will be displayed).
+- You can no longer search TV programmes for signed or audio described versions. Those flags are are not included in the schedule data. That facility is unlikely ever to return. However, you should still be able to download those versions where available.
+- You can no longer search TV programmes by category. Category information is not included in the schedule data. That facility is unlikely ever to return. Category information will not appear in search results (for the present a blank space will be displayed).
 - Programmes broadcast exclusively on red button streams that were formerly available to get_iplayer will no longer be available.
 
 **REMEMBER**: Any programme not in your data caches (and thus not found in your search results) should still be available with `--pid <PID>` or `--url <URL>`.

@@ -110,7 +110,7 @@ A few examples:
 |Options file|Command line|Description|
 |------------|------------|-----------|
 |modes|--modes &lt;mode&gt;,&lt;mode&gt;,...|Recording modes.  See --tvmode and --radiomode for available modes and defaults. Shortcuts: default,good,better(=default),best. Use --modes=best to select highest quality available (incl. HD TV).|
-|tvmode|--tvmode &lt;mode&gt;,&lt;mode&gt;,...|TV recording modes: flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow,hlsvhigh,hlshigh,hlsstd,hlslow. Shortcuts: default,good,better(=default),best,rtmp,flash,hlsbest,hls. (Use &#39;best&#39; for HD TV.) (&#39;default&#39;=flashvhigh,flashhigh,flashstd,flashlow)|
+|tvmode|--tvmode &lt;mode&gt;,&lt;mode&gt;,...|TV recording modes: flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow,hlshd,hlsvhigh,hlshigh,hlsstd,hlslow. Shortcuts: default,good,better(=default),best,rtmp,flash,hlsbest,hls. (Use &#39;best&#39; for HD TV.) (&#39;default&#39;=flashvhigh,flashhigh,flashstd,flashlow)|
 |radiomode|--radiomode &lt;mode&gt;,&lt;mode&gt;,...|Radio recording modes: flashaachigh,flashaacstd,flashaaclow,hlsaachigh,hlsaacstd,hlsaaclow. Shortcuts: default,good,better(=default),best,rtmp,flash,flashaac,hls,hlsaac,ddl,ddlaac. (&#39;default&#39;=flashaachigh,flashaacstd,flashaaclow)|
 |livetvmode|--livetvmode &lt;mode&gt;,&lt;mode&gt;,...|Live TV recording modes: hlshd,hlssd,hlsvhigh,hlshigh,hlsstd,hlslow. Shortcuts: default,good,better(=default),vbetter,(incl. SD),best. (Use &#39;best&#39; for HD/SD TV.)(&#39;default&#39;=hlsvhigh,hlshigh,hlsstd,hlslow)|
 |liveradiomode|--liveradiomode &lt;mode&gt;,&lt;mode&gt;,...|Live Radio recording modes: hlsaachigh,hlsaacstd,hlsaacmed,hlsaaclow,shoutcastaachigh,shoutcastmp3std. Shortcuts: default,good,better(=default),best,hls,hlshaac,shoutcast,shoutcastmp3. (&#39;default&#39;=hlsaachigh,hlsaacstd,hlsaacmed,hlsaaclow)|
@@ -129,6 +129,7 @@ Below are representative values for recordings made with each of the TV recordin
 |**flashnormal**|RTMP streaming|H.264|512 x 288|672 kbps|AAC|128 kbps|841 kbps|  
 |**flashlow**|RTMP streaming|H.264|512 x 288|304 kbps|AAC|96 kbps|404 kbps|  
 |**hlshd**|HLS streaming (live)|H.264|1280 x 720|3500 kbps|AAC|128 kbps|3643 kbps|  
+|**hlshd**|HLS streaming|H.264|1280 x 720|2800 kbps|AAC|128 kbps|2128 kbps|  
 |**hlssd**|HLS streaming (live)|H.264|1024 x 756|2000 kbps|AAC|128 kbps|2081 kbps|  
 |**hlsvhigh**|HLS streaming|H.264|832 x 468|1404 kbps|AAC|96 kbps|1496 kbps|  
 |**hlshigh**|HLS streaming|H.264|640 x 360|700 kbps|AAC|96 kbps|801 kbps| 
