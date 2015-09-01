@@ -159,7 +159,7 @@ So when using the PID method you can still use all the other commands throughout
 
 get_iplayer saves files to your current working directory as a default on both Mac OS X and Linux, whereas it saves programmes to the folder you specified when first installing on Windows.
 
-You can see how to download programmes to a directory (folder) of your choice in the [How do I change or specify where get_iplayer saves downloaded radio programmes?](#how-do-i-change-or-specify-where-get-iplayer-saves-downloaded-programmes) section.
+You can see how to download programmes to a directory (folder) of your choice in the [How do I change or specify where get_iplayer saves downloaded radio programmes?](#how-do-i-change-or-specify-where-get-iplayer-saves-downloaded-radio-programmes) section.
 
 Click the link to jump there now if you need to, or if this is your first time using this guide simply read on and we'll get to that shortly.
 
