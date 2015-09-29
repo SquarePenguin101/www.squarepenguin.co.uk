@@ -1,5 +1,5 @@
 +++
-Description = "Attribution for all licensed material used within josharcher.co.uk"
+Description = "Attribution for all licensed material used within squarepenguin.co.uk"
 date = "2015-05-07T01:42:47+01:00"
 draft = false
 slug = ""
