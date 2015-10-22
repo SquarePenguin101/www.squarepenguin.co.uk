@@ -8,7 +8,7 @@ These instructions are for Arch Linux
 
 1. Install packages available in official repositories
 
-		sudo pacman -S rtmpdump ffmpeg mplayer id3v2 perl-xml-simple perl-mp3-info
+		sudo pacman -S rtmpdump ffmpeg id3v2 perl-xml-simple perl-mp3-info
 
 2. Prepare to build packages from Arch User Repository (AUR)
 

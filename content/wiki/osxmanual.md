@@ -29,7 +29,7 @@ Additional Perl modules may be installed using the [local::lib method](/wiki/man
 
 4. Install the external programs:
 
-        sudo install -m 755 AtomicParsley id3v2 rtmpdump ffmpeg ffplay ffprobe ffserver mplayer mencoder /usr/local/bin
+        sudo install -m 755 AtomicParsley id3v2 rtmpdump ffmpeg ffplay ffprobe ffserver /usr/local/bin
 
 ### Command-line Interface (CLI)
 

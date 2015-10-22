@@ -28,7 +28,7 @@ If you install the PBI version, skip steps 1-4 below.
 
 3. Install external programs
 
-        pkg install AtomicParsley id3v2 mplayer ffmpeg
+        pkg install AtomicParsley id3v2 ffmpeg
 
     **FreeBSD Only:** The `--aactomp3` option for get_iplayer will not work with the packaged version of ffmpeg because it is not built with support for the LAME MP3 encoder.
 

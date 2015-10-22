@@ -4,7 +4,11 @@ Windows users should install get_iplayer with the provided installer.  Download 
 
 <http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
 
-**NOTE:** You must run the installer while logged in as a user that has administrator privileges.  If you are the only user on your PC you should already have administrator privileges. If you are logged in as a normal user and elevate your privileges by signing in as an administrator at the UAC prompt or by invoking the installer via "Run as Administrator", the menu shortcuts and output directory will be installed for the administrator account, not the logged-in user.  You can temporarily assign your user account to the Administrators group to run the installer. If you subsequently run get_iplayer while logged in as a different, non-administrator user you will not be able to access the output directory configured by the installer.  You will need to use the `--output` option to specify a separate output directory (can be saved in preferences).   The "Recording -> Override Recordings Folder" setting serves the same function for the Web PVR Manager.
+**NOTE:** Install get_iplayer while logged in with the user account from which you plan to run it in regular use. However, you must run the installer while logged in as a user that has administrator privileges. You can temporarily assign your user account to the Administrators group to run the installer. If you are the only user on your PC you should already have administrator privileges. If you are logged in as a normal user and elevate your privileges by signing in as an administrator at the UAC prompt or by invoking the installer via "Run as Administrator", the menu shortcuts and output directory will be installed for the administrator account, not the logged-in user. If you subsequently run get_iplayer while logged in as a different, non-administrator user you will not be able to access the output directory configured by the installer.  You will then need to use the `--output` option to specify a separate output directory and save it in preferences with `--prefs-add`. Example:
+
+    get_iplayer --prefs-add --output "%USERPROFILE%\Desktop\iPlayer Recordings"
+
+   The "Recording -> Override Recordings Folder" setting serves the same function for the Web PVR Manager.
 
 ### Perl Support
 
@@ -16,13 +20,13 @@ The installer will download and install all the required Windows support program
 
 ### Command-line Interface (CLI)
 
-1. Start the installer and follow the wizard in the usual manner.  Select all components for installation The installer will download and install get_iplayer, Perl and the Windows support programs: RTMPDump, FFmpeg, MPlayer, LAME, AtomicParsley and VLC Media Player. 
+1. Start the installer and follow the wizard in the usual manner.  Select all components for installation The installer will download and install get_iplayer, Perl and the Windows support programs: RTMPDump, FFmpeg and AtomicParsley. 
 
-2. To start the CLI go to `All Programs -> get_iplayer -> Get_iPlayer` on the Start menu.  In the Windows 8 Start screen, click the `Get_iPlayer` tile.   The CLI will launch in a console window.  The working directory of the console window will be the get_iplayer installation directory, typically `C:\Program Files\get_iplayer` or `C:\Program Files (x86)\get_iplayer` on 64-bit Windows.  The CLI expects to operate in that directory, so do not change to another location.
+    **NOTE:** MPlayer, LAME and VLC support obsolete functionality and should not be installed. They will be removed from the Windows installer in a future release.  If you wish to use VLC as media viewer, perform a full VLC installation separately.
 
-3. The first time MPlayer runs (i.e., the first time you download a regional or local radio programme) after a fresh installation, it will scan the available fonts on your system to update its font cache.  This scan will produce a large volume of extra output in your console window.  This will not affect the programme download, though it may take a long time if you have a large number of fonts installed.  MPlayer will update its font cache whenever it detects that your installed fonts have changed.
+2. To start the CLI go to `All Programs -> get_iplayer -> Get_iPlayer` on the Start menu. In the Windows 8 Start screen, click the `Get_iPlayer` tile. The CLI will launch in a console window.  The working directory of the console window will be the get_iplayer installation directory, typically `C:\Program Files\get_iplayer` or `C:\Program Files (x86)\get_iplayer` on 64-bit Windows. The CLI expects to operate in that directory, so do not change to another location.
 
-4. **NOTE**: Unless you opt to change the default value, the installer sets the location for recorded programmes to `iPlayer Recordings` on the Windows desktop of the administrator user who ran the installer.  If you have multiple users running get_iplayer on one Windows PC, the other users will need to configure their own output folders with the CLI:
+3. **NOTE**: Unless you opt to change the default value, the installer sets the location for recorded programmes to `iPlayer Recordings` on the Windows desktop of the administrator user who ran the installer.  If you have multiple users running get_iplayer on one Windows PC, the other users will need to configure their own output folders with the CLI:
 
 		get_iplayer --prefs-add --output "%USERPROFILE%\Desktop\iPlayer Recordings"
 

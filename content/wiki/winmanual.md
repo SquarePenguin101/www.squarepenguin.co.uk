@@ -12,19 +12,15 @@ Use the CPAN client from your Perl distribution to install additional modules fo
 
 ### External Programs
 
-You will need to locate or build the external programs yourself.  You can see the versions used by the get_iplayer Windows installer if you download this file:
+You will need to locate or build the external programs yourself.  You can see the versions used by the get_iplayer Windows installer in the file `windows/get_iplayer_config.ini` in the get_iplayer source code distribution (see below). The file is in INI format.  The "url" value in each section contains the  download URL for that program.  Extract the downloaded archives and install the binaries to your location of choice.
 
-<http://www.infradead.org/get_iplayer_win/get_iplayer_config_latest.ini>
-
-The file is in INI format.  The "url" value in each section contains the  download URL for that program.  Extract the downloaded archives and install the binaries to your location of choice.
-
-**NOTE:** LAME and VLC support obsolete functionality and thus are not generally required for manual installation.  They appear in the above .INI file for use by the Windows installer.  If you wish to use VLC as media viewer, perform a full VLC installation separately.
+**NOTE:** MPlayer, LAME and VLC support obsolete functionality and should not be used for manual installation.  They appear in the above .INI file for use by the Windows installer.  If you wish to use VLC as media viewer, perform a full VLC installation separately.
 
 ### Command-line Interface (CLI)
 
 1. Download an archive of the latest get_iplayer release from:
 
-	<https://github.com/get-iplayer/get_iplayer/releases>
+	<https://github.com/get-iplayer/get_iplayer/releases/latest>
 
 2. After downloading, extract the archive.  These instructions assume the archive has been extracted to `C:\tmp\get_iplayer`.
 
@@ -56,16 +52,18 @@ The file is in INI format.  The "url" value in each section contains the  downlo
 
 	and save the file.
 	
-	NOTE: the batch file assumes that perl.exe is installed somewhere in PATH.  If it is not, put the full path to perl.exe in the batch file.	
-7. Execute get_iplayer once to initialise the config directory (`%USERPROFILE%\.get_iplayer`) and download plugins
+	NOTE: the batch file assumes that perl.exe is installed somewhere in PATH.  If it is not, put the full path to perl.exe in the batch file.
+	
+7. Create the config directory and install plugins
 
-    	get_iplayer
+    	mkdir "%USERPROFILE%\.get_iplayer\plugins"
+        copy plugins\*.plugin "%USERPROFILE%\.get_iplayer\plugins"
 
 8. Configure external programs
 
 	If the external programs needed by get_iplayer are not installed in PATH, you must explicitly configure their locations in your get_iplayer preferences.  For example:
 
-		get_iplayer --prefs-add --rtmpdump="C:\path\to\rtmpdump.exe" --ffmpeg="C:\path\to\ffmpeg.exe" --mplayer="C:\path\to\mplayer.exe" --atomicparsley="C:\path\to\atomicparsley.exe"
+		get_iplayer --prefs-add --rtmpdump="C:\path\to\rtmpdump.exe" --ffmpeg="C:\path\to\ffmpeg.exe" --atomicparsley="C:\path\to\atomicparsley.exe"
 
 9. Configure output directory
 
@@ -77,7 +75,6 @@ The file is in INI format.  The "url" value in each section contains the  downlo
 10. Run CLI with:
 
     	get_iplayer [...]
-    	
 
 ### Web PVR Manager (WPM)
 

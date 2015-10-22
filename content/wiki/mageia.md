@@ -14,11 +14,11 @@ These instructions are for Mageia 5. Information for Mageia 4 can be found [here
 
     32-bit:
 
-        urpmi --media tainted ffmpeg mplayer rtmpdump librtmp1
+        urpmi --media tainted ffmpeg rtmpdump librtmp1
 
     64-bit:
 
-        urpmi --media tainted ffmpeg mplayer rtmpdump lib64rtmp1
+        urpmi --media tainted ffmpeg rtmpdump lib64rtmp1
 
     This step is necessary because the restricted versions of these programs in the core and non-free media sets do not fully support all get_iplayer functionality.
 

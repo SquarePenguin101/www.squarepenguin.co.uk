@@ -1,6 +1,6 @@
 ## Ubuntu / Mint
 
-These instructions are for Ubuntu (all versions that have not reached end-of-life) / Mint 17 (Qiana).
+These instructions are for Ubuntu (all versions that have not reached end-of-life) and Ubuntu-based Mint 17 (Qiana), but not Mint Debian edition (LMDE). 
 
 The get_iplayer versions incorporated in Ubuntu repositories are all out of date or broken, so Ubuntu/Mint users should install from the get-iplayer PPA.
 

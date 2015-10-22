@@ -16,6 +16,12 @@ It is also recommended to install [VLC Media Player](http://www.videolan.org/vlc
 
 ## Usage
 
+### DO THIS EVERY TIME YOU RUN THE WEB PVR MANAGER
+
+1. Select the programme types you wish to search by ticking the appropriate **Programme type** boxes in the **Search** tab. Only BBC TV programmes are indexed and searched by default, so you MUST select additional types for them to be included in your search results.
+
+2. Click the **Refresh Cache** button to open a new browser window/tab where the programme data cache will be updated. You MUST do this in order to find the latest programmes in your search results. Leave that window open to automatically refresh the cache at periodic intervals. 
+
 ### Page Tabs
 
 There are several different tabs along the top of the page:
@@ -33,11 +39,11 @@ There are several different action buttons along the top and bottom of the searc
 
 - **Search** - Enter your search term in the *Search* field and click this button to execute the search.  You and target your search at a field other than *Name* by changing the value of *Search in*.  Additional search options may found in the **Advanced Search** tab. You can search the PVR recordings history instead of the available programmes by selecting *Search History* in the search panel
 
-> **HEY! OVER HERE!** - With the default settings WPM will only search TV programmes.  Select the *BBC Radio* checkbox to add radio programmes to the search results.
+> **HEY!** - With the default settings WPM will only search TV programmes.  Select the *BBC Radio* checkbox to add radio programmes to the search results.
 
 - **Record** - Select the checkbox next to the programme(s) you want to record and click this for immediate recording in a separate browser tab.
 
->**HEY! OVER HERE!** - In Linux/Unix/OSX recordings are saved by default in the directory where you started the WPM service. With the Windows installer version of WPM recordings are saved by default in the `iPlayer Recordings` folder on your desktop. You can override this in your get_iplayer preferences, or you may enter a new location in the *Override Recordings Folder* field in the **Recording** settings tab.
+>**HEY!** - In Linux/Unix/OSX recordings are saved by default in the directory where you started the WPM service. With the Windows installer version of WPM recordings are saved by default in the `iPlayer Recordings` folder on your desktop. You can override this in your get_iplayer preferences, or you may enter a new location in the *Override Recordings Folder* field in the **Recording** settings tab.
 
 - **Play** - Select the checkbox next to the programme(s) you want to playback and click this to download an m3u playlist (you should associate m3u playlists with VLC in your browser for immediate playback).
 
@@ -45,13 +51,13 @@ There are several different action buttons along the top and bottom of the searc
 
 - **Add Search to PVR** - Once you have added the search terms to get the list of programmes you wish to regularly record, click this button.
 
->**HEY! OVER HERE!** - The queued recordings and PVR searches that you add will only actually be recorded when you click the **Run PVR** button at the top of the page.
+>**HEY!** - The queued recordings and PVR searches that you add will only actually be recorded when you click the **Run PVR** button at the top of the page.
 
 - **Refresh Cache** - You must regularly refresh the programme cache to see new programmes. Clicking this button opens another tab or window that refreshes the list of programmes from the online feeds of the selected programme types. If you leave it open it will auto-refresh every hour unless you override the settings.
 
     **NOTE:** It may take a while to reload page when refreshing caches.
 
->**HEY! OVER HERE!** - Like the man says: Don't forget to refresh your cache before doing a search.
+>**HEY!** - Like the man says: Don't forget to refresh your cache before doing a search.
 
 
 - **Quick URL** - To record or play a BBC iPlayer audio or video URL, paste the programme episode page URL into the *Quick URL* box and click **Play** or **Record**
@@ -88,7 +94,7 @@ There are several different action buttons along the top and bottom of the searc
 
 Settings are grouped into 5 tabs: Advanced Search, Display, Columns, Recording and Streaming.  Hover over any form field with your mouse to see a tooltip with a brief description of its purpose.
 
->**HEY! OVER HERE!** - WPM does not download HD TV (where available) by default out of consideration for users with limited internet bandwidth.  If you wish to download HD TV, change the value of *Recording Modes* in the **Recording** tab to "best" (without quotes).  Use the **Save As Default** button to make the setting permanent (see below).
+>**HEY!** - WPM does not download HD TV (where available) by default out of consideration for users with limited internet bandwidth.  If you wish to download HD TV, change the value of *Recording Modes* in the **Recording** tab to "best" (without quotes).  Use the **Save As Default** button to make the setting permanent (see below).
 
 The settings correspond to options for the get_iplayer CLI.  See [this page](/wiki/manpage) for a full list.  Not all get_iplayer options are available to the WPM.  For those options, get_iplayer uses either its default values or values that have been saved to its user options file with `get_iplayer --prefs-add` (examples [here](/wiki/documentation#saving-settings)).
 
@@ -112,7 +118,7 @@ Logitech Squeezebox by creating URLs for the following:
 - Stream pre-recorded programmes losslessly or by transcoding on-the-fly
 - Stream mp3 files using the localfiles get_iplayer plugin
 
-The [README](https://raw.github.com/get-iplayer/get_iplayer/master/README-get_iplayer.cgi.txt) gives examples.
+The [original README](https://github.com/get-iplayer/get_iplayer/wiki/wpmdoc) gives examples.
 
 ### Automatic Playlist URLs
 
@@ -122,11 +128,11 @@ Web PVR Manager allows you to create M3U playlists on-the-fly from searches to e
 - Create playlists of pre-recorded programmes based on user defined search criteria
 - Create OPML playlists which can be used to selectively navigate on devices like the Logitech Squeezebox
 
-The [README](https://raw.github.com/get-iplayer/get_iplayer/master/README-get_iplayer.cgi.txt) gives examples.
+The [original README](https://github.com/get-iplayer/get_iplayer/wiki/wpmdoc) gives examples.
 
 ## CGI Deployment
 
-The [README](https://raw.github.com/get-iplayer/get_iplayer/master/README-get_iplayer.cgi.txt) contains instructions.
+The [original README](https://github.com/get-iplayer/get_iplayer/wiki/wpmdoc) contains instructions.
 
 ## Relationship to CLI
 

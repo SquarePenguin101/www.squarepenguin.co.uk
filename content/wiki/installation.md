@@ -33,7 +33,7 @@
 <a name="requirements"></a>
 ## Requirements
 
-get_iplayer runs on Linux/Unix (numerous flavours supported), OS X (10.5+) or Windows (XP/Vista/7/8).
+get_iplayer runs on Linux/Unix (numerous flavours supported), OS X (10.5+) or Windows (XP/Vista/7/8/10).
 
 <a name="requirements-perl"></a>
 ### Perl Support

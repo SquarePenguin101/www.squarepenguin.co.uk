@@ -225,19 +225,19 @@ Be aware that the #2 CDN in your second attempt may correspond to the problemati
 
 The table below shows the external programmes required to download and - if applicable - convert and tag files produced from each combination of recording mode and output format used by get_iplayer.
 
-|Type|Mode|Format|rtmpdump|ffmpeg|mplayer|atomicparsley|id3v2/MP3::Tag|
-|----|----|------|--------|------|-------|-------------|--------------|
-|TV|flashhd, flashvhigh, flashhigh, flashstd, flashnormal, flashlow|mp4 (h264/aac)|X|X|---|X|---|
-|TV|flashnormal|avi (h264/aac)|X|X|---|X|---|
-|TV|flashhd, flashvhigh, flashhigh, flashstd, flashnormal, flashlow (with --raw)|flv (h264/aac)|X|---|---|---|---|
-|TV|flashhd, flashvhigh, flashhigh, flashstd, flashnormal, flashlow (with --mkv)|mkv (h264/aac)|X|X|---|---|---|
-|TV|hlshd, hlsvhigh, hlshigh, hlsstd, hlsnormal, hlslow|mp4 (h264/aac)|---|X|---|X|---|
-|TV|hlshd, hlsvhigh, hlshigh, hlsstd, hlsnormal, hlslow (with --raw)|mpegts (h264/aac)|--|---|---|---|---|
-|TV|hlshd, hlsvhigh, hlshigh, hlsstd, hlsnormal, hlslow (with --mkv)|mkv (h264/aac)|---|X|---|---|---|
-|Radio|flashaachigh, flashaacstd, flashaaclow|m4a (aac)|X|X|---|X|---|
-|Radio|flashaachigh, flashaacstd, flashaaclow (with --raw)|flv (aac)|X|---|---|---|---|
-|Radio|flashaachigh, flashaacstd, flashaaclow (with --aactomp3)|mp3|X|X|---|---|X|
-|Radio|hlsaachigh, hlsaacstd, hlsaaclow|m4a (aac)|---|X|---|X|---|
-|Radio|hlsaachigh, hlsaacstd, hlsaaclow (with --raw)|mpegts (aac)|---|X|---|---|---|
-|Radio|hlsaachigh, hlsaacstd, hlsaaclow (with --aactomp3)|mp3|---|X|---|---|X|
-|Podcast|podcast|mp3|---|---|---|---|---|
+|Type|Mode|Format|rtmpdump|ffmpeg|atomicparsley|id3v2/MP3::Tag|
+|----|----|------|--------|------|-------------|--------------|
+|TV|flashhd, flashvhigh, flashhigh, flashstd, flashnormal, flashlow|mp4 (h264/aac)|X|X|X|---|
+|TV|flashnormal|avi (h264/aac)|X|X|X|---|
+|TV|flashhd, flashvhigh, flashhigh, flashstd, flashnormal, flashlow (with --raw)|flv (h264/aac)|X|---|---|---|
+|TV|flashhd, flashvhigh, flashhigh, flashstd, flashnormal, flashlow (with --mkv)|mkv (h264/aac)|X|X|---|---|
+|TV|hlshd, hlsvhigh, hlshigh, hlsstd, hlsnormal, hlslow|mp4 (h264/aac)|---|X|X|---|
+|TV|hlshd, hlsvhigh, hlshigh, hlsstd, hlsnormal, hlslow (with --raw)|mpegts (h264/aac)|--|---|---|---|
+|TV|hlshd, hlsvhigh, hlshigh, hlsstd, hlsnormal, hlslow (with --mkv)|mkv (h264/aac)|---|X|---|---|
+|Radio|flashaachigh, flashaacstd, flashaaclow|m4a (aac)|X|X|X|---|
+|Radio|flashaachigh, flashaacstd, flashaaclow (with --raw)|flv (aac)|X|---|---|---|
+|Radio|flashaachigh, flashaacstd, flashaaclow (with --aactomp3)|mp3|X|X|---|X|
+|Radio|hlsaachigh, hlsaacstd, hlsaaclow|m4a (aac)|---|X|X|---|
+|Radio|hlsaachigh, hlsaacstd, hlsaaclow (with --raw)|mpegts (aac)|---|X|---|---|
+|Radio|hlsaachigh, hlsaacstd, hlsaaclow (with --aactomp3)|mp3|---|X|---|X|
+|Podcast|podcast|mp3|---|---|---|---|

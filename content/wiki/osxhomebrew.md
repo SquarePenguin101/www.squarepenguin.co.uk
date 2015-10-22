@@ -13,7 +13,7 @@ Homebrew is designed to work with the system Perl installed with OS X, so no add
 All external programs can be installed with the get_iplayer package, as noted below.  They may also be installed separately:
 
 	brew update
-	brew install rtmpdump ffmpeg mplayer atomicparsley id3v2
+	brew install rtmpdump ffmpeg atomicparsley id3v2
 
 ### Command-line Interface (CLI)
 

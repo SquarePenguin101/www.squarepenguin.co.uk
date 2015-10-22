@@ -22,9 +22,6 @@ These instructions are for Slackware / Salix 14.1. Differences between the two a
 
 2. Install Packaged Dependencies
 
-	#### Slackware
-	MPlayer is part of the XAP package set and should be part of a full install.  Install it from your Slackware distribution or a Slackware repository if necessary.
-
 	#### Salix
 
 	If you have performed a Salix basic installation, download the multimedia codecs installer (already available in a full install):
@@ -37,12 +34,7 @@ These instructions are for Slackware / Salix 14.1. Differences between the two a
 
 	Select all items for installation.  When the installation is complete, ffmpeg and rtmpdump will have been installed.
 
-	Install mplayer:
-
-		sudo slapt-get -i MPlayer
-
-	
-2. Create sbopkg queuefile
+3. Create sbopkg queuefile
 
     These instructions assume you have configured sbopkg to read queuefiles from the default location `/var/lib/sbopkg/queues`.
 

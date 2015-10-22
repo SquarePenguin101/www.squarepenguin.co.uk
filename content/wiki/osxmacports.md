@@ -28,12 +28,11 @@ Because MacPorts is a self-contained system, you must install the MacPorts build
 
 		sudo port install rtmpdump atomicparsley id3v2
 
-2. Install ffmpeg and mplayer
+2. Install ffmpeg
 
-    The default installations of ffmpeg and mplayer pull in X11, Python and other dependencies you probably don't want or need, so use the "-x11" flag to prevent building an x11 variant:
+    The default installations of ffmpeg pulls in X11, Python and other dependencies you probably don't want or need, so use the "-x11" flag to prevent building an x11 variant:
 
 		sudo port install ffmpeg -x11
-		sudo port install mplayer -x11
     
 ### Command-line Interface (CLI)
 

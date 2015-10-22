@@ -14,7 +14,7 @@ These instructions are for Debian 7 (wheezy).  Information for Debian 6 (squeeze
 
 2. Install components not installed with get-iplayer package
 
-    	apt-get install libav-tools mplayer libmp3-tag-perl libnet-smtp-ssl-perl libauthen-sasl-perl libnet-smtp-tls-butmaintained-perl
+    	apt-get install libav-tools libmp3-tag-perl libnet-smtp-ssl-perl libauthen-sasl-perl libnet-smtp-tls-butmaintained-perl
 
     **NOTE:** The get-iplayer package (2.82-2+deb7u1) in Debian 7 is too old to support secure email.  If you need that functionality, upgrade to the testing or unstable package ([see below](#linux-package-debian-testing)).
 
