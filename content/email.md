@@ -25,4 +25,6 @@ If you'd like to do so securely or just want to be sure that the person replying
 
 <a href="/files/josh-archer-public-key.asc">Josh Archer - Public Key</a>
 
+Fingerprint: <code>56E0 297B 6157 B883 7692  571A 9C65 46AC 7932 19D3</code>
+
 ### I warn you though, if your email is about support for get_iplayer, I will ignore it!
