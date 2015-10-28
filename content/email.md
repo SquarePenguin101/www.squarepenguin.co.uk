@@ -17,34 +17,12 @@ Don't feel pressured into doing that though, no one else does.
 
 ## But I do need to email you!
 
-_Really?_ If you honestly need to contact me about something else like spelling errors or something on the site itself not working, then feel free to go ahead, that's fine.
+_Really?_ If you honestly need to contact me about something else like spelling errors or something on the site itself not working, then feel free to go ahead, that's fine. You can do so 'insecurely' here: 
 
-You'll just have to scroll down...
-<br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br>
-...keep going...
-<br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br>
-...keep going...
-<br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br>
-...keep going...
-<br><br><br><br><br><br><br>
-...keep going...
-<br><br><br><br><br><br><br>
-...keep going...
-<br><br><br><br><br><br><br>
-...keep going...
-<br><br><br><br><br><br><br>
-...keep going...
-<br><br><br><br><br><br><br>
-...keep going...
-<br><br><br><br><br><br><br>
-...keep going...
-<br><br><br><br><br><br><br>
-Man, you really do want to email me. Here you go then - <a href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#103;&#101;&#116;&#105;&#112;&#108;&#097;&#121;&#101;&#114;&#064;&#115;&#113;&#117;&#097;&#114;&#101;&#112;&#101;&#110;&#103;&#117;&#105;&#110;&#046;&#099;&#111;&#046;&#117;&#107;'>&#69;&#109;&#97;&#105;&#108;&#32;&#109;&#101;</a>.
+<a href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#103;&#101;&#116;&#105;&#112;&#108;&#097;&#121;&#101;&#114;&#064;&#115;&#113;&#117;&#097;&#114;&#101;&#112;&#101;&#110;&#103;&#117;&#105;&#110;&#046;&#099;&#111;&#046;&#117;&#107;'>&#69;&#109;&#97;&#105;&#108;&#32;&#109;&#101;</a>
 
-### I warn you though, if it's about support, I will ignore it!
+If you'd like to do so securely or just want to be sure that the person replying is me, you can use my PGP public key:
+
+<a href="/files/josh-archer-public-key.asc">Josh Archer - Public Key</a>
+
+### I warn you though, if your email is about support for get_iplayer, I will ignore it!
