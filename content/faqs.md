@@ -60,8 +60,8 @@ The BBC do implement DRM on their iPhone and Adobe Air downloadable files and th
 ## Example commands
 
 1.  [get_iplayer Example Commands](/wiki/documentation/)
-<a name="faq1"></a>
-## I see a programme that is available on the iPlayer web site, but I can't find it with a get_iplayer search.  What's wrong?
+
+## <a name="faq1"></a> I see a programme that is available on the iPlayer web site, but I can't find it with a get_iplayer search.  What's wrong?
 
 First ascertain:
 
