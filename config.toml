@@ -17,4 +17,5 @@ paginate = 7
 [permalinks]
 
 [Blackfriday]
-plainIdAnchors = true
+plainIDAnchors = true
+smartypants = false
