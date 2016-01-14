@@ -2,7 +2,7 @@
 
 ## Fedora
 
-These instructions are for Fedora 20.
+These instructions are for Fedora 23.
 
 ### Command-line Interface (CLI)
 
@@ -12,24 +12,15 @@ These instructions are for Fedora 20.
 
 2. Install get_iplayer and dependencies
 
-        sudo yum install get_iplayer
+        sudo dnf install get_iplayer
 
 3. Install additional Perl modules
 
-        sudo yum install perl-MP3-Info perl-Authen-SASL perl-Net-SMTP-SSL
+        sudo dnf install perl-MP3-Info perl-Authen-SASL perl-Net-SMTP-SSL
 
     If you wish to use the MP3::Tag module for better MP3 tagging, or you require support for TLS email, additional Perl modules may be installed using the [local::lib method](/wiki/manual#manual-perl-locallib).	
-4. Post-install
 
-    You may notice that the get_iplayer package pulls in the vlc-core package.  If you wish to use the full VLC media player, you must install it separately:
-
-        sudo yum install vlc
-
-    If you need help adding support for the media formats produced by get_iplayer, start here:
-
-    <https://ask.fedoraproject.org/en/question/9111/sticky-what-plugins-do-i-need-to-install-to-watch-movies-and-listen-to-music/>
-
-5. Run CLI with:
+4. Run CLI with:
 
     	get_iplayer [...]
 

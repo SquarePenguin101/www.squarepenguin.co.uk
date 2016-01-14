@@ -1,6 +1,6 @@
 ## Ubuntu / Mint
 
-These instructions are for Ubuntu (all versions that have not reached end-of-life) and Ubuntu-based Mint 17 (Qiana), but not Mint Debian edition (LMDE). 
+These instructions are for Ubuntu (all versions that have not reached end-of-life) and Ubuntu-based Mint 17, but not Mint Debian edition (LMDE). 
 
 The get_iplayer versions incorporated in Ubuntu repositories are all out of date or broken, so Ubuntu/Mint users should install from the get-iplayer PPA.
 
@@ -35,7 +35,11 @@ The [get-iplayer PPA](https://launchpad.net/~jon-hedgerows/+archive/get-iplayer)
 
         sudo apt-get install rtmpdump
 
-5. Run CLI with:
+5. **Ubuntu 12.04 only:** You will need an additional codec to convert radio programmes to MP3
+
+        sudo apt-get install libavcodec-extra-53
+
+6. Run CLI with:
 
     	get_iplayer [...]
 

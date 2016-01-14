@@ -2,41 +2,39 @@
 
 ## Raspbian / Raspberry Pi
 
-These instructions are for Raspbian wheezy.
+These instructions are for both Raspbian wheezy and Raspbian jessie.
 
-### Command-line Interface (CLI)
+### get-iplayer Package
 
-Although the Debian get-iplayer package is incorporated in Raspbian repositories, Raspbian users are recommended to use the get_iplayer repository version (see below).  If you must use the Debian package, refer to the above instructions for Debian installation.  Note that the version of AtomicParsley packaged with Raspbian frequently fails with files downloaded with get_iplayer.
+Raspbian users are recommended to use the get_iplayer repository version (see below), even though the Debian get-iplayer package is incorporated in Raspbian repositories.  If you must use the Debian package, refer to the installation instructions for [Debian](debian).  Note that the version of AtomicParsley packaged with Raspbian (but not the version packaged here) frequently fails with files downloaded with get_iplayer.
 
 #### get_iplayer Repository Installation
 
 1. Add the repository
 
-    Paste these _five_ lines into a terminal window:
+    Paste these lines into a terminal window:
 
-	    sudo bash -c "cat > /etc/apt/sources.list.d/packages.hedgerows.org.uk.list <<EOF
-	    deb http://packages.hedgerows.org.uk/raspbian wheezy/
-	    deb-src http://packages.hedgerows.org.uk/raspbian wheezy/
-	    EOF
-	    "
+	    echo "deb http://packages.hedgerows.org.uk/raspbian wheezy/" | sudo tee /etc/apt/sources.list.d/packages.hedgerows.org.uk.list
+	    echo "deb-src http://packages.hedgerows.org.uk/raspbian wheezy/" | sudo tee -a /etc/apt/sources.list.d/packages.hedgerows.org.uk.list
 
-2. Update, and install the repository signing key, and update again:
+2. Install the repository signing key, and update the package index:
 
-	    sudo apt-get update
-	    sudo apt-get --allow-unauthenticated -y install jonhedgerows-keyring
+	    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 0F5BFDFE
 	    sudo apt-get update
 
 3. Install the get-iplayer package
 
     	sudo apt-get install get-iplayer
 
-4. Run CLI with:
+That's it!  You are now ready to run the command line interface with:
 
     	get_iplayer [...]
 
+(There are instructions for removing the repository at [packages.hedgerows.org.uk](http://packages.hedgerows.org.uk/))
+
 ### Web PVR Manager (WPM)
 
-The WPM is installed along with the CLI.
+The WPM is installed as part of the get-iplayer package.
 
 1. Launch the WPM in a terminal window with this command:
 

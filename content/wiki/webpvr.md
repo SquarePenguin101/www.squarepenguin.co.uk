@@ -60,8 +60,7 @@ There are several different action buttons along the top and bottom of the searc
 >**HEY!** - Like the man says: Don't forget to refresh your cache before doing a search.
 
 
-- **Quick URL** - To record or play a BBC iPlayer audio or video URL, paste the programme episode page URL into the *Quick URL* box and click **Play** or **Record**
-
+- **Quick URL** - To record or play a BBC iPlayer audio or video URL, paste the programme episode page URL into the *Quick URL* box and click **Play** or **Record**. The correct programme type (BBC TV or BBC Radio) must also be selected.
 
 ### Programme Links
 

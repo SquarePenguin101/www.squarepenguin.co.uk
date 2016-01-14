@@ -11,9 +11,9 @@ Additional Perl modules may be installed using the [local::lib method](/wiki/man
 
     OS X 10.6 (Snow Leopard) or higher, 64-bit Intel only:
 
-    <http://sourceforge.net/projects/get-iplayer/files/osx/utils/x86_64/20141227/get_iplayer-osx-utils-x86_64-20141227.zip>
+    <http://sourceforge.net/projects/get-iplayer/files/osx/utils/x86_64/20151230/get_iplayer-osx-utils-x86_64-20151230.zip>
 
-    OS X 10.5 (Leopard), 32-bit Intel only:
+    OS X 10.5 (Leopard), 32-bit Intel only [NO LONGER UPDATED]:
 
     <http://sourceforge.net/projects/get-iplayer/files/osx/utils/i386/20141227/get_iplayer-osx-utils-i386-20141227.zip>
 
@@ -21,7 +21,7 @@ Additional Perl modules may be installed using the [local::lib method](/wiki/man
 
 2. Extract the zip file, open a command prompt and navigate to the directory containing the extracted files.  For example:
 
-        cd ~/Downloads/get_iplayer-osx-utils-x86_64-20141227
+        cd ~/Downloads/get_iplayer-osx-utils-x86_64-20151230
 
 3. Create the installation directory if it does not exist:
 

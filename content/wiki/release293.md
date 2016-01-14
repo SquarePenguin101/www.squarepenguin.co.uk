@@ -11,7 +11,7 @@ get_iplayer 2.94 was released shortly after 2.93 to fix a bug that broke live st
 On 02/06/2015 the BBC removed the listing feeds used by get_iplayer to populate the TV programme data cache used to support searching.  get_iplayer has now switched to using BBC schedule data instead.  This is what you need to know:
 
 - If you added `--refresh-feeds-tv=schedule` to your preferences as a temporary measure to support the web pvr, remove it now from the command line with:
-    
+
         get_iplayer --prefs-del --refresh-feeds-tv=schedule
 
 - Refreshing your TV data cache will be **MUCH** slower than before.  Remember this especially if you use `--refresh-future`, which doubles the indexing time. The schedule parsing is based on old code inherited from the original version of get_iplayer, but hopefully it should improve a bit in future releases.
@@ -36,7 +36,7 @@ On 02/06/2015 the BBC removed some metadata resources (XML playlists) formerly u
     WARNING: Please download and run latest installer or install the XML::Simple Perl module for more accurate programme metadata.
     ERROR: Failed to get version pid metadata from iplayer site
 
-The XML::Simple module is provided by the Windows installer and is part of the system Perl in OS X.  Linux/Unix users should consult the installation instructions (see below). 
+The XML::Simple module is provided by the Windows installer and is part of the system Perl in OS X.  Linux/Unix users should consult the installation instructions (see below).
 
 ### 4. Other changes
 
@@ -80,7 +80,7 @@ You may have read about Nitro, the BBC's newish all-singing, all-dancing program
 
 http://www.bbc.co.uk/blogs/internet/entries/bc82562e-ea9d-4655-982d-e6219b2c877b
 
-After nearly two years, Nitro has still not been opened to outside developers, though it may be opened up later this year.  Even so, Nitro is not an option for get_iplayer, at least not directly.  The terms and conditions (and the BBC) prevent direct access to Nitro services by get_iplayer. 
+After nearly two years, Nitro has still not been opened to outside developers, though it may be opened up later this year.  Even so, Nitro is not an option for get_iplayer, at least not directly.  The terms and conditions (and the BBC) prevent direct access to Nitro services by get_iplayer.
 
 In its present form, get_iplayer must rely on the BBC schedule data or, if it should come to the worst, rely on scraping the iPlayer site. Scraping is one possible way to return category information and signed/audiodescribed flags to the programme data caches, but there are no plans to implement it.
 
@@ -102,9 +102,9 @@ Windows users should use the most recent installer to update:
 
 The installer will update the following components to the indicated versions:
 
-|Component|Version|Notes|
-|---------|-------|-----|
-|get_iplayer main scripts|2.94|includes both CLI and Web PVR Manager|
+|Component|Version|Notes
+|---------|-------|-----
+|get_iplayer main scripts|2.94|includes both CLI and Web PVR Manager
 
 **After installing, you must immediately refresh all your cache data:**
 

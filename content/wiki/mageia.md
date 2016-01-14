@@ -2,7 +2,7 @@
 
 ## Mageia
 
-These instructions are for Mageia 5. Information for Mageia 4 can be found [here](/wiki/mageia4). These instructions assume you are logged in as root, but you may also perform the installation commands with `sudo`.
+These instructions are for Mageia 5. These instructions assume you are logged in as root, but you may also perform the installation commands with `sudo`.
 
 ### Command-line Interface (CLI)
 

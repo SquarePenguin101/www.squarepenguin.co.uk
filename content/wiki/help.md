@@ -20,6 +20,8 @@ Support forums and guides for get_iplayer users may be found at:
 
 <https://squarepenguin.co.uk/forums/>
 
+**ALL** usage queries, feature requests or problem reports should go to the support forums.
+
 ### Mailing List
 
 There is a low-traffic mailing list for get_iplayer:

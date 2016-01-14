@@ -11,11 +11,11 @@ The BBC recently made some changes to the iPlayer service and web site that affe
 - There are a few exceptions to the 7-day rule, such as series like Doctor Who that have a full series catch-up policy.  The episodes of those series remain available until the final episode reaches its expiry date.  But again, once 7 days pass from the broadcast of the final episode you should expect those episodes to disappear from the get_iplayer cache.
 - If a programme you're looking for does not appear in get_iplayer search results, check it on the iPlayer site **BEFORE** reporting it as an error.  If the programme is more than 7 days old (or its availability is shown as less than 23 days), you must download it directly via PID or URL.
 - When in doubt, use the programme PID.  All available programmes can be downloaded via PID regardless of whether or not they are in the get_iplayer cache.
-    
+
         TV: get_iplayer --pid=<PID> ...
-        
+
         Radio: get_iplayer --pid=<PID> --type=radio ...
-    
+
 
 ## Installation/Upgrade
 
@@ -43,15 +43,15 @@ The embedded version of Perl has been updated for get_iplayer 2.87, so previous 
 
 The installer will update the following components to the indicated versions:
 
-|Component|Version|  
-|---------|-------|  
-|get_iplayer script|2.87|  
-|Perl support|4.9 [Perl 5.18]|
-|MPlayer|svn-r32050 [required downgrade]|
-|FFmpeg|2.2.3|
-|VLC|2.1.5|
-|RTMPDump|2.4-20140302-git-79459a2|
-|AtomicParsley|0.9.6-hg109.9183fff907bf|
+|Component|Version
+|---------|-------
+|get_iplayer script|2.87
+|Perl support|4.9 [Perl 5.18]
+|MPlayer|svn-r32050 [required downgrade]
+|FFmpeg|2.2.3
+|VLC|2.1.5
+|RTMPDump|2.4-20140302-git-79459a2
+|AtomicParsley|0.9.6-hg109.9183fff907bf
 
 Note the required downgrade of MPlayer.
 
@@ -121,7 +121,7 @@ Use of `--quiet` and `--silent` is strongly discouraged.  The most likely causes
 
 ### `--verbose` and `--debug` now applied to ffmpeg/avconv
 
-A small amount of additional output from ffmpeg/avconv will now be displayed when `--verbose` or `--debug` is specified. 
+A small amount of additional output from ffmpeg/avconv will now be displayed when `--verbose` or `--debug` is specified.
 
 ### >>Important note re: obsolete FFmpeg versions<<
 

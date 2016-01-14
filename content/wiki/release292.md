@@ -28,7 +28,7 @@ At least some live TV streams must be generated internally by get_iplayer, so as
 
 ### 3. On-demand Radio
 
-The BBC has removed WMA streams for on-demand radio programmes.  That should affect few, if any, users.  The BBC also has announced that RTMP streams for on-demand radio programmes will disappear in the future, though no timetable has been given.  For the present, RTMP (i.e., flashaac recording modes) is the default format used by get_iplayer, though the default format will switch to HLS in a future version. 
+The BBC has removed WMA streams for on-demand radio programmes.  That should affect few, if any, users.  The BBC also has announced that RTMP streams for on-demand radio programmes will disappear in the future, though no timetable has been given.  For the present, RTMP (i.e., flashaac recording modes) is the default format used by get_iplayer, though the default format will switch to HLS in a future version.
 
 get_iplayer now supports the direct download AAC files that are available for a subset of on-demand radio programmes.  They are .m4a files, but you can use `--aactomp3` to convert them if desired.  Where these files are available, they can be downloaded using `--radiomode=ddlaac`.  These files are not available for many programmes, and may be disappearing, so are not included in the default modes for radio.
 
@@ -93,9 +93,9 @@ Windows users should use the most recent installer to update:
 
 The installer will update the following components to the indicated versions:
 
-|Component|Version|Notes|
-|---------|-------|-----|
-|get_iplayer main scripts|2.92|includes both CLI and Web PVR Manager|
+|Component|Version|Notes
+|---------|-------|-----
+|get_iplayer main scripts|2.92|includes both CLI and Web PVR Manager
 
 After installing, **immediately** refresh all your tv/radio cache data:
 

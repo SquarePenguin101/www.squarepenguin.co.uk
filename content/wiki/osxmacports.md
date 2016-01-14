@@ -24,7 +24,7 @@ Because MacPorts is a self-contained system, you must install the MacPorts build
 
 ### External Programs
 
-1. Install external programs (except ffmpeg and player)
+1. Install external programs (except ffmpeg)
 
 		sudo port install rtmpdump atomicparsley id3v2
 

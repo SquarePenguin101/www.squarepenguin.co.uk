@@ -18,11 +18,11 @@ Perl is part of the base system for most Linux/Unix distributions.  If not, it w
 
 Many Perl modules used by get_iplayer should be available in the package repositories for your system.  However, the naming convention for packaged Perl modules differs between distributions.  Generally speaking, a module's namespace separator ("::") is replaced by a hyphen, a prefix (and sometimes a suffix) are added, and the name is sometimes changed to lower case.  Consider an example: 
 
-The package names for the **MP3::Tag** Perl module in some different distributions are:
+The package names for the **XML::Simple** Perl module in some different distributions are:
 
-* DEB-based (Debian, Ubuntu): **libmp3-tag-perl**
-* RPM-based (openSUSE, Fedora): **perl-MP3-Tag**
-* Ports-based (OpenBSD, MacPorts): **p5-mp3-tag** or **p5-MP3-Tag**
+* DEB-based (Debian, Ubuntu): **libxml-simple-perl**
+* RPM-based (openSUSE, Fedora): **perl-XML-Simple**
+* Ports-based (OpenBSD, MacPorts): **p5-xml-simple** or **p5-XML-Simple**
 
 One variation from the above scheme is important to know.  The package names for the required **LWP** module are:
 
@@ -49,7 +49,7 @@ This example is for the bash shell and assumes that your profile is loaded from 
 
 After your local library is set up, you can install modules with `cpanm Module::Name [Module::Name ...]`. For example, to install the Perl modules for get_iplayer:
 
-	cpanm LWP MP3::Info MP3::Tag Authen::SASL Net::SMTP::SSL Net::SMTP::TLS::ButMaintained XML::Simple
+	cpanm LWP XML::Simple MP3::Tag MP3::Info Authen::SASL Net::SMTP::SSL Net::SMTP::TLS::ButMaintained
 
 Users of Perl 5.22 and higher must also install the `CGI` module separately to use the Web PVR Manager
 
@@ -58,7 +58,7 @@ Users of Perl 5.22 and higher must also install the `CGI` module separately to u
 
 The external programs used by get_iplayer should be available in the package repositories for your system.  The package name will almost always be the same as the program itself.  For example, to install the utilities for get_iplayer in Fedora: 
 
-	sudo yum install rtmpdump ffmpeg mplayer atomicparsley id3v2
+	sudo yum install rtmpdump ffmpeg atomicparsley id3v2
 
 Replace `sudo yum install` with `sudo apt-get install` (Debian), `sudo zypper install` (openSUSE), `sudo pacman -S` (Arch Linux), `sudo pkg_add` (OpenBSD) or `sudo pkg install` (FreeBSD).
 

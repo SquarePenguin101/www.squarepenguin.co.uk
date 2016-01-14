@@ -2,26 +2,64 @@
 
 ## Debian
 
-These instructions are for Debian 7 (wheezy).  Information for Debian 6 (squeeze) can be found [here](/wiki/debian6).  The instructions assume that you are logged in as root, but the installation commands may also be performed with `sudo`.
+These instructions are for Debian 8 (jessie). The instructions assume that you are logged in as root, but the installation commands may also be performed with `sudo`.
+
+**NOTE**: As of Debian 8 (jessie), get_iplayer is no longer available in the stable repository. Use the instructions below to combine dependencies from stable and backports repositories with the get-iplayer package from the testing repository. The example below is for get_iplayer 2.94.  Adjust file names accordingly for later versions. Information for the get-iplayer package in the testing repository can be found at:
+
+https://packages.debian.org/testing/get-iplayer
 
 ### Command-line Interface (CLI)
 
-1. Install get-iplayer package (note that package name contains hyphen, not underscore)
+1. Install dependencies (except ffmpeg) from stable repository
 
-	    apt-get install get-iplayer
+        apt-get install libwww-perl libxml-simple-perl libmp3-tag-perl libmp3-info-perl libnet-smtp-ssl-perl libauthen-sasl-perl libnet-smtp-tls-butmaintained-perl rtmpdump atomicparsley
+ 
+2. Install ffmpeg from backports repository
 
-    **NOTE:** The get-iplayer package (2.82-2+deb7u1) in Debian 7 has been patched to restore TV downloading functions broken in version 2.82-2 by BBC changes.  However, you are encouraged to upgrade to the testing or unstable package ([see below](#linux-package-debian-testing)) in order to get a more recent release of get_iplayer.
+    If you previously installed the libav-tools package from the stable repository, you may wish to remove it first:
 
-2. Install components not installed with get-iplayer package
+        apt-get autoremove libav-tools
 
-    	apt-get install libav-tools libmp3-tag-perl libnet-smtp-ssl-perl libauthen-sasl-perl libnet-smtp-tls-butmaintained-perl
+    You can also remove it after installing ffmpeg. The libav-tools package is upgraded during ffmpeg installation so that its utilities are linked to the ffmpeg equivalents (e.g., avconv -> ffmpeg), so you do not need libav-tools for get_iplayer.
 
-    **NOTE:** The get-iplayer package (2.82-2+deb7u1) in Debian 7 is too old to support secure email.  If you need that functionality, upgrade to the testing or unstable package ([see below](#linux-package-debian-testing)).
+    To access the backports repository, add this line to `/etc/apt/sources.list`:
 
-3. Run CLI with:
+        deb http://ftp.uk.debian.org/debian jessie-backports main
+
+    Update package database and install:
+
+        apt-get update
+        apt-get -t jessie-backports install ffmpeg
+
+    For further information see:
+
+    http://backports.debian.org/Instructions/
+
+    For a list of backports mirrors see:
+
+    https://www.debian.org/mirror/list
+
+3. Install get_iplayer package from testing repository
+
+    Download DEB package (do not install with `apt-get`, `aptitude`, `Synaptic`, etc.)
+        
+        wget http://ftp.uk.debian.org/debian/pool/main/g/get-iplayer/get-iplayer_2.94-1_all.deb
+
+    For a list of download links from other mirrors see:
+
+        https://packages.debian.org/testing/all/get-iplayer/download
+
+    Remove any existing get-iplayer package:
+
+        dpkg -r get-iplayer
+    
+    Install new get-iplayer package:
+
+        dpkg -i get-iplayer_2.94-1_all.deb
+
+4. Run CLI with:
 
 		get_iplayer [...]
-
 
 ### Web PVR Manager (WPM)
 
@@ -38,30 +76,3 @@ The WPM is installed along with the CLI.
 3. After the WPM has opened in your browser, click the `Refresh Cache` button.  A new tab or window will open that shows the cache being refreshed.  Leave that tab or window open to have the cache refreshed automatically every hour.  You can also manually refresh the cache at any time.
 
 4. Stop the WPM by typing Ctrl-C.
-
-<a name="linux-package-debian-testing"></a>
-### Update to Debian Testing/Unstable Version
-
-If you should ever need to update to a get-iplayer package that is newer than the one provided in Debian stable, you can download and install the Debian testing/unstable package directly.  Although installing packages from testing on a stable system is often discouraged, it is currently safe to do so with the get-iplayer package.
-
-1. Check the package and make sure that dependencies have not changed
-
-	<http://packages.debian.org/stable/get-iplayer>
-
-	Switch to the testing/unstable package pages using the links at the top right of the page.
-	
-2. If the dependencies still look OK, download the Debian testing/unstable get-iplayer package from your preferred mirror
-
-    <http://packages.debian.org/testing/all/get-iplayer/download>
-
-    <http://packages.debian.org/unstable/all/get-iplayer/download>
-
-3. Remove just the old get-iplayer package
-
-        dpkg -r get-iplayer
-
-4. Install the downloaded DEB file (version 2.83-1 in this example)
-
-    	dpkg -i get-iplayer_2.83-1_all.deb
-
-	Only the get-iplayer package will be updated, so this method assumes that dependencies have not changed in the newer package.

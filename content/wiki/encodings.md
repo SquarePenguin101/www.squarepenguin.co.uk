@@ -17,15 +17,15 @@ At the top of the output you should see some lines that look like:
     INFO: encodingconsoleout = UTF-8
     INFO: encodingconsolein = UTF-8
     INFO: ${^UNICODE} = 0
-    
+
 In the unlikely event you ever need to adjust the encodings detected by get_iplayer, the values can be overridden with the associated command-line options:
 
-|Option|Description|
-|------|-----------|
-|`--encoding-locale`|encoding of command-line values, including search arguments|
-|`--encoding-locale-fs`|encoding of file names, typically same as `--encoding-locale`|
-|`--encoding-console-out`|encoding for STDOUT and STDERR, including search results|
-|`--encoding-console-in`|encoding for STDIN (not currently used)|
+|Option|Description
+|------|-----------
+|`--encoding-locale`|encoding of command-line values, including search arguments
+|`--encoding-locale-fs`|encoding of file names, typically same as `--encoding-locale`
+|`--encoding-console-out`|encoding for STDOUT and STDERR, including search results
+|`--encoding-console-in`|encoding for STDIN (not currently used)
 
 Encoding names must be known to Perl.  A list can be found [here](http://search.cpan.org/~jhi/perl-5.8.1/ext/Encode/lib/Encode/Supported.pod). The encoding options cannot be saved in preferences or presets.
 
@@ -33,12 +33,12 @@ Encoding of search results may not always be perfect.  Any characters that don't
 
 If encodings are not automatically detected and not specified on the command line, the fallback encodings used are:
 
-|Option|Windows|Linux/Unix/OSX|
-|------|-------|--------------|
-|`--encoding-locale`|cp1252 (Windows code page 1252)|UTF-8|
-|`--encoding-locale-fs`|cp1252 (Windows code page 1252)|UTF-8|
-|`--encoding-console-out`|cp850 (OEM ANSI code page 850)|UTF-8|
-|`--encoding-console-in`|cp850 (OEM ANSI code page 850)|UTF-8|
+|Option|Windows|Linux/Unix/OSX
+|------|-------|--------------
+|`--encoding-locale`|cp1252 (Windows code page 1252)|UTF-8
+|`--encoding-locale-fs`|cp1252 (Windows code page 1252)|UTF-8
+|`--encoding-console-out`|cp850 (OEM ANSI code page 850)|UTF-8
+|`--encoding-console-in`|cp850 (OEM ANSI code page 850)|UTF-8
 
 The Windows fallback values are appropriate to UK English installations of Windows, but should more or less work for Windows systems with Western/Central European and American locales.  Most Linux/Unix/OSX users will have a system locale using UTF-8 encoding, so the fallback values should work.
 

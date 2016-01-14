@@ -12,7 +12,9 @@ Use the CPAN client from your Perl distribution to install additional modules fo
 
 ### External Programs
 
-You will need to locate or build the external programs yourself.  You can see the versions used by the get_iplayer Windows installer in the file `windows/get_iplayer_config.ini` in the get_iplayer source code distribution (see below). The file is in INI format.  The "url" value in each section contains the  download URL for that program.  Extract the downloaded archives and install the binaries to your location of choice.
+You will need to download the external programs separately.  You will find the versions used by the get_iplayer Windows installer in the file `windows/get_iplayer_config.ini` in the get_iplayer source code distribution (see below). The file is in INI format.  The "url" value in each section contains the  download URL for that program. It is recommended that you use these versions.  Extract the downloaded archives and install the binaries to your location of choice.
+
+**NOTE:** You must install rtmpdump.exe and ffmpeg.exe to support the iPlayer media formats, and atomicparsley.exe is necessary for adding metadata to downloaded programmes.
 
 **NOTE:** MPlayer, LAME and VLC support obsolete functionality and should not be used for manual installation.  They appear in the above .INI file for use by the Windows installer.  If you wish to use VLC as media viewer, perform a full VLC installation separately.
 
@@ -33,11 +35,16 @@ You will need to locate or build the external programs yourself.  You can see th
 		copy get_iplayer C:\get_iplayer\get_iplayer.pl
 		copy windows\get_iplayer\get_iplayer.cmd C:\get_iplayer
 
-5. Go to installation directory
+5. Create the config directory and install plugins
+
+    	mkdir "%USERPROFILE%\.get_iplayer\plugins"
+        copy plugins\*.plugin "%USERPROFILE%\.get_iplayer\plugins"
+
+6. Go to installation directory
 	
 		cd C:\get_iplayer
 
-6. Fix batch file wrapper (`get_iplayer.cmd`) for standalone use
+7. Fix batch file wrapper (`get_iplayer.cmd`) for standalone use
 
 	The batch file is coded so that it expects get_iplayer.pl to be in the user's working directory (this is how the installer version works).  The batch file should be changed to look for get_iplayer.pl in the installation directory, regardless of the user's working directory.  This means you can install the CLI somewhere in PATH and use it from any location.
 
@@ -54,11 +61,6 @@ You will need to locate or build the external programs yourself.  You can see th
 	
 	NOTE: the batch file assumes that perl.exe is installed somewhere in PATH.  If it is not, put the full path to perl.exe in the batch file.
 	
-7. Create the config directory and install plugins
-
-    	mkdir "%USERPROFILE%\.get_iplayer\plugins"
-        copy plugins\*.plugin "%USERPROFILE%\.get_iplayer\plugins"
-
 8. Configure external programs
 
 	If the external programs needed by get_iplayer are not installed in PATH, you must explicitly configure their locations in your get_iplayer preferences.  For example:

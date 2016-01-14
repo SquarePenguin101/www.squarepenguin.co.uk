@@ -15,6 +15,7 @@
         - [FreeBSD / PC-BSD](/wiki/freebsd)
         - [Mageia](/wiki/mageia)
         - [OpenBSD](/wiki/openbsd)
+        - [NetBSD](/wiki/netbsd)
         - [openSUSE](/wiki/opensuse)
         - [Raspbian / Raspberry Pi](/wiki/raspbian)
         - [Slackware / Salix](/wiki/slackware)
@@ -26,6 +27,7 @@
 - Windows
     * [Installer](/wiki/winsetup)
     * [Manual Installation](/wiki/winmanual)
+    * [Cygwin](/wiki/cygwin)
 - Other
     - [Development Version](/wiki/gipdev)
 	- [Perlbrew](/wiki/perlbrew)

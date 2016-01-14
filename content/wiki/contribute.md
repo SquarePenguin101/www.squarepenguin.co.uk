@@ -26,6 +26,8 @@ Follow a few basic guidelines for pull requests:
 
 - Make sure your patches apply cleanly to the current **develop** branch in the get_iplayer repo, otherwise they may be rejected. Don't expect committers to fix your code.
 
+- If you are not able to test your code on at least one version each of Linux/Unix, OS X and Windows, say so in your pull request description. If that is the case, your pull request is less likely to be accepted, but it is necessary for committers to know what testing may be required.
+
 ### Documentation
 
 If you would like to contribute new documentation or make changes in existing documentation, you can edit the project wiki  (GitHub account required). The get_iplayer project wiki is:

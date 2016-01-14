@@ -2,7 +2,7 @@
 
 ## OpenBSD
 
-These instructions are for OpenBSD 5.4-release.  The instructions assume that you are logged in as root, but you may perform the installation commands with `sudo`.
+These instructions are for OpenBSD 5.8.  The instructions assume that you are logged in as root, but you may perform the installation commands with `sudo`.
 
 ### Command-line Interface (CLI)
 
@@ -12,7 +12,7 @@ These instructions are for OpenBSD 5.4-release.  The instructions assume that yo
 
 2. Install components not installed with get_iplayer package
 
-        pkg_add ffmpeg p5-Net-SMTP-SSL p5-Authen-SASL p5-Net-SMTP-TLS-ButMaintained
+        pkg_add ffmpeg p5-MP3-Info p5-Net-SMTP-SSL p5-Authen-SASL p5-Net-SMTP-TLS-ButMaintained
 
 3. Run CLI with:
 

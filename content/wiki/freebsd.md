@@ -2,23 +2,13 @@
 
 ## FreeBSD / PC-BSD
 
-These instructions are for FreeBSD / PC-BSD 10.0-RELEASE.  The instructions assume that you are logged in as root, but the installation commands may also be performed with `sudo`.
+These instructions are for FreeBSD / PC-BSD 10.2.  The instructions assume that you are logged in as root, but the installation commands may also be performed with `sudo`.
 
 ### Command-line Interface (CLI)
 
-#### PC-BSD Only
-
-PC-BSD offers get_iplayer packaged in PBI format.  However, you are recommended not to install it.  The PBI version does not convert downloads to MP4/M4A/MP3, nor does it apply metadata tags.  If you **only** want to use FLV files, the PBI version may be a viable alternative for you. You can install it with AppCafe or with:
-
-	pbi_add -r get_iplayer
-
-If you install the PBI version, skip steps 1-4 below.
-
-**NOTE:** The PBI version of get_iplayer is only available for 64-bit PC-BSD.  If you have a 32-bit version of PC-BSD (released before 32-bit builds were discontinued in June 2013), **do not** install the get_iplayer 2.82 PBI - it is broken.
-
 1. Install Perl
 
-        pkg install perl
+        pkg install perl5
 
     NOTE: Perl will likely already be installed if you installed a desktop environment.
 
@@ -26,15 +16,15 @@ If you install the PBI version, skip steps 1-4 below.
 
         pkg install get_iplayer
 
-3. Install external programs
+3. Install additional external programs
 
         pkg install AtomicParsley id3v2 ffmpeg
 
     **FreeBSD Only:** The `--aactomp3` option for get_iplayer will not work with the packaged version of ffmpeg because it is not built with support for the LAME MP3 encoder.
 
-4. Install Perl modules
+4. Install additional Perl modules
 
-        pkg install p5-MP3-Tag p5-MP3-Info p5-XML-Simple p5-Net-SMTP-SSL p5-Net-SMTP-TLS-ButMaintained
+        pkg install p5-MP3-Tag p5-MP3-Info p5-Net-SMTP-SSL p5-Net-SMTP-TLS-ButMaintained
 
 5. Run CLI:
 

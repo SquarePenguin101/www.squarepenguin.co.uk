@@ -7,7 +7,7 @@ Some changes in 2.91 make use of the `XML::Simple` Perl module, used for parsing
 The XML::Simple module is installed by the Windows installer.  If you have followed the Linux/Unix/OSX installation instructions in the GitHub wiki, you will have installed the module.  To check if you have the module installed, run the following at a command prompt:
 
     perl -MXML::Simple -e 1
-    
+
 If the command returns without printing an error message, you have the module installed.  If not, use the link below to navigate to the installation instructions for your system.  
 
 ## Installation/Upgrade
@@ -28,9 +28,9 @@ Windows users should use the most recent installer to update:
 
 From get_iplayer 2.90, the installer will update the following components to the indicated versions:
 
-|Component|Version|  
-|---------|-------|  
-|get_iplayer main script|2.91|  
+|Component|Version
+|---------|-------
+|get_iplayer main script|2.91
 
 ## Changes in get_iplayer 2.91
 
@@ -45,12 +45,12 @@ NOTE: You cannot set `--playlist-metadata` in the Web PVR.
 #### Brand and series parsing
 iPlayer programmes have an associated brand name - a top-level name - and an optional series title that varies from series to series, along with an episode title.  get_iplayer now parses the brand and series titles separately, and there are now `<brand>` and `<series>` substitution parameters for use with `--fileprefix` and `--subdir-format`. The `<brand>` and `<series>` parameters are concatenated as the `<name>` parameter.  Note that `<series>` is not always available. A few examples are shown below:
 
-|brand|series|name|nameshort|episode|episodeshort|  
-|-----|------|----|---------|-------|------------|  
-|15 Minute Drama|Carol|15 Minute Drama: Carol|15 Minute Drama|1. Episode 1|Episode 1|
-|The Archers||The Archers|The Archers|17524. 30/11/2014|30/11/2014|
-|Doctor Who|Series 8|Doctor Who: Series 8|Doctor Who|12. Death in Heaven|Death in Heaven|
-|Horizon|2000-2001|Horizon: 2000-2001|Horizon|Vanished: The Plane That Disappeared|Vanished: The Plane That Disappeared|
+|brand|series|name|nameshort|episode|episodeshort
+|-----|------|----|---------|-------|------------
+|15 Minute Drama|Carol|15 Minute Drama: Carol|15 Minute Drama|1. Episode 1|Episode 1
+|The Archers||The Archers|The Archers|17524. 30/11/2014|30/11/2014
+|Doctor Who|Series 8|Doctor Who: Series 8|Doctor Who|12. Death in Heaven|Death in Heaven
+|Horizon|2000-2001|Horizon: 2000-2001|Horizon|Vanished: The Plane That Disappeared|Vanished: The Plane That Disappeared
 
 #### Subdirectory naming
 
@@ -66,54 +66,54 @@ get_iplayer is now better able to determine episode numbers for programmes.  Thi
 
 Several new tagging options have been introduced to allow more flexibility in populating album/show titles and track titles.  Examples of the new options are shown below using this metadata:
 
-|brand|series|name|nameshort|episode|episodeshort|  
-|-----|------|----|---------|-------|------------|  
-|15 Minute Drama|Carol|15 Minute Drama: Carol|15 Minute Drama|1.&#160;Episode&#160;1|Episode&#160;1|
+|brand|series|name|nameshort|episode|episodeshort
+|-----|------|----|---------|-------|------------
+|15 Minute Drama|Carol|15 Minute Drama: Carol|15 Minute Drama|1.&#160;Episode&#160;1|Episode&#160;1
 
 Default:
 
-|album/show title|track title|  
-|---------------|-----------|
-|15 Minute Drama: Carol|Episode 1|
+|album/show title|track title
+|---------------|-----------
+|15 Minute Drama: Carol|Episode 1
 
 
 With `--tag-longepisode`: Use `episode` instead of `episodeshort` for track title
 
-|album/show title|track title|  
-|---------------|-----------|
-|15 Minute Drama: Carol|1. Episode 1|
+|album/show title|track title
+|---------------|-----------
+|15 Minute Drama: Carol|1. Episode 1
 
 With `--tag-longtitle`: Prepend `series` (if available) to track title
 
-|album/show title|track title|  
-|---------------|-----------|
-|15 Minute Drama: Carol|Carol: Episode 1|
+|album/show title|track title
+|---------------|-----------
+|15 Minute Drama: Carol|Carol: Episode 1
 
 Combine `--tag-longtitle` with `--tag-shortname`: Use `nameshort` instead of `name` for album/show title
 
-|album/show title|track title|  
-|---------------|-----------|
-|15 Minute Drama|Carol: Episode 1|
+|album/show title|track title
+|---------------|-----------
+|15 Minute Drama|Carol: Episode 1
 
 Another new option has been introduced to allow reformatting dates in track titles.  An example is shown below using this metadata:
 
-|brand|series|name|nameshort|episode|episodeshort|  
-|-----|------|----|---------|-------|------------|  
-|The Archers||The Archers|The Archers|17524. 30/11/2014|30/11/2014|
+|brand|series|name|nameshort|episode|episodeshort
+|-----|------|----|---------|-------|------------
+|The Archers||The Archers|The Archers|17524. 30/11/2014|30/11/2014
 
 Default:
 
-|album/show title|track title|  
-|---------------|-----------|
-|The Archers|30/11/2014|
+|album/show title|track title
+|---------------|-----------
+|The Archers|30/11/2014
 
 
 With `--tag-isodate`: Use ISO8601 dates (YYYY-MM-DD) in album/show names and track titles
 
 
-|album/show title|track title|  
-|---------------|-----------|
-|The Archers|2014-11-30|
+|album/show title|track title
+|---------------|-----------
+|The Archers|2014-11-30
 
 
 NOTE: You cannot set any tagging options in the Web PVR Manager.
@@ -130,10 +130,10 @@ NOTE: You cannot set `--refresh-abortonerror` in the Web PVR Manager.
 
 get_iplayer now parses the brand and series titles separately for a programme when populating its cache, similar to the scheme described above for programme metadata.  The brand and series (if present) titles are concatenated to populate the `name` field in the cache. It should now be easier to search for programmes with different brand and series titles without using `--fields=name,episode` or `--long`.  An example:
 
-||name|episode|
-|---|----|-------|
-|pre-2.91|15 Minute Drama|Carol: Episode 1|
-|2.91+|15 Minute Drama: Carol|1. Episode 1|
+||name|episode
+|---|----|-------
+|pre-2.91|15 Minute Drama|Carol: Episode 1
+|2.91+|15 Minute Drama: Carol|1. Episode 1
 
 #### Category information for radio programmes
 
@@ -161,14 +161,14 @@ TV groups
 
 Although you can use `--refresh-exclude-groups-tv`, it will have little effect given the above groupings (unless you actually want to exclude the national channels).
 
-Example: If you were only interested in programmes on national radio stations, you might use: 
+Example: If you were only interested in programmes on national radio stations, you might use:
 
 	--refresh-exclude-groups-radio="regional,local"
 
 You can also use `--refresh-exclude` to further winnow your cache data selection.  For example, if you were only interested in programmes on national radio stations, but not programmes on the World Service, you could use:
 
 	--refresh-exclude-groups-radio="regional,local" --refresh-exclude="World Service"
-	
+
 Note that `--refresh-exclude-groups{-radio,-tv}` are applied **before** `--refresh-include` and `--refresh-exclude`.
 
 NOTE: You cannot set `--refresh-exclude-groups{-radio,-tv}` in the Web PVR Manager.
@@ -180,13 +180,13 @@ The BBC have announced that they will be removing WMA and RTMP streams for live 
 
 HLS recording modes analogous to the existing Flash modes have been implemented:
 
-	tv     : hlshd hlsvhigh hlshigh hlsstd hlslow 
+	tv     : hlshd hlsvhigh hlshigh hlsstd hlslow
 	radio  : hlsaachigh hlsaacstd hlsaaclow
 	aliases: hls hlsdefault hlsbest hlsvbetter hlsbetter hlsgood
 
 The output file formats are the same as for the Flash streams: TV is MP4 with H264 video/AAC audio, radio is M4A with AAC audio.  If you use `--raw` or stop recording manually, you will be left with a `.ts` (MPEG Transport Stream) file in your output directory, not a `.flv` file as with the `flash` modes.
 
-You can use `--aactomp3` with HLS streams. 
+You can use `--aactomp3` with HLS streams.
 
 #### Caveats
 
@@ -208,7 +208,7 @@ Live TV HD streams via HDS workaround
 
 There are no HD or SD streams available for live TV using the mobile HLS streams described above.  However, it is currently possible to get HD/SD streams for 3 channels (BBC One/Two/Three) by using the `--hds-livetv` option.  Other HD/SD streams may be available in future releases.  The `--hds-livetv` option instructs get_iplayer to use a different data source (HDS manifests - files with stream information) to find the HD/SD streams, which are downloaded via HLS. get_iplayer does not support HDS itself - it merely uses HDS data to find the streams. With `--hds-livetv`, you can use the `hlshd` mode for a HD 1280x720 3500kbps HD stream, and the `hlssd` mode for a 1024x576 2000kbps SD stream. Or simply use the `best` alias. The `--hds-livetv` option requires the `XML::Simple` Perl module described above.  
 
-NOTE: Consider the `--hds-livetv` feature as experimental and subject to removal in a future release. 
+NOTE: Consider the `--hds-livetv` feature as experimental and subject to removal in a future release.
 
 NOTE: You cannot set `--hds-livetv` in the Web PVR Manager.
 
@@ -227,20 +227,20 @@ Earlier versions of get_iplayer erroneously stripped apostrophes and quotes from
         fileprefix '<nameshort> <episodeshort> <pid>'
 
 
-|version|filename|  
-|---------------|-----------|
-|pre-2.91| /tmp/BBC_Radio_1s_Essential_Mix_Warp_25_b04t92qd.EXT|
-|2.91+| /tmp/'BBC_Radio_1s_Essential_Mix_Warp_25_b04t92qd'.EXT|
+|version|filename
+|---------------|-----------
+|pre-2.91| /tmp/BBC_Radio_1s_Essential_Mix_Warp_25_b04t92qd.EXT
+|2.91+| /tmp/'BBC_Radio_1s_Essential_Mix_Warp_25_b04t92qd'.EXT
 
 The same applies for quotes:
 
         fileprefix "<nameshort> <episodeshort> <pid>"
 
 
-|version|filename|  
-|---------------|-----------|
-|pre-2.91| /tmp/BBC_Radio_1s_Essential_Mix_Warp_25_b04t92qd.EXT|
-|2.91+| /tmp/"BBC_Radio_1s_Essential_Mix_Warp_25_b04t92qd".EXT|
+|version|filename
+|---------------|-----------
+|pre-2.91| /tmp/BBC_Radio_1s_Essential_Mix_Warp_25_b04t92qd.EXT
+|2.91+| /tmp/"BBC_Radio_1s_Essential_Mix_Warp_25_b04t92qd".EXT
 
 
 Do not use apostrophes or quotes in your options file as shown above.  They are unnecessary, and you almost certainly don't want them in your file or directory names.  Quotes are also illegal in Windows file names and from 2.91 will break get_iplayer downloads if stored in the user options file.  Unfortunately, get_iplayer doesn't prevent you from saving apostrophes or quotes in your options file if you are determined to do so.

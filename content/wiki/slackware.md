@@ -14,45 +14,25 @@ These instructions are for Slackware / Salix 14.1. Differences between the two a
 
 	<http://docs.slackware.com/howtos:slackware_admin:building_packages_with_sbopkg>
 
-	Below are instructions for creating a custom sbopkg queuefile to install get_iplayer and dependencies in a single operation.  If you have used sbopkg before, do not be tempted to use any of the queuefiles from:
+	Below are instructions for creating a custom sbopkg queuefile to install get_iplayer and dependencies in a single operation.
 
-	<https://gitorious.org/sbopkg-slackware-queues>
+    #### Salix only
 
-	Some of the required queuefiles are broken and will cause the installation to fail.  Also, there are a few additional components not included in those queuefiles that are useful for full support of get_iplayer functionality.
+    Do not use the multimedia codecs installer provided with Salix. The included version of ffmpeg is too old for full support of get_iplayer.
 
-2. Install Packaged Dependencies
+2. Create sbopkg queuefile
 
-	#### Salix
-
-	If you have performed a Salix basic installation, download the multimedia codecs installer (already available in a full install):
-
-		sudo slapt-get -i salix-codecs-installer
-
-	Run the multimedia codecs installer:
-	
-		sudo salix-codecs-installer
-
-	Select all items for installation.  When the installation is complete, ffmpeg and rtmpdump will have been installed.
-
-3. Create sbopkg queuefile
-
-    These instructions assume you have configured sbopkg to read queuefiles from the default location `/var/lib/sbopkg/queues`.
-
-	#### Slackware
-	
-	As root, create a sbopkg queuefile at this location:
+    These instructions assume you have configured sbopkg to read queuefiles from the default location `/var/lib/sbopkg/queues`. As root, create a sbopkg queuefile at this location:
 
 	`/var/lib/sbopkg/queues/get_iplayer-full.sqf`
 
-	The file contents should be **exactly** as shown below (the order is important):
+    The file contents should be **exactly** as shown below (the order is important):
 
 		rtmpdump
-		libmp4v2
-		faac 
-		xvidcore
 		lame
 		x264
-		ffmpeg | RTMP=yes FAAC=yes XVID=yes
+		xvidcore
+		ffmpeg | LAME=yes X264=yes XVID=yes
 		id3lib
 		id3v2
 		perl-http-date
@@ -79,61 +59,30 @@ These instructions are for Slackware / Salix 14.1. Differences between the two a
 		perl-MP3-Info
 		get_iplayer
 
-	If you require additional options for ffmpeg, adjust the queuefile options accordingly.  See:
+	The above ffmpeg options are the minimum for get_iplayer. If you require additional options for ffmpeg, adjust the queuefile options accordingly.  See:
 
 	<http://slackbuilds.org/repository/14.1/multimedia/ffmpeg/>
 
-	#### Salix
+3. Install Build Dependencies
+
+    #### Salix only
+
+    Install some ffmpeg build dependencies that are already installed by default with Slackware:
+
+        sudo slapt-get --install yasm libssh tetex
+        # load $PATH changes before running sbopkg
+        source /etc/profile
 	
-	As root, create a sbopkg queuefile at this location:
-
-	`/var/lib/sbopkg/queues/get_iplayer-salix.sqf`
-
-	The file contents should be **exactly** as shown below (the order is important):
-
-		id3lib
-		id3v2
-		perl-http-date
-		perl-file-listing
-		perl-IO-HTML
-		perl-encode-locale
-		perl-html-tagset
-		perl-html-parser
-		perl-lwp-mediatypes
-		perl-http-message
-		perl-http-cookies
-		perl-http-daemon
-		perl-http-negotiate
-		perl-net-http
-		perl-www-robotrules
-		libwww-perl
-		perl-digest-sha1
-		perl-digest-hmac
-		perl-Authen-SASL
-		Net-SSLeay
-		perl-Net-LibIDN
-		perl-IO-Socket-SSL
-		perl-Net-SMTP-SSL
-		perl-MP3-Info
-		get_iplayer
-
 3. Install get_iplayer and dependencies with queuefile
 
-	#### Slackware
-
 	Run this command:
 
+        # Slackware
         sbopkg -i get_iplayer-full
+        # Salix
+        sudo sbopkg -i get_iplayer-full
 
-	When prompted to confirm the queuefile options for ffmpeg (RTMP=yes FAAC=yes XVID=yes), enter **q** to accept.  All packages will then be downloaded, built and installed.
-
-	#### Salix
-
-	Run this command:
-
-        sudo sbopkg -i get_iplayer-salix
-
-	The principal difference between the Slackware and Salix installations is that the Salix build of ffmpeg will be linked with  more external libraries but will not be linked with the FAAC codec library.  As mentioned above, you can change the options for building ffmpeg in Slackware  Either build will support all the formats necessary for get_iplayer.
+	When prompted to confirm the queuefile options for ffmpeg (LAME=yes X264=yes XVID=yes), enter **q** to accept.  All packages will then be downloaded, built and installed.
 
 4. Install AtomicParsley
 
@@ -145,11 +94,15 @@ These instructions are for Slackware / Salix 14.1. Differences between the two a
         ./autogen.sh
         ./configure
         make
-        make install (sudo make install on Salix)
+        # Slackware
+        make install
+        # Salix
+        sudo make install
       
 5. Install additional Perl modules
 
     If you wish to use the MP3::Tag module for better MP3 tagging, or you require the Net::SMTP::TLS::ButMaintained module for TLS email, additional Perl modules may be installed using the [local::lib method](/wiki/manual#manual-perl-locallib).	
+
 6. Run CLI with:
 
     	get_iplayer [...]
