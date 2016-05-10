@@ -60,6 +60,14 @@ It might also be prudent to add these options as defaults on your system so that
 
     get_iplayer --output='/home/jbloggs/videos/' --version-list=default --prefs-add
 
+### Logging new downloads
+
+If you would prefer not to receive an email for every download, you can add an option to the cron command to keep track of new downloads in a log file.
+
+    0 * * * * /path/to/get_iplayer --pvr -c 'echo "$(date)    <name> <episode>" >>/home/jbloggs/log/iplayer' 2>/dev/null
+
+You can then check the most recent downloads with `tail ~/log/iplayer` (or add this command to .bash_profile if you want to receive this update on login).
+
 And finally, remember that this will only work when your computer is booted up and connected to the Internet!
 
 *Source: linuxcentre.net*

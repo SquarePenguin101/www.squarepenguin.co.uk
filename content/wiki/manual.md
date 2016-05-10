@@ -71,7 +71,7 @@ A few distros do not provide all the necessary external programs in their offici
 
 1. Download the latest release to working directory
 
-	    curl -kLO https://raw.github.com/get-iplayer/get_iplayer/latest/get_iplayer
+	    curl -kLO https://raw.github.com/get-iplayer/get_iplayer/master/get_iplayer
 
 	NOTE: If your system does not have `curl` try `wget`.  Replace `curl -kLO` with `wget --no-check-certificate`.
 
@@ -96,7 +96,7 @@ A few distros do not provide all the necessary external programs in their offici
 
 1. Download the latest release to working directory
 
-		curl -kLO https://raw.github.com/get-iplayer/get_iplayer/latest/get_iplayer.cgi
+		curl -kLO https://raw.github.com/get-iplayer/get_iplayer/master/get_iplayer.cgi
 
 	NOTE: If your system does not have `curl` try `wget`.  Replace `curl -kLO` with `wget --no-check-certificate`.
 

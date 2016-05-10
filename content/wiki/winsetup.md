@@ -2,7 +2,7 @@
 
 Windows users should install get_iplayer with the provided installer.  Download the latest version from:
 
-<http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
+<https://github.com/get-iplayer/get_iplayer_win32/releases/latest>
 
 **NOTE:** Install get_iplayer while logged in with the user account from which you plan to run it in regular use. However, you must run the installer while logged in as a user that has administrator privileges. You can temporarily assign your user account to the Administrators group to run the installer. If you are the only user on your PC you should already have administrator privileges. If you are logged in as a normal user and elevate your privileges by signing in as an administrator at the UAC prompt or by invoking the installer via "Run as Administrator", the menu shortcuts and output directory will be installed for the administrator account, not the logged-in user. If you subsequently run get_iplayer while logged in as a different, non-administrator user you will not be able to access the output directory configured by the installer.  You will then need to use the `--output` option to specify a separate output directory and save it in preferences with `--prefs-add`. Example:
 
@@ -16,7 +16,7 @@ The installer will install a private customised version of [Strawberry Perl](htt
 
 ### External Programs
 
-The installer will download and install all the required Windows support programs.
+The installer will install all the required Windows support programs.
 
 ### Command-line Interface (CLI)
 

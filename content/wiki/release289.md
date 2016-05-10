@@ -31,9 +31,9 @@ Note that it may take a long  time for get_iplayer 2.89 to be packaged for your 
 
 #### Windows
 
-All Windows users **must** use the most recent get_iplayer installer to upgrade to get_iplayer 2.89:
+Windows users should use the most recent installer to update:
 
-<http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
+<https://github.com/get-iplayer/get_iplayer_win32/releases/latest>
 
 The embedded version of Perl was updated for get_iplayer 2.87, so previous installers **will not work**.
 

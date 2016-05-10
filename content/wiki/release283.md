@@ -10,11 +10,11 @@ Please note that it may take some time for get_iplayer 2.83 to be packaged for y
 
 #### Windows Installer
 
-A new version of the get_iplayer Windows installer is available:
+Windows users should use the most recent installer to update:
 
-<http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
+<https://github.com/get-iplayer/get_iplayer_win32/releases/latest>
 
-All Windows users should use this installer to upgrade to get_iplayer 2.83.  The installer will also upgrade dependencies to the following versions:
+The installer will also upgrade dependencies to the following versions:
 
 - Strawberry Perl 5.16.2
 - RTMPDump 2.4-git-20130109

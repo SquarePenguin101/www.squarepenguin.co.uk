@@ -15,7 +15,7 @@
 |`--tag-isodate`|tag_isodate&#160;(0/1)|Use ISO8601 dates (YYYY-MM-DD) in album/show names and track title
 |`--tag-longdesc`|tag_longdesc&#160;(0/1)|AtomicParsley accepts `--longdesc` option for long description text
 |`--tag-longdescription`|tag_longdescription&#160;(0/1)|AtomicParsley accepts `--longDescription` option for long description text
-|`--tag-longepisode`|tag_longepisode&#160;(0/1)|Use `<episode>` instead of <episodeshort> for track title
+|`--tag-longepisode`|tag_longepisode&#160;(0/1)|Use `<episode>` instead of `<episodeshort>` for track title
 |`--tag-longtitle`|tag_longtitle&#160;(0/1)|Prepend `<series>` (if available) to track title. Ignored with --tag-fulltitle.
 |`--tag-podcast`|tag_podcast&#160;(0/1)|Tag downloaded radio and tv programmes as iTunes podcasts
 |`--tag-podcast-radio`|tag_podcast_radio&#160;(0/1)|Tag only downloaded radio programmes as iTunes podcasts

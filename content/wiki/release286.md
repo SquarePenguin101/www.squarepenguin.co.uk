@@ -10,9 +10,9 @@ Please note that it may take some time for get_iplayer 2.86 to be packaged for y
 
 #### Windows
 
-All Windows users should use the get_iplayer installer to upgrade to get_iplayer 2.86:
+Windows users should use the most recent installer to update:
 
-<http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
+<https://github.com/get-iplayer/get_iplayer_win32/releases/latest>
 
 The installer will update the following components to the indicated versions:
 

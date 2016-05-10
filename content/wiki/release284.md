@@ -10,11 +10,11 @@ Please note that it may take some time for get_iplayer 2.84 to be packaged for y
 
 #### Windows Installer
 
-A new version of the get_iplayer Windows installer is available:
+Windows users should use the most recent installer to update:
 
-<http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
+<https://github.com/get-iplayer/get_iplayer_win32/releases/latest>
 
-All Windows users should use this installer to upgrade to get_iplayer 2.84.  The installer will update the following components to the indicated versions:
+The installer will update the following components to the indicated versions:
 
 - get_iplayer main script: 2.84
 - get_iplayer Perl support: 4.7 (with Strawberry Perl 5.16.3)

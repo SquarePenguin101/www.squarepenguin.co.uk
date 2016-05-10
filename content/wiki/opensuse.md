@@ -12,6 +12,8 @@ These instructions are for openSUSE Leap 42.1.
     
     The Packman repository should now be added to your system.  The ffmpeg utility also will have been installed.
 
+    NOTE: Do not install the ffmpeg build provided in the openSUSE repositories. It does not provide the necessary codec support for get_iplayer. If you already installed the openSUSE-supplied ffmpeg, you must upgrade and change vendor for the ffmpeg package and all its subpackages. You cannot upgrade just the ffmpeg package - all must be installed from Packman.
+
 2. Update package database
 
     	sudo zypper refresh
