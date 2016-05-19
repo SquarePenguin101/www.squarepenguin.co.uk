@@ -11,11 +11,15 @@ title = "get_iplayer Windows installation guide"
 Type = "guides"
 
 +++
-<div style="float:right;text-align:center;padding:20px;max-width:300px;"><a href="http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe" title="get_iplayer download link for Windows installer"><h1 style="color:#aa0066;">Download Windows installer</h1><img src="/icons/download.png" style="max-width:150px;margin-top:20px;" alt="get_iplayer download link for Windows installer"/></a></div>
+<div style="float:right;text-align:center;padding:20px;max-width:300px;"><a href="https://github.com/get-iplayer/get_iplayer_win32/releases/download/2.94.0/get_iplayer-2.94.0.exe" title="get_iplayer download link for Windows installer"><h1 style="color:#aa0066;">Download Windows installer</h1><img src="/icons/download.png" style="max-width:150px;margin-top:20px;" alt="get_iplayer download link for Windows installer"/></a></div>
 
 # get_iplayer Windows installer
 
 get_iplayer has a handy installer that take care of all installation tasks for you. Simply click on the download arrow below and run the installer and you'll be set up in no time...
+
+## Want checksums or source code?
+
+If you have security or curiosity on your mind then we've got you covered. You can obtain the installer checksums and download the source code for the latest release of get_iplayer from [here](https://github.com/get-iplayer/get_iplayer_win32/releases/latest).  
 
 ## Not confident with the Windows installer?
 
