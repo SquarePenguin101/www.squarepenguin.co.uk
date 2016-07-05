@@ -64,7 +64,7 @@ If get_iplayer detects that avconv is installed, it will use it in preference to
 
 ### XBMC File Naming
 
-The syntax for substitution parameters has been extended slightly.  It is now possible to define separators in `fileprefix` that are omitted when the associated parameter is empty.  You should now be able to use a single `fileprefix` setting that will make XBMC happy (most of the time).  Details here:  
+The syntax for substitution parameters has been extended slightly.  It is now possible to define separators in `fileprefix` that are omitted when the associated parameter is empty.  You should now be able to use a single `fileprefix` setting that will make XBMC happy (most of the time).  Details here:
 
 <https://github.com/get-iplayer/get_iplayer/wiki/fileprefix>
 

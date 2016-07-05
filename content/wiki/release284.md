@@ -36,8 +36,10 @@ The default format used if `--subsfmt` is omitted or has any value other than **
 If you wish to switch to the **compact** format subtitles for a particular programme, you can re-download only the subtitles with:
 
 	get_iplayer --subtitles-only --overwrite --subsfmt=compact --get <index>
+
 	OR
-	get_iplayer --subtitles-only --overwrite --subsfmt=compact --pid <pid>	
+
+	get_iplayer --subtitles-only --overwrite --subsfmt=compact --pid <pid>
 
 NOTE: This will overwrite the previous subtitles (.srt) file.
 
@@ -51,7 +53,7 @@ Due to changes on the BBC News site, recent embedded videos became unavailable b
 
 The **wma** recording mode has been removed from the recording mode shortcuts (good, better, best, default).  On Windows, WMA recording is a less than reliable fallback when rtmpdump fails to download Flash format catch-up programmes.  It can also prove confusing to users since Windows MPlayer may stop downloading a WMA stream without reporting an error.
 
-The **wma** mode is still supported, but it must now be explicitly specified via `--modes=wma`, `--radiomode=wma` or `--liveradiomode=wma`.  The previous default behaviour may be restored with `--modes=default,wma`. If your preferences or PVR jobs are set to use **wma**, they will still work as before.   
+The **wma** mode is still supported, but it must now be explicitly specified via `--modes=wma`, `--radiomode=wma` or `--liveradiomode=wma`.  The previous default behaviour may be restored with `--modes=default,wma`. If your preferences or PVR jobs are set to use **wma**, they will still work as before.
 
 ### New Metadata Fields
 

@@ -1,23 +1,21 @@
 get_iplayer Web PVR Manager
 ---------------------------
-**(document from original developer)**
+
+**(document from original developer - some or all content may be obsolete)**
 
 The world's most insecure web-based PVR manager and streaming proxy for get_iplayer
 
 **WARNING:** Never run this in an untrusted environment or facing the internet
 
 Copyright (C) 2009-2010 Phil Lewis
-
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
-
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
-
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
@@ -25,13 +23,17 @@ Author: Phil Lewis
 Email: iplayer2 (at sign) linuxcentre.net
 License: GPLv3 (see LICENSE.txt)
 
-
 Features
 --------
+
 * Search for programmes
+
 * List/Add/Remove PVR entries
+
 * Acts as a proxy to stream any programme over HTTP
+
 * Automatically generates playlists for any programme type
+
 * See web site: https://github.com/get-iplayer/get_iplayer/wiki
 
 Run with embedded web server
@@ -49,11 +51,10 @@ Run with embedded web server
 
 * Access using: `http://localhost:1935/`
 
-
 Installation as Apache CGI script
 ---------------------------------
 
-* Run the below commands as root
+* Run the commands below as root
 
 * Create dirs in `/var/www/get_iplayer/`:
 
@@ -77,8 +78,8 @@ Installation as Apache CGI script
 
 * Ensure you have the following lines in Apache's httpd.conf:
 
-        ScriptAlias /iplayer "/var/www/get_iplayer/get_iplayer.cgi" 
-        SetEnv HOME /var/www/get_iplayer/ 
+        ScriptAlias /iplayer "/var/www/get_iplayer/get_iplayer.cgi"
+        SetEnv HOME /var/www/get_iplayer/
 
 * This will run as apache's user/group and save all settings files in `/var/www/get_iplayer/.get_iplayer`
 
@@ -88,22 +89,27 @@ Installation as Apache CGI script
 
         output /var/www/get_iplayer/output
         ffmpeg /usr/bin/ffmpeg
-        rtmpdump /path/to/rtmpdump	
-        mplayer /path/to/mplayer	
+        rtmpdump /path/to/rtmpdump
         atomicparsley /path/to/atomicparsley
         id3v2 /path/to/id3v2
 
 * Make sure that apache user can see and execute the binaries
+
 * Access using `http://<your web server>/iplayer`
+
 * Recordings will be in `/var/www/get_iplayer/output/`
 
 Usage
 ------
 
 * Assumes web server is running with script at 'http://localhost/iplayer'
+
 * Embedded web server can be accessed (assuming port 1935) as `http://localhost:1935/` or `http://localhost:1935/iplayer`
+
 * Valid OUTTYPE values are: wav,mp3,rm,flv,mov
+
 * You can open most of these URLs as 'vlc <URL>' or 'mplayer -cache=<kb> <URL>'
+
 * Note: Ensure you open the playlist window in VLC
 
 Streaming URLs
@@ -132,7 +138,7 @@ Streaming URLs
 Direct Streaming of Recorded Content
 ------------------------------------
 
-* Stream Pre-recorded <TYPE> Programme with <PID> and <MODE>
+* Stream pre-recorded <TYPE> programme with <PID> and <MODE>
 
         http://localhost/?ACTION=direct&PROGTYPES=<TYPE>&PID=<PID>&MODES=<MODE>
 
@@ -150,11 +156,11 @@ Playlists of Recorded Content
 Automatic Playlists
 -------------------
 
-* All radio programmes - all modes (flashaac,flashaudio,wma):
+* All radio programmes - all modes:
 
         http://127.0.0.1/iplayer?ACTION=playlist&PROGTYPES=radio
 
-* All TV programmes - all modes (flashhigh,flashstd,flashnormal,flashlow):
+* All TV programmes - all modes:
 
         http://127.0.0.1/iplayer?ACTION=playlist&PROGTYPES=tv
 
@@ -207,27 +213,27 @@ In Squeezecenter, Add this URL to 'Favourites' and you will be able to navigate 
 
         http://<SERVER IP>/iplayer?ACTION=opml&PROGTYPES=liveradio&MODES=flash&SEARCH=%20\d&OUTTYPE=wav
 
-
 Set up crontab for PVR to run
 -----------------------------
 
-* Add a line in /etc/crontab to run the pvr: 
+* Add a line in /etc/crontab to run the pvr:
 
         0 * * * * apache /usr/bin/get_iplayer --pvr 2>/dev/null
-
 
 Caveats
 --------
 
 * Sometimes takes a while to load page while refreshing caches
-* If a boolean param is in the cookies then it overrides the unchecked status on
-  the form regardless
-* When using the stream, playlist or play links directly, cookies are not sent 
-  and the settings are not applied
+
+* If a boolean param is in the cookies then it overrides the unchecked status on the form regardless
+
+* When using the stream, playlist or play links directly, cookies are not sent and the settings are not applied
 
 Todo
 -----
 
 * Manual flush of indices (maybe normally set --expiry to 99999999 and warn that indices are out of date)
+
 * in general, take presentation data out of the html and into css, take scripting out of the html and into the js
+
 * Add a button to save the playlist in M3U or OPML (playlist of selected progs?)

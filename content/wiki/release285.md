@@ -24,7 +24,6 @@ The installer will update the following components to the indicated versions:
 
 The primary purpose of this release is to propagate a change in the Windows installation that is required to make the Web PVR Manager compatible with Internet Explorer 11.  The change is explained in [this page](/wiki/ie11).
 
-
 ### Other Changes
 
 - Added support for additional subtitle format

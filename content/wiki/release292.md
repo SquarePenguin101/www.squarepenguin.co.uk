@@ -10,7 +10,7 @@ The BBC has dropped WMA (Windows Media) and Shoutcast AAC live radio streams and
 
 All national, regional and local stations (except World Service) have 4 UK HLS streams: 320k, 128k, 96k, 48k.  These correspond to the `--liveradiomode` values `hlsaachigh`, `hlsaacstd`, `hlsaacmed`, `hlsaaclow`.  All stations (except World Service) have 2 international HLS streams: 96k and 48k, corresponding to the `--liveradiomode` values `hlsaacmed` and `hlsaaclow`. The streams for all stations escept World Service are available from 2 CDNs.  The World Service has 1 64k stream for UK and international, corresponding to the `--liveradiomode` value `hlsaaclow`.  With no mode setting, get_iplayer will use the best quality available.
 
-The BBC will not publish the HLS stream locations, so get_iplayer must generate at least some of them. In essence, those streams are hard-coded within get_iplayer, so the BBC could change and break them at any time.  get_iplayer normally relies on BBC services to determine your geographic location and provide the appropriate streams.  However, this process becomes more indirect when generating the HLS stream locations.  If you are in the UK and get_iplayer doesn't provide the UK streams, use `--liveradio-uk` to force them to be generated.  This option will not defeat the geo-blocking used with the HLS radio streams.  Conversely, if you are not in the UK and get_iplayer doesn't provide the international streams, use `--liveradio-intl` to force them to be generated.  
+The BBC will not publish the HLS stream locations, so get_iplayer must generate at least some of them. In essence, those streams are hard-coded within get_iplayer, so the BBC could change and break them at any time.  get_iplayer normally relies on BBC services to determine your geographic location and provide the appropriate streams.  However, this process becomes more indirect when generating the HLS stream locations.  If you are in the UK and get_iplayer doesn't provide the UK streams, use `--liveradio-uk` to force them to be generated.  This option will not defeat the geo-blocking used with the HLS radio streams.  Conversely, if you are not in the UK and get_iplayer doesn't provide the international streams, use `--liveradio-intl` to force them to be generated.
 
 #### b. Shoutcast
 
@@ -43,8 +43,8 @@ The BBC is operating a new(ish) CDN for HLS on-demand TV streams.  This CDN is n
 ### 5. Other
 
 - Restored ability to search for audio described programmes using `--versionlist=audiodescribed` (with default ION data feeds).
-- Implemented numbering scheme for programmes with episodes split over multiple broadcasts. A letter is appended to the episode number in `<senum>` (e.g., s18e05a), and the letter is available in `<episodepart>` substitution parameter.  You will probably never encounter this unless you download Silent Witness.  
-- Added `--exclude-supplier` option.  This has only one potential use: When the Level3 CDN (used only for HD TV streams) is causing problems by dropping connections or truncating downloads (as was the case for most of February), use `--exclude-supplier=level3` to bypass it and use the alternate CDN.  
+- Implemented numbering scheme for programmes with episodes split over multiple broadcasts. A letter is appended to the episode number in `<senum>` (e.g., s18e05a), and the letter is available in `<episodepart>` substitution parameter.  You will probably never encounter this unless you download Silent Witness.
+- Added `--exclude-supplier` option.  This has only one potential use: When the Level3 CDN (used only for HD TV streams) is causing problems by dropping connections or truncating downloads (as was the case for most of February), use `--exclude-supplier=level3` to bypass it and use the alternate CDN.
 - The `rtsp` recording modes have been removed. The streams are no longer available.
 - Programme clips now have full metadata applied.
 - Did some minor cleanup of Kodi .nfo metadata output.  See [issue #139](https://github.com/get-iplayer/get_iplayer/issues/139) for details.
@@ -83,7 +83,7 @@ Installation information for all platforms can be found here:
 
 #### Linux/Unix
 
-Linux/Unix packages are maintained by volunteers and may not be updated for a short time after a new release of get_iplayer.  Until then, use the manual installation instructions at the link above.  
+Linux/Unix packages are maintained by volunteers and may not be updated for a short time after a new release of get_iplayer.  Until then, use the manual installation instructions at the link above.
 
 #### Windows
 

@@ -44,6 +44,7 @@ The above is just a rough example - you will need to work out the correct parame
 <http://trac.ffmpeg.org/wiki/How%20to%20encode%20Xvid%20/%20DivX%20video%20with%20ffmpeg>
 
 **Do not** use `--avi` to simply re-mux the normal H.264/AAC video/audio content.  If your media player cannot handle MP4 files, it is highly likely it cannot handle those stream formats.
+
 ### Trim download history
 
 If you have accumulated a very large download history file, you may want to truncate it while retaining enough history data to avoid repeat downloads of recent  programmes.  You can now use the `--trim-history` option:

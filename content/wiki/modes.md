@@ -1,222 +1,260 @@
 ## get_iplayer Recording Modes
 
-BBC iPlayer makes programmes available at several levels of video and audio quality.  get_iplayer represents each video/audio quality level with an alphanumeric code, referred to as a "mode".  You may have seen references to these: "flashvhigh", "flashaudio". etc.  Each mode corresponds to a set of media streams available from the BBC.  You can find details of recording modes later in this document.  
+### Modes
 
-get_iplayer 2.83 and higher use a simplified system of recording mode shortcuts that should be sufficient for most users.  You are encouraged to use the mode shortcuts if at all possible.  You may still specify your own custom mode settings if you wish.
+BBC iPlayer makes programmes available in different streaming formats at multiple levels of video and audio quality. get_iplayer represents each combination of format and quality with an alphanumeric code, referred to as a "mode".  The mode value is a combination of a stream type prefix and bitrate/resolution suffix. You may have seen references to these: "hls" + "hd" = "hlshd", "dash" + "high" = "dashhigh", etc. You can find details of available recording modes [below](#mode-details), though in general you will not need to use them directly. Use shortcuts instead.
 
-## Shortcuts
+### Shortcuts
 
-Recording mode shortcuts use a simple system with four possible values: "good", "better", "best" and "default" (synonym for "better").  The mode shortcuts are used as values for the `--modes` parameter of the get_iplayer CLI (command-line interface), the **modes** option in your preferences or the **Recording Modes** field in the get_iplayer WPM (Web PVR Manager).
+get_iplayer uses a system of recording mode shortcuts that should work for most users. A shortcut can be a stream type prefix, a quality level, or a combination of the two. A shortcut is expanded into a list of recording modes for get_iplayer to use in selecting which media stream to download. See [below](#shortcut-expansions) for details of how shortcuts are expanded into mode lists.
 
-### You Need to Know This
+#### Stream type prefixes
 
-If you are upgrading from get_iplayer 2.82 or earlier, be aware that the *default* recording mode - the mode used if you do not supply a value - has changed.  Beginning with get_iplayer 2.83, the default recording mode is set to download the best available SD video for TV programmes (flashvhigh).  get_iplayer 2.82 and earlier download lower-quality video (flashhigh) by default.  In practical terms, that means that after you upgrade from 2.82 or earlier your downloads will be nearly twice as large and take nearly twice as long (given constant bandwidth) as with the previous default mode setting.  See the next section for instructions on restoring the pre-2.83 behaviour.
+|Prefix|Description|Availability
+|------|-----------|-----
+|**hls**|Apple HTTP Live Streaming (for mobile devices)|on-demand TV (default), on-demand radio, live radio (default)
+|**hvf**|Apple HTTP Live Streaming (for connected TVs)|on-demand TV, live TV (default)
+|**dash**|MPEG Dynamic Adaptive Streaming over HTTP|on-demand radio
+|**radio**|Combined HLS and DASH|on-demand radio (default)
+|**flash** **[DEPRECATED]**|RTMP (Real-Time Messaging Protocol)|on-demand TV and radio
+|**shoutcast**  **[DEPRECATED]**|Shoutcast MP3 streaming (cannot be combined with quality levels)|live radio
 
-WPM users:  If you saved a previous value of the **Recording Modes** field as your default it will still be honoured after upgrade.  However, after you upgrade to WPM 2.83 or higher you are strongly encouraged to set the **Recording Modes** field to one of the mode shortcuts as described in the next section and set the new value as your default.
+#### Quality levels
 
-### Choosing Your Mode
+Quality level can be one of five possible values (in order of decreasing bitrate and resolution):
 
-The easiest way to decide which shortcut to use is to answer a few simple questions:
+- best
+- better
+- good
+- worse
+- worst
 
-- Do you want the default behaviour, which is to download the best available SD video for a single TV programme?
+The stream type prefixes and quality levels can be combined, e.g. `hlsgood`, `hvfbest`, `dashworst`, but there is rarely any reason to do so. If you specify only a stream type prefix for one of the mode options (e.g., `--tvmode=hvf`), you will download the best available quality for that stream type.  If you specify only a quality level for the value of one of the mode options (e.g., `--tvmode=good`), you will download the best available quality - up to the level specified - in the default format for the given programme type.
 
-	CLI: `get_iplayer --modes=default [...]`
+The quality level is treated as a maximum. If a stream at the specified level is not available, the best available lower-quality version is used. If you wish to target a specific media stream, use the appropriate mode directly rather than a shortcut value
 
-	NOTE: `--modes=default` can be omitted for the CLI since it is, well, the default.
+The mode shortcuts are used for the `--modes`, `--tvmode` and `--radiomode` options of the get_iplayer CLI (command-line interface), the **modes**, **tvmode** and **radiomode** options in your preferences or the **Recording Modes** field in the get_iplayer WPM (Web PVR Manager). Multiple shortcuts can be specified as a comma-delimited list, though that is rarely necessary. Multiple values are processed from left to right.
 
-	WPM: Enter "default" (without quotes) in **Recording Modes** field and click **Apply Settings**, then record programme.
+### Choosing Your Shortcut or Mode
 
-	NOTE: **Recording Modes** may not be left blank.
+In general, you do not need to specify a shortcut or recording mode. get_iplayer will download the best quality available for the default format for the given programme type. This is usually what you want. If you are using the Web PVR Manager, you should remove any previous setting in the **Recording Modes** field in order to record with the default modes.
 
-- Do you *always* want the default behaviour, which is to download the best available SD video for all TV programmes?
+There are a few circumstances in which you may need to specify recording modes or shortcuts. Some examples are listed below.
 
-	CLI: `get_iplayer --prefs-add --modes=default`
+You wish to only record HD video:
 
-	NOTE: It is not necessary to set this preference for the CLI  since it is, well, the default.
+    get_iplayer --tvmode=hlshd [...]
 
-	WPM: Enter "default" (without quotes) in **Recording Modes** field and click **Save As Default**
+You wish to use **hvf** streams in order to record 50 fps HD video when available:
 
-	NOTE: **Recording Modes** may not be left blank.
+    get_iplayer --tvmode=hvf [...]
 
-- Do you want to download HD video (if available) for a single programme?
+You wish to record only the best available 50 fps video:
 
-	CLI: `get_iplayer --modes=best [...]`
+    get_iplayer --tvmode=hvfhd,hvfsd [...]
 
-	WPM: Enter "best" (without quotes) in **Recording Modes** field and click **Apply Settings**, then record programme.
+You wish to record medium-quality TV, e.g., to save disk storage or if you have poor internet connection:
 
-	NOTE: Best available SD video will be downloaded if HD video not available.
+    get_iplayer --tvmode=good [...]
 
-- Do you *always* want to download HD video (if available) for all TV programmes?
+You wish to revert to the pre-2.95 default for TV programmes **[DEPRECATED]**:
 
-	CLI: `get_iplayer --prefs-add --modes=best`
+    get_iplayer --tvmode=flashbetter [...]
 
-	WPM: Enter "best" (without quotes) in **Recording Modes** field and click **Save As Default**
+You wish to always record the worst quality TV streams, e.g., you only want audiodescribed versions and do not need good video resolution:
 
-	NOTE: Best available SD video will be downloaded if HD video not available.
+    get_iplayer --prefs-add --tvmode=worst
 
-- Do you want to revert to pre-2.83 default behaviour and download lower-quality video for a single programme?
+This saves the `--tvmode` option in preferences so that it does not need to be specified for each invocation of get_iplayer.
 
-	CLI: `get_iplayer --modes=good [...]`
+You wish to record medium-quality radio, e.g., for speech programmes:
 
-	WPM: Enter "good" (without quotes) in **Recording Modes** field and click **Apply Settings**, then record programme.
+    get_iplayer --radiomode=good --type=radio [...]
 
-- Do you *always* want to revert to pre-2.83 default behaviour and download lower-quality video for all TV programmes?
+You are using the Web PVR Manager and you wish to record medium-quality TV programmes, but you also wish to record the best quality radio programmes:
 
-	CLI: `get_iplayer --prefs-add --modes=good`
+> The WPM effectively uses `--modes` behind the scenes, so you will need two shortcuts, one that applies only to radio and one that applies to TV. Enter `radiobest,good` - **the order is important** - in the *Recording Modes* field and click *Apply Settings*, then record your programmes. If you want that to be your new default setting, click *Save As Default* after updating the *Recording Modes* field.
 
-	WPM: Enter "good" (without quotes) in **Recording Modes** field and click **Save As Default**
+<a name="mode-options"></a>
+## Recording Mode Options
 
-#### What About Radio?
+The recording quality for programmes is set by one of the mode options shown in the following table.  Note that you can set separate modes for radio and TV. If no type-specific mode (`--tvmode`, `--radiomode`) is defined, the `--modes` option (if supplied) will be used.  If you use the `--modes` option, take care to supply recording modes appropriate to the  type(s) of programmes you are downloading.  For example, using `--modes=hlshd` in a command to download a radio programme will prevent the download from succeeding.
 
-get_iplayer downloads the best available quality for all radio programmes regardless of the mode shortcut used.  You can override this behaviour by using specific mode values (see below).
-
-#### Show Me the Modes
-
-See [below](#shortcut-expansions) for details of how shortcuts are expanded into mode lists.
-
-## Recording Mode Details
-
-The characteristics for all recording modes are shown below for reference: [TV](#tv-modes), [Radio](#radio-modes)
-
-The recording quality for programmes is set by one of the mode options shown in the following table.  Note that you can set separate modes for each get_iplayer programme type. If no type-specific mode is defined, the **modes** option (if supplied) will be used.  If you use the **modes** option, take care to supply recording modes appropriate to the  type(s) of programmes you are downloading.  For example, using `--modes=flashhd` in a command to download a radio programme will prevent the download from succeeding.
-
-Mode values are supplied as a comma-separated list of values which get_iplayer processes from the left to right.  The first mode found that matches an available media stream will be used for the download.  If the  download for the first mode fails, subsequent modes will be used.
-
-A few examples:
-
-- Set all recording modes (TV and Radio) explicitly to download best quality available:
-
-		get_iplayer --get 123 --modes=flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow,flashaachigh,flashaacstd,flashaudio,flashaaclow,wma
-
-- Record a single TV programme at the lowest quality available:
-
-		get_iplayer --get 123 --tvmode=flashlow,flashstd,flashhigh,flashvhigh,flashhd
-
-- Make a live radio recording in WMA format, with fallback to AAC format:
-
-		get_iplayer --type=liveradio --liveradiomode=wma,flashaac "Radio 3"
-
-- Record at a lower bit rate for speech radio programmes:
-
-		get_iplayer --get 123 --type=radio --radiomode=flashaaclow
-
-- Set a preference to *only* record the highest-quality (HD and SD) TV programmes, with no fallback to lower-quality video:
-
-		get_iplayer --prefs-add --tvmode=flashhd,flashvhigh
-
+Mode values are supplied as a comma-separated list of values which get_iplayer processes from left to right, e.g., `--tvmode=hlshigh,hlsstd,hlslow`. The first mode found that matches an available media stream will be used for the download. If the download for the first mode fails, subsequent modes will be tried.
 
 #### Mode Options
 
+Recording modes are configured using the options below. The `--modes` options is applied to all programme types, but is overridden by type-specific options (if specified).
+
 |Options file|Command line|Description
 |------------|------------|-----------
-|modes|--modes &lt;mode&gt;,&lt;mode&gt;,...|Recording modes.  See --tvmode and --radiomode for available modes and defaults. Shortcuts: default,good,better(=default),best. Use --modes=best to select highest quality available (incl. HD TV).
-|tvmode|--tvmode &lt;mode&gt;,&lt;mode&gt;,...|TV recording modes: flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow,hlshd,hlsvhigh,hlshigh,hlsstd,hlslow. Shortcuts: default,good,better(=default),best,rtmp,flash,hlsbest,hls. (Use &#39;best&#39; for HD TV.) (&#39;default&#39;=flashvhigh,flashhigh,flashstd,flashlow)
-|radiomode|--radiomode &lt;mode&gt;,&lt;mode&gt;,...|Radio recording modes: flashaachigh,flashaacstd,flashaaclow,hlsaachigh,hlsaacstd,hlsaaclow. Shortcuts: default,good,better(=default),best,rtmp,flash,flashaac,hls,hlsaac,ddl,ddlaac. (&#39;default&#39;=flashaachigh,flashaacstd,flashaaclow)
-|livetvmode|--livetvmode &lt;mode&gt;,&lt;mode&gt;,...|Live TV recording modes: hlshd,hlssd,hlsvhigh,hlshigh,hlsstd,hlslow. Shortcuts: default,good,better(=default),vbetter,(incl. SD),best. (Use &#39;best&#39; for HD/SD TV.)(&#39;default&#39;=hlsvhigh,hlshigh,hlsstd,hlslow)
-|liveradiomode|--liveradiomode &lt;mode&gt;,&lt;mode&gt;,...|Live Radio recording modes: hlsaachigh,hlsaacstd,hlsaacmed,hlsaaclow,shoutcastaachigh,shoutcastmp3std. Shortcuts: default,good,better(=default),best,hls,hlshaac,shoutcast,shoutcastmp3. (&#39;default&#39;=hlsaachigh,hlsaacstd,hlsaacmed,hlsaaclow)
+|modes|--modes &lt;mode&gt;,&lt;mode&gt;,...| Recording modes.  See --tvmode and --radiomode (with --long-help) for available modes and defaults. Shortcuts: worst,worse,good,better,best
+|radiomode|--radiomode &lt;mode&gt;,&lt;mode&gt;,...|Radio recording modes (overrides --modes): dashhigh,dashstd,dashmed,dashlow,flashhigh,flashstd,flashlow,hlshigh,hlsstd,hlsmed,hlslow. Shortcuts: worst,worse,good,better,best,dash,flash,hls. (default=hlshigh,dashhigh,hlsstd,dashstd,hlsmed,dashmed,hlslow,dashlow)
+|tvmode|--tvmode &lt;mode&gt;,&lt;mode&gt;,...|TV recording modes (overrides --modes): flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow,hlshd,hlsvhigh,hlshigh,hlsstd,hlslow,flashlow,hvfhd,hvfsd,hvfvhigh,hvfhigh,hvfstd,hvflow. Shortcuts: worst,worse,good,better,best,flash,hls,hvf. (default=hlshd,hlsvhigh,hlshigh,hlsstd,hlslow)
+|liveradiomode|--liveradiomode &lt;mode&gt;,&lt;mode&gt;,...|**[DEPRECATED]** Live Radio recording modes (overrides --modes): hlshigh,hlsstd,hlsmed,hlslow,shoutcastmp3std,shoutcastaachigh (R3 only, UK only). Shortcuts: worst,worse,good,better,best,hls,shoutcast. (default=hlshigh,hlsstd,hlsmed,hlslow)
+|livetvmode|--livetvmode &lt;mode&gt;,&lt;mode&gt;,...|**[DEPRECATED]** Live TV recording modes (overrides --modes): hvfhd,hvfsd,hvfvhigh,hvfhigh,hvfstd,hvflow. Shortcuts: worst,worse,good,better,best,hvf. (default=hvfhd,hvfsd,hvfvhigh,hvfhigh,hvfstd,hvflow)
+
+<a name="mode-details"></a>
+## Recording Mode Details
+
+The characteristics for all recording modes are shown below for reference: [TV Modes](#tv-modes), [Radio Modes](#radio-modes)
 
 <a name="tv-modes"></a>
 ### TV Modes
 
 Below are representative values for recordings made with each of the TV recording modes.
 
-|Recording Mode|Access Method|Video Codec|Video Resolution|Video Bitrate|Audio Codec|Audio Bitrate|Overall Bitrate
+|Recording Mode|Stream Format|Video Codec|Video Resolution|Video Bitrate|Audio Codec|Audio Bitrate|Overall Bitrate
 |--------------|-------------|-----------|----------------|-------------|-----------|-------------|---------------
-|**flashhd**|RTMP streaming|H.264|1280 x 720|2301 kbps|AAC|96 kbps|2400 kbps
-|**flashvhigh**|RTMP streaming|H.264|832 x 468|1404 kbps|AAC|96 kbps|1505 kbps
-|**flashhigh**|RTMP streaming|H.264|640 x 360|700 kbps|AAC|96 kbps|801 kbps
-|**flashstd**|RTMP streaming|H.264|640 x 360|416 kbps|AAC|96 kbps|516 kbps
-|**flashnormal**|RTMP streaming|H.264|512 x 288|672 kbps|AAC|128 kbps|841 kbps
-|**flashlow**|RTMP streaming|H.264|512 x 288|304 kbps|AAC|96 kbps|404 kbps
-|**hlshd**|HLS streaming (live)|H.264|1280 x 720|3500 kbps|AAC|128 kbps|3643 kbps
-|**hlshd**|HLS streaming|H.264|1280 x 720|2800 kbps|AAC|128 kbps|2128 kbps
-|**hlssd**|HLS streaming (live)|H.264|1024 x 756|2000 kbps|AAC|128 kbps|2081 kbps
-|**hlsvhigh**|HLS streaming|H.264|832 x 468|1404 kbps|AAC|96 kbps|1496 kbps
-|**hlshigh**|HLS streaming|H.264|640 x 360|700 kbps|AAC|96 kbps|801 kbps
-|**hlsstd**|HLS streaming|H.264|640 x 360|416 kbps|AAC|96 kbps|516 kbps
-|**hlslow**|HLS streaming|H.264|512 x 288|304 kbps|AAC|96 kbps|404 kbps
+|**hlshd**|HLS|H.264|1280 x 720|2800 kbps|AAC|128 kbps|2128 kbps
+|**hlsvhigh**|HLS|H.264|832 x 468|1404 kbps|AAC|96 kbps|1496 kbps
+|**hlshigh**|HLS|H.264|640 x 360|700 kbps|AAC|96 kbps|801 kbps
+|**hlsstd**|HLS|H.264|640 x 360|416 kbps|AAC|96 kbps|516 kbps
+|**hlslow**|HLS|H.264|512 x 288|304 kbps|AAC|96 kbps|404 kbps
+|**hvfhd**|HLS **(50fps)**|H.264|1280 x 720|4780 kbps|AAC|128 kbps|4919 kbps
+|**hvfsd**|HLS **(50fps)**|H.264|960 x 540|2719 kbps|AAC|128 kbps|2859 kbps
+|**hvfvhigh**|HLS|H.264|960 x 540|1759 kbps|AAC|96 kbps|1496 kbps
+|**hlshigh**|HLS|H.264|704 x 396|956 kbps|AAC|96 kbps|801 kbps
+|**hvfstd**|HLS|H.264|512 x 288|551 kbps|AAC|96 kbps|516 kbps
+|**hvflow**|HLS|H.264|385 x 216|390 kbps|AAC|96 kbps|404 kbps
+|**flashhd** **[DEPRECATED]**|RTMP|H.264|1280 x 720|2301 kbps|AAC|96 kbps|2400 kbps
+|**flashvhigh** **[DEPRECATED]**|RTMP|H.264|832 x 468|1404 kbps|AAC|96 kbps|1505 kbps
+|**flashhigh** **[DEPRECATED]**|RTMP|H.264|640 x 360|700 kbps|AAC|96 kbps|801 kbps
+|**flashstd** **[DEPRECATED]**|RTMP|H.264|640 x 360|416 kbps|AAC|96 kbps|516 kbps
+|**flashlow** **[DEPRECATED]**|RTMP|H.264|512 x 288|304 kbps|AAC|96 kbps|404 kbps
 
 <a name="radio-modes"></a>
 ### Radio Modes
 
 Below are representative values for recordings made with each of the radio recording modes.
 
-|Recording Mode|Source|Access Method|Audio Codec|Audio Bitrate|Notes
-|--------------|------|-------------|-----------|-------------|-----
-|**flashaachigh**|Radio 3|RTMP streaming|AAC|320 kbps|Radio 3 only
-|**flashaacstd**|National Radio|RTMP streaming|AAC|128 kbps|---
-|**flashaaclow**|National Radio|RTMP streaming|AAC|48 kbps|---
-|**hlsaacstd**|National Radio|HLS streaming|AAC|128 kbps|---
-|**hlshaaclow**|National Radio|HLS streaming|AAC|48 kbps|---
+|Recording Mode|Stream Format|Audio Codec|Audio Bitrate|Notes
+|--------------|-------------|-----------|-------------|-----
+|**dashhigh**|MPEG-DASH|AAC|320 kbps|UK only
+|**dashstd**|MPEG-DASH|AAC|128 kbps|UK only
+|**dashmed**|MPEG-DASH|AAC|96 kbps|UK and Intl
+|**dashlow**|MPEG-DASH|AAC|48 kbps|UK and Intl
+|**hlshigh**|HLS|AAC|320 kbps|live radio only, UK only
+|**hlsstd**|HLS|AAC|128 kbps|UK only
+|**hlsmed**|HLS|AAC|96 kbps|live radio only, UK and Intl
+|**hlshlow**|HLS|AAC|48 kbps|UK and Intl
+|**flashhigh** **[DEPRECATED]**|RTMP|AAC|320 kbps|Radio 3 only, UK only
+|**flashstd** **[DEPRECATED]**|RTMP|AAC|128 kbps|UK only
+|**flashlow** **[DEPRECATED]**|RTMP|AAC|48 kbps|UK and Intl
+|**shoutcastmp3** **[DEPRECATED]**|Shoutcast|MP3|128 kbps|live radio only, UK and Intl
+|**shoutcastaac** **[DEPRECATED]**|Shoutcast|AAC|320 kbps|live radio only, UK only, Radio 3 only
 
 <a name="shortcut-expansions"></a>
-### Shortcut Expansions
+## Shortcut Expansions
 
 The tables below detail how recording mode shortcuts are expanded into lists of mode values.
 
-#### TV Shortcuts
+### TV Shortcuts
 
-|Shortcut|Modes|Notes
-|--------|-----|-----
-|**good**|flashhigh,flashstd,flashnormal,flashlow|---
-|**better**|flashvhigh + 'good'|---
-|**best**|flashhd + 'better'|---
-|**default**|synonym for 'better'|---
-|**flash**|same as 'default'|for backwards compatibility
-|**rtmp**|same as 'default'|for backwards compatibility
-|**hlsgood**|hlshigh,hlsstd,hlslow|---
-|**hlsbetter**|hlsvhigh + 'hlsgood'|---
-|**hlsbest**|synonym for 'hlsbetter'|---
-|**hlsdefault**|synonym for 'hlsbetter'|---
-|**hls**|synonym for 'hlsdefault'|---
+|Shortcut|Modes
+|--------|-----
+|**worst**|synonym for **hlsworst**
+|**worse**|synonym for **hlsworse**
+|**good**|synonym for **hlsgood**
+|**better**|synonym for **hlsbetter**
+|**best**|synonym for **hlsbest**
+|**hlsworst**|hlslow
+|**hlsworse**|hlsstd,hlslow
+|**hlsgood**|hlshigh,hlsstd,hlslow
+|**hlsbetter**|hlsvhigh,hlshigh,hlsstd,hlslow
+|**hlsbest**|hlshd,hlsvhigh,hlshigh,hlsstd,hlslow
+|**hls**|synonym for **hlsbest**
+|**hvfworst**|hvflow
+|**hvfworse**|hvfstd,hvflow
+|**hvfgood**|hvfhigh,hvfstd,hvflow
+|**hvfbetter**|hvfvhigh,hvfhigh,hvfstd,hvflow
+|**hvfbest**|hvfhd,hvfsd,hvfvhigh,hvfhigh,hvfstd,hvflow
+|**hvf**|synonym for **hvfbest**
+|**flashworst** **[DEPRECATED]**|flashlow
+|**flashworse** **[DEPRECATED]**|flashstd,flashlow
+|**flashgood** **[DEPRECATED]**|flashhigh,flashstd,flashlow
+|**flashbetter** **[DEPRECATED]**|flashvhigh,flashhigh,flashstd,flashlow
+|**flashbest** **[DEPRECATED]**|flashhd,flashvhigh,flashhigh,flashstd,flashlow
+|**flash** **[DEPRECATED]**|synonym for **flashbest**
 
-#### Live TV Shortcuts
+### Live TV Shortcuts
 
-|Shortcut|Modes|Notes
-|--------|-----|-----
-|**good**|hlshigh,hlsstd,hlslow|---
-|**better**|hlsvhigh + 'good'|---
-|**vbetter**|hlssd + 'better'|---
-|**best**|hlshd + 'vbetter'|---
-|**default**|synonym for 'better'|---
+|Shortcut|Modes
+|--------|-----
+|**worst**|synonym for **hvfworst**
+|**worse**|synonym for **hvfworse**
+|**good**|synonym for **hvfgood**
+|**better**|synonym for **hvfbetter**
+|**best**|synonym for **hvfbest**
+|**hvfworst**|hvflow
+|**hvfworse**|hvfstd,hvflow
+|**hvfgood**|hvfhigh,hvfstd,hvflow
+|**hvfbetter**|hvfvhigh,hvfhigh,hvfstd,hvflow
+|**hvfbest**|hvfhd,hvfsd,hvfvhigh,hvfhigh,hvfstd,hvflow
+|**hvf**|synonym for **hvfbest**
 
-#### Radio Shortcuts
+### Radio Shortcuts
 
-|Shortcut|Modes|Notes
-|--------|-----|-----
-|**flashaac**|flashaachigh,flashaacstd,flashaaclow|---
-|**flash**|synonym for 'flashaac'|---
-|**rtmp**|same as 'flash'|for backwards compatibility
-|**good**|synonym for 'flashaac'|---
-|**better**|same as 'good'|---
-|**best**|same as 'good'|---
-|**default**|synonym for 'better'|---
-|**hlsaac**|hlshaachigh,hlsaacstd,hlsaaclow|---
-|**hls**|synonym for 'hlsaac'|---
-|**ddlaac**|ddlhaachigh,ddlaacstd,ddlaaclow|---
-|**ddl**|synonym for 'ddlaac'|---
+|Shortcut|Modes
+|--------|-----
+|**worst**|hlslow,dashlow
+|**worse**|hlslow,dashlow
+|**good**|hlsmed,dashmed,hlslow,dashlow
+|**better**|hlsstd,dashstd,hlsmed,dashmed,hlslow,dashlow
+|**best**|hlshigh,dashhigh,hlsstd,dashstd,hlsmed,dashmed,hlslow,dashlow
+|**dashworst**|dashlow
+|**dashworse**|dashlow
+|**dashgood**|dashmed,dashlow
+|**dashbetter**|dashstd,dashmed,dashlow
+|**dashbest**|dashhigh,dashstd,dashmed,dashlow
+|**dash**|synonym for **dashbest**
+|**hlsworst**|hlslow
+|**hlsworse**|hlslow
+|**hlsgood**|hlsmed,hlslow
+|**hlsbetter**|hlsstd,hlsmed,hlslow
+|**hlsbest**|hlshigh,hlsstd,hlsmed,hlslow
+|**hls**|synonym for **hlsbest**
+|**flashworst** **[DEPRECATED]**|flashlow
+|**flashworse** **[DEPRECATED]**|flashlow
+|**flashgood** **[DEPRECATED]**|flashlow
+|**flashbetter** **[DEPRECATED]**|flashstd,flashlow
+|**flashbest** **[DEPRECATED]**|flashhigh,flashstd,flashlow
+|**flash** **[DEPRECATED]**|synonym for **flashbest**
 
-#### Live Radio Shortcuts
+### Live Radio Shortcuts
 
-Same as Radio Shortcuts
+|Shortcut|Modes
+|--------|-----
+|**worst**|synonym for **hlsworst**
+|**worse**|synonym for **hlsworse**
+|**good**|synonym for **hlsgood**
+|**better**|synonym for **hlsbetter**
+|**best**|synonym for **hlsbest**
+|**hlsworst**|hlslow
+|**hlsworse**|hlslow
+|**hlsgood**|hlsmed,hlslow
+|**hlsbetter**|hlsstd,hlsmed,hlslow
+|**hlsbest**|hlshigh,hlsstd,hlsmed,hlslow
+|**hls**|synonym for **hlsbest**
+|**shoutcast** **[DEPRECATED]**|shoutcastaac,shoutcastmp3
 
 ## Modes and CDNs
 
-BBC iPlayer programmes may be available from more than one content distribution network (CDN).  A CDN is an external provider of media streaming services and infrastructure.  get_iplayer internally differentiates between available CDNs with a number appended to recording modes.  The metadata for a TV programme might show the following:
+BBC iPlayer programmes may be available from more than one content distribution network (CDN).  A CDN is an external provider of media streaming services and infrastructure.  get_iplayer internally differentiates between available CDNs with a number appended to recording modes.  The metadata for a radio programme might show the following:
 
-	modes:    default: flashhd1,flashhd2,flashhigh1,flashhigh2,flashlow1,flashlow2,flashstd1,flashstd2,flashvhigh1,flashvhigh2,subtitles1
+	modes:    original: dashhigh1,dashhigh2,dashstd1,dashstd2,dashmed1,dashmed2,dashlow1,dashlow2
 
-This indicates that the flash* streams are available from two CDNs. Some radio programmes are only available from a single CDN:
+This indicates that the dash* streams are available from two CDNs. Some programmes are only available from a single CDN:
 
-	modes:    default: flashaaclow1,flashaacstd1
+	modes:    original: hlsstd1,hlslow1
 
-The CDNs that correspond to the "1" and "2" may be different for each invocation of get_iplayer.  It is not possible to predict which CDN will be be used for a given recording.  In general it is not necessary to specifically designate a CDN when recording a programme.  If, for example, get_iplayer cannot download the flashhd1 stream, it will roll over to the flashhd2 stream and retry the download.  
+The CDNs that correspond to the "1" and "2" may be different for each invocation of get_iplayer.  It is not possible to predict which CDN will be be used for a given recording.  In general it is not necessary to specifically designate a CDN when recording a programme.  If, for example, get_iplayer cannot download the dashhigh1 stream, it will roll over to the dashhigh2 stream and retry the download.
 
 **NOTE:** get_iplayer does not roll over to another CDN when recording live streams.
 
 There may be times when the #1 CDN is not responding properly or rejecting connections.  You can force the use of the #2 CDN by explicitly setting your recording modes with the "2" appended.  An example:
 
-	get_iplayer --get 123 --tvmode=flashhd2,flashvhigh2
+	get_iplayer --get 123 --tvmode=hvfhd2,hvfvhigh2
 
 Be aware that the #2 CDN in your second attempt may correspond to the problematic #1 CDN from the previous download attempt, so a few retries may be required to get a connection to the working CDN.
 
@@ -227,17 +265,22 @@ The table below shows the external programmes required to download and - if appl
 
 |Type|Mode|Format|rtmpdump|ffmpeg|atomicparsley|id3v2/MP3::Tag
 |----|----|------|--------|------|-------------|--------------
-|TV|flashhd, flashvhigh, flashhigh, flashstd, flashnormal, flashlow|mp4 (h264/aac)|X|X|X|---
-|TV|flashnormal|avi (h264/aac)|X|X|X|---
-|TV|flashhd, flashvhigh, flashhigh, flashstd, flashnormal, flashlow (with --raw)|flv (h264/aac)|X|---|---|---
-|TV|flashhd, flashvhigh, flashhigh, flashstd, flashnormal, flashlow (with --mkv)|mkv (h264/aac)|X|X|---|---
-|TV|hlshd, hlsvhigh, hlshigh, hlsstd, hlsnormal, hlslow|mp4 (h264/aac)|---|X|X|---
-|TV|hlshd, hlsvhigh, hlshigh, hlsstd, hlsnormal, hlslow (with --raw)|mpegts (h264/aac)|--|---|---|---
-|TV|hlshd, hlsvhigh, hlshigh, hlsstd, hlsnormal, hlslow (with --mkv)|mkv (h264/aac)|---|X|---|---
-|Radio|flashaachigh, flashaacstd, flashaaclow|m4a (aac)|X|X|X|---
-|Radio|flashaachigh, flashaacstd, flashaaclow (with --raw)|flv (aac)|X|---|---|---
-|Radio|flashaachigh, flashaacstd, flashaaclow (with --aactomp3)|mp3|X|X|---|X
-|Radio|hlsaachigh, hlsaacstd, hlsaaclow|m4a (aac)|---|X|X|---
-|Radio|hlsaachigh, hlsaacstd, hlsaaclow (with --raw)|mpegts (aac)|---|X|---|---
-|Radio|hlsaachigh, hlsaacstd, hlsaaclow (with --aactomp3)|mp3|---|X|---|X
+|TV|hlshd, hlsvhigh, hlshigh, hlsstd, hlslow|mp4 (h264/aac)|---|X|X|---
+|TV|hlshd, hlsvhigh, hlshigh, hlsstd, hlslow (with --raw)|mpegts (h264/aac)|--|---|---|---
+|TV|hlshd, hlsvhigh, hlshigh, hlsstd, hlslow (with --mkv)|mkv (h264/aac)|---|X|---|---
+|TV|hvfhd, hvfsd, hvfvhigh, hvfhigh, hvfstd, hvflow|mp4 (h264/aac)|---|X|X|---
+|TV|hvfhd, hvfsd, hvfvhigh, hvfhigh, hvfstd, hvflow (with --raw)|mpegts (h264/aac)|--|---|---|---
+|TV|hvfhd, hvfsd, hvfvhigh, hvfhigh, hvfstd, hvflow (with --mkv)|mkv (h264/aac)|---|X|---|---
+|TV|flashhd, flashvhigh, flashhigh, flashstd, flashlow|mp4 (h264/aac)|X|X|X|---
+|TV|flashhd, flashvhigh, flashhigh, flashstd, flashlow (with --raw)|flv (h264/aac)|X|---|---|---
+|TV|flashhd, flashvhigh, flashhigh, flashstd, flashlow (with --mkv)|mkv (h264/aac)|X|X|---|---
+|Radio|dashhigh, dashstd, dashmed, dashlow|m4a (aac)|---|X|X|---
+|Radio|dashhigh, dashstd, dashmed, dashlow (with --raw)|mpegts (aac)|---|X|---|---
+|Radio|dashhigh, dashstd, dashmed, dashlow (with --aactomp3)|mp3|---|X|---|X
+|Radio|hlsstd, hlslow|m4a (aac)|---|X|X|---
+|Radio|hlsstd, hlslow (with --raw)|mpegts (aac)|---|X|---|---
+|Radio|hlsstd, hlslow (with --aactomp3)|mp3|---|X|---|X
+|Radio|flashhigh, flashstd, flashlow|m4a (aac)|X|X|X|---
+|Radio|flashhigh, flashstd, flashlow (with --raw)|flv (aac)|X|---|---|---
+|Radio|flashhigh, flashstd, flashlow (with --aactomp3)|mp3|X|X|---|X
 |Podcast|podcast|mp3|---|---|---|---

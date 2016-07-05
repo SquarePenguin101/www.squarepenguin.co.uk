@@ -10,7 +10,7 @@ The Web PVR Manager (WPM) is a Web-based search front-end to get_iplayer which a
 
 See the [get_iplayer installation page](/wiki/installation) for instructions on how to install and run WPM.  Bear in mind that WPM is a front end for the get_iplayer command-line interface (CLI), so you must install the CLI, its related Perl modules and the necessary external applications along with WPM.  In particular, note that [ffmpeg](http://ffmpeg.org) and [rtmpdump](http://rtmpdump.mplayerhq.hu/) are required for streaming or recording of the Flash streams that comprise the bulk of BBC iPlayer content.
 
-Windows users should download and run the latest [get_iplayer installer](http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe), which will set up everything you need.  You can launch WPM from `All Programs -> get_iplayer -> Web PVR Manager` on the Start menu or the `Web PVR Manager` tile in Windows 8.
+Windows users should download and run the latest [get_iplayer installer](https://github.com/get-iplayer/get_iplayer_win32/releases/latest), which will set up everything you need.  You can launch the WPM from `All Programs -> get_iplayer -> Web PVR Manager` on the Start Menu (`All Apps -> get_iplayer -> Web PVR Manager` on Windows 10) or the `Web PVR Manager` tile in the Windows 8 Start screen.
 
 It is also recommended to install [VLC Media Player](http://www.videolan.org/vlc/) to use with the **Play** links (see below).
 
@@ -20,7 +20,7 @@ It is also recommended to install [VLC Media Player](http://www.videolan.org/vlc
 
 1. Select the programme types you wish to search by ticking the appropriate **Programme type** boxes in the **Search** tab. Only BBC TV programmes are indexed and searched by default, so you MUST select additional types for them to be included in your search results.
 
-2. Click the **Refresh Cache** button to open a new browser window/tab where the programme data cache will be updated. You MUST do this in order to find the latest programmes in your search results. Leave that window open to automatically refresh the cache at periodic intervals. 
+2. Click the **Refresh Cache** button to open a new browser window/tab where the programme data cache will be updated. You MUST do this in order to find the latest programmes in your search results. Leave that window open to automatically refresh the cache at periodic intervals.
 
 ### Page Tabs
 
@@ -59,7 +59,6 @@ There are several different action buttons along the top and bottom of the searc
 
 >**HEY!** - Like the man says: Don't forget to refresh your cache before doing a search.
 
-
 - **Quick URL** - To record or play a BBC iPlayer audio or video URL, paste the programme episode page URL into the *Quick URL* box and click **Play** or **Record**. The correct programme type (BBC TV or BBC Radio) must also be selected.
 
 ### Programme Links
@@ -75,7 +74,6 @@ There are several different action buttons along the top and bottom of the searc
 	**NOTE:** Only two recording tabs can work at any one time.
 
 - **Add Series** - Add a programme's whole series (including future episodes) to the PVR by click its *Add Series*.
-
 
 #### Information
 
@@ -110,38 +108,49 @@ When you change settings, use the buttons beneath the settings tabs to apply the
 ### Direct Streaming URLs
 
 Web PVR Manager allows you to stream audio and video to media player
+
 software such as VLC, mplayer, ffplay and hardware streamers such as the
+
 Logitech Squeezebox by creating URLs for the following:
 
 - Stream BBC iPlayer programmes directly from the Internet as FLV streams
+
 - Stream pre-recorded programmes losslessly or by transcoding on-the-fly
+
 - Stream mp3 files using the localfiles get_iplayer plugin
 
-The [original README](https://github.com/get-iplayer/get_iplayer/wiki/wpmdoc) gives examples.
+The [original README](webpvrold) gives examples.
 
 ### Automatic Playlist URLs
 
 Web PVR Manager allows you to create M3U playlists on-the-fly from searches to enable you to stream audio and video to media player software such as VLC, mplayer, ffplay and hardware streamers such as the Logitech Squeezebox. These playlist URLs can:
 
 - Create playlists of currently available programmes based on user defined search criteria
+
 - Create playlists of pre-recorded programmes based on user defined search criteria
+
 - Create OPML playlists which can be used to selectively navigate on devices like the Logitech Squeezebox
 
-The [original README](https://github.com/get-iplayer/get_iplayer/wiki/wpmdoc) gives examples.
+The [original README](webpvrold) gives examples.
 
 ## CGI Deployment
 
-The [original README](https://github.com/get-iplayer/get_iplayer/wiki/wpmdoc) contains instructions.
+The [original README](webpvrold) contains instructions.
 
 ## Relationship to CLI
 
 When you invoke an action in the WPM such as "Search", "Record" or "Add to PVR", behind the scenes the WPM constructs a command string and runs the get_iplayer CLI just as if you typed the equivalent command at a prompt.  However, the WPM was designed as a standalone, simpler - and more limited - interface to get_iplayer, and thus lacks a number of  options available to the CLI.  The WPM also was designed to maintain its own configuration settings separate from preferences set with the CLI using `--prefs-add`.   It is strongly recommended that if you are a WPM user you do all your configuration in the WPM.  However, there are some very particular cases where CLI preferences may be required.  Below is list of considerations to keep in mind if you attempt to use CLI preferences from the WPM.
 
 1. The WPM cannot load, display, or change the values of CLI preferences.  Any settings you save in the WPM are saved for the WPM only.  In order to view or change the values of your preferences, you must use the CLI with `--prefs-show`, `--prefs-add` and `--prefs-del`.
+
 2. Any WPM setting with a non-empty value will override the equivalent CLI preference value.  This is the same as if you override a preference value by adding the equivalent option to the CLI command line.
+
 3. Any WPM setting with a text string value (e.g., "Exclude Channels Containing") will **not** override the equivalent CLI preference if the string value is empty, so it is technically possible (though not advisable) to use the equivalent CLI preference.
+
 4. Any WPM setting with a boolean (on/off) value (e.g., "Refresh Future Schedule") will **always** override the equivalent CLI preference since it always has a value (on or off).  These settings must **always** be made in the WPM.
+
 5. Any WPM setting with a fixed set of possible values (e.g., "Download Metadata") will **always** override the equivalent CLI preference since it always has a value (one of the set). These settings must **always** be made in the WPM.
+
 6. Any CLI preference that does not have an equivalent WPM setting (e.g., "aactomp3") will **always** be used by the CLI when it is invoked from the WPM.
 
 Examples:
@@ -161,7 +170,6 @@ Examples:
 3. You may wish to convert all your radio downloads to MP3 automatically.  To do that, set the necessary preference with the CLI:
 
 		get_iplayer --prefs-add --aactomp3
-
 
 	Since the WPM does not support a "aactomp3" setting - and thus cannot override it - this preference will be used for all radio downloads.
 

@@ -4,7 +4,7 @@
 
 The BBC recently made some changes to the iPlayer service and web site that affected get_iplayer.  This is what you need to know after upgrading to get_iplayer 2.87:
 
-- Programmes more than 7 days old are **NOT** available for caching by get_iplayer and therefore will **NOT** appear in search results.  
+- Programmes more than 7 days old are **NOT** available for caching by get_iplayer and therefore will **NOT** appear in search results.
 - It **DOES NOT MATTER** that a programme is still available on the iPlayer site up to its 30-day expiry.  Once 7 days pass from its last broadcast, it is no longer available for caching by get_iplayer.
 - You **MUST** download programmes more than 7 days old directly via PID or URL.  If you don't know what that means, it's time to refresh yourself [here](/wiki/documentation#recording).
 - get_iplayer 2.87 or higher is **REQUIRED** to download programmes more than 7 days old via PID or URL.  If you're using your own hacked version of get_iplayer, you'll need to do some more hacking.
@@ -13,9 +13,7 @@ The BBC recently made some changes to the iPlayer service and web site that affe
 - When in doubt, use the programme PID.  All available programmes can be downloaded via PID regardless of whether or not they are in the get_iplayer cache.
 
         TV: get_iplayer --pid=<PID> ...
-
         Radio: get_iplayer --pid=<PID> --type=radio ...
-
 
 ## Installation/Upgrade
 
@@ -31,7 +29,7 @@ Installation information for all platforms can be found here:
 
 #### Linux/Unix
 
-Note that it may take some time for get_iplayer 2.87 to be packaged for your system.  Until then, use the manual installation instructions at the link above.  
+Note that it may take some time for get_iplayer 2.87 to be packaged for your system.  Until then, use the manual installation instructions at the link above.
 
 #### Windows
 
@@ -58,6 +56,7 @@ Note the required downgrade of MPlayer.
 ## Changes in get_iplayer 2.87
 
 ### Adaptations for BBC changes in early Oct 2014
+
 - Implemented downloading for programmes > 7 days old
 - Implemented metadata capture for programmes > 7 days old
 - Restored downloading with iPlayer Radio URLs
@@ -76,7 +75,7 @@ You are strongly recommended to stick to the default file name formulation, with
 
 > Just say no to non-ASCII characters in file names
 
-If you use a system locale outside Western/Central Europe or the Americas with non-UTF8 encoding, you will likely encounter problems if you attempt to retain non-ASCII characters in file names because those characters won't won't map to your locale's encoding.  
+If you use a system locale outside Western/Central Europe or the Americas with non-UTF8 encoding, you will likely encounter problems if you attempt to retain non-ASCII characters in file names because those characters won't won't map to your locale's encoding.
 
 > Just say no to non-ASCII characters in file names
 
@@ -88,7 +87,7 @@ The `--pid` option previously invoked an immediate download even if `--info` was
 
 ### `--{metadata,subtitles,thumbnail}-only` now work with `--pid` for programmes not in cache
 
-When `--metadata-only`, `--subtitles-only` or `--thumbnail-only` was used with `--pid`, get_iplayer would stop if the indicated PID was not found in its cache.  Now those options will perform their usual functions with `--pid` for programmes not in the cache. This can be used for all programmes, including those more than 7 days old.  
+When `--metadata-only`, `--subtitles-only` or `--thumbnail-only` was used with `--pid`, get_iplayer would stop if the indicated PID was not found in its cache.  Now those options will perform their usual functions with `--pid` for programmes not in the cache. This can be used for all programmes, including those more than 7 days old.
 
 ### `--swfurl` option
 
@@ -101,7 +100,6 @@ get_iplayer now returns a non-zero exit code when one or more downloads fail.  T
 ### `--check-duration`option
 
 The `--check-duration` option can help if you have problems with rtmpdump or mplayer truncating your recordings without signalling an error to get_iplayer.  With this option enabled, get_iplayer will print a message similar to the following for each output file:
-
 
     INFO: Duration check: recorded: 00:01:58 expected: 00:02:00 difference: -00:00:02 file: /Users/nobody/get_iplayer/Bells_on_Sunday/Bells_on_Sunday_-_Ripon_Cathedral_b04f8k3x_default.m4a
 
@@ -137,7 +135,7 @@ There are many possible permutations of locale/language/encoding.  get_iplayer i
 
 ### Web PVR Manager now speaks UTF-8
 
-As part of implementing support for non-ASCII characters, communication between the Web PVR Manager and get_iplayer and communication between the Web PVR Manager and the user's browser now uses UTF-8 encoding exclusively, on all platforms.  
+As part of implementing support for non-ASCII characters, communication between the Web PVR Manager and get_iplayer and communication between the Web PVR Manager and the user's browser now uses UTF-8 encoding exclusively, on all platforms.
 
 This should be transparent to users, though there are some edge cases to be aware of.  For example, if you use Linux with a single-byte encoding in your system locale (e.g., ISO-8859-1), and you create files with non-ASCII characters in their names with the get_iplayer CLI, you won't be able to play those files using the PlayFile link in the Web PVR Manager because the file name will be encoded as UTF-8, which won't match the encoding used in the file name on disk.  The Web PVR Manager itself only produces pure-ASCII file names, so do likewise with the CLI if you want to share files between them.
 

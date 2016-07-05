@@ -1,16 +1,16 @@
 ## get_iplayer Documentation
 
-**[Known Issues](/wiki/issues)**
-
 [Release Notes](/wiki/releasenotes)
 
 [Installation](/wiki/installation)
 
 [Usage and Examples](/wiki/documentation)
 
+[FAQ](/wiki/faq)
+
 [Getting Help](/wiki/help)
 
-[Support Forums and User Guides](http://squarepenguin.co.uk) (external link)
+[Support Forums and User Guides](http://squarepenguin.co.uk/forums)
 
 [Unix Manual Page](/wiki/manpage)
 
@@ -20,9 +20,7 @@
 
 [Metadata Tagging](/wiki/tagging)
 
-[Output File Naming](/wiki/fileprefix) (Kodi/Plex users - read this)
-
-[Character Encodings](/wiki/encodings)
+[Output File Naming](/wiki/fileprefix)
 
 [Using the PVR with cron](/wiki/pvrcron)
 
@@ -30,6 +28,6 @@
 
 [Contribute to get_iplayer](/wiki/contribute)
 
-[FAQ](/wiki/faq)
+[Known Issues](https://github.com/get-iplayer/get_iplayer/issues)
 
 *Some material in this wiki was taken from the defunct get_iplayer site at linuxcentre.net*

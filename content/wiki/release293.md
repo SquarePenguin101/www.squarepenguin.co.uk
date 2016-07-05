@@ -92,7 +92,7 @@ Installation information for all platforms can be found here:
 
 #### Linux/Unix
 
-Linux/Unix packages are maintained by volunteers and may not be updated for a short time after a new release of get_iplayer.  Until then, use the manual installation instructions at the link above.  
+Linux/Unix packages are maintained by volunteers and may not be updated for a short time after a new release of get_iplayer.  Until then, use the manual installation instructions at the link above.
 
 #### Windows
 

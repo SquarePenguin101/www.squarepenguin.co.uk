@@ -1,4 +1,4 @@
-## Using the get_iplayer PVR with `cron`
+## Using the get_iplayer PVR with cron
 
 ## Don't Want to Miss that Programme on iPlayer over Christmas?
 
@@ -15,12 +15,13 @@ Use get\_iplayer to search for the programme you wish to have downloaded. You ca
 This results in:
 
     Matches:
-     184:    Doctor Who Confidential: Series 4 - A Noble Return, 'BBC Three', Factual,Arts,Culture & the Media,TV, default
-     185:    Doctor Who Confidential: Series 4 - The Italian Job, 'BBC Three', Factual,Arts,Culture & the Media,TV, default
-     186:    Doctor Who Confidential - At Christmas, 'BBC Three', Factual,Arts,Culture & the Media,TV, default
-     187:    Doctor Who: Series 4 - Partners in Crime, 'BBC One', Drama,SciFi & Fantasy,TV, default
-     188:    Doctor Who: Series 4 - The Fires of Pompeii, 'BBC One', Drama,SciFi & Fantasy,TV, default
-     189:    Doctor Who - Voyage of the Damned, 'BBC One', Drama,SciFi & Fantasy,TV, default
+
+    184:    Doctor Who Confidential: Series 4 - A Noble Return, 'BBC Three', Factual,Arts,Culture & the Media,TV, default
+    185:    Doctor Who Confidential: Series 4 - The Italian Job, 'BBC Three', Factual,Arts,Culture & the Media,TV, default
+    186:    Doctor Who Confidential - At Christmas, 'BBC Three', Factual,Arts,Culture & the Media,TV, default
+    187:    Doctor Who: Series 4 - Partners in Crime, 'BBC One', Drama,SciFi & Fantasy,TV, default
+    188:    Doctor Who: Series 4 - The Fires of Pompeii, 'BBC One', Drama,SciFi & Fantasy,TV, default
+    189:    Doctor Who - Voyage of the Damned, 'BBC One', Drama,SciFi & Fantasy,TV, default
 
 OK, so I don't want those extra programmes on BBC Three, so I limit my search to BBC One only:
 
@@ -29,9 +30,10 @@ OK, so I don't want those extra programmes on BBC Three, so I limit my search to
 Now I just get these matches:
 
     Matches:
-     187:    Doctor Who: Series 4 - Partners in Crime, 'BBC One', Drama,SciFi & Fantasy,TV, default
-     188:    Doctor Who: Series 4 - The Fires of Pompeii, 'BBC One', Drama,SciFi & Fantasy,TV, default
-     189:    Doctor Who - Voyage of the Damned, 'BBC One', Drama,SciFi & Fantasy,TV, default
+
+    187:    Doctor Who: Series 4 - Partners in Crime, 'BBC One', Drama,SciFi & Fantasy,TV, default
+    188:    Doctor Who: Series 4 - The Fires of Pompeii, 'BBC One', Drama,SciFi & Fantasy,TV, default
+    189:    Doctor Who - Voyage of the Damned, 'BBC One', Drama,SciFi & Fantasy,TV, default
 
 Now I have the search I want, I can save this to the PVR search list by simply appending the --pvradd option:
 

@@ -2,7 +2,7 @@
 
 ## Read This First
 
-Some changes in 2.91 make use of the `XML::Simple` Perl module, used for parsing XML data from the BBC. The module is not yet a hard requirement, so if it is not installed, get_iplayer will print a warning and skip the related sections of code. To reiterate: **the XML::Simple module is NOT required for get_iplayer to function**, though it may be required in a future release.  
+Some changes in 2.91 make use of the `XML::Simple` Perl module, used for parsing XML data from the BBC. The module is not yet a hard requirement, so if it is not installed, get_iplayer will print a warning and skip the related sections of code. To reiterate: **the XML::Simple module is NOT required for get_iplayer to function**, though it may be required in a future release.
 
 The XML::Simple module is installed by the Windows installer.  If you have followed the Linux/Unix/OSX installation instructions in the GitHub wiki, you will have installed the module.  To check if you have the module installed, run the following at a command prompt:
 
@@ -18,7 +18,7 @@ Installation information for all platforms can be found here:
 
 #### Linux/Unix
 
-It may take some time for get_iplayer 2.91 to be packaged for your system.  Until then, use the manual installation instructions at the link above.  
+It may take some time for get_iplayer 2.91 to be packaged for your system.  Until then, use the manual installation instructions at the link above.
 
 #### Windows
 
@@ -36,13 +36,14 @@ From get_iplayer 2.90, the installer will update the following components to the
 
 ### 1. Metadata changes
 
-The extraction of programme metadata for tagging has been re-implemented to replace the loss of BBC data feeds.  The new implementation relies on the `XML::Simple` Perl module (see above).  If the module is not installed, get_iplayer will fall back to the stopgap metadata implementation introduced in 2.89.  If you wish to revert to the 2.89 metadata implementation explicitly, use `--playlist-metadata`.  
+The extraction of programme metadata for tagging has been re-implemented to replace the loss of BBC data feeds.  The new implementation relies on the `XML::Simple` Perl module (see above).  If the module is not installed, get_iplayer will fall back to the stopgap metadata implementation introduced in 2.89.  If you wish to revert to the 2.89 metadata implementation explicitly, use `--playlist-metadata`.
 
 **NOTE:** The 2.89 metadata implementation is likely to be removed in a future release.  At that time, `XML::Simple` and `JSON` modules will become a hard requirement for get_iplayer.  Any such future changes will be announced in advance.
 
 NOTE: You cannot set `--playlist-metadata` in the Web PVR.
 
 #### Brand and series parsing
+
 iPlayer programmes have an associated brand name - a top-level name - and an optional series title that varies from series to series, along with an episode title.  get_iplayer now parses the brand and series titles separately, and there are now `<brand>` and `<series>` substitution parameters for use with `--fileprefix` and `--subdir-format`. The `<brand>` and `<series>` parameters are concatenated as the `<name>` parameter.  Note that `<series>` is not always available. A few examples are shown below:
 
 |brand|series|name|nameshort|episode|episodeshort
@@ -76,7 +77,6 @@ Default:
 |---------------|-----------
 |15 Minute Drama: Carol|Episode 1
 
-
 With `--tag-longepisode`: Use `episode` instead of `episodeshort` for track title
 
 |album/show title|track title
@@ -107,14 +107,11 @@ Default:
 |---------------|-----------
 |The Archers|30/11/2014
 
-
 With `--tag-isodate`: Use ISO8601 dates (YYYY-MM-DD) in album/show names and track titles
-
 
 |album/show title|track title
 |---------------|-----------
 |The Archers|2014-11-30
-
 
 NOTE: You cannot set any tagging options in the Web PVR Manager.
 
@@ -173,7 +170,6 @@ Note that `--refresh-exclude-groups{-radio,-tv}` are applied **before** `--refre
 
 NOTE: You cannot set `--refresh-exclude-groups{-radio,-tv}` in the Web PVR Manager.
 
-
 ### 4. HLS recording modes
 
 The BBC have announced that they will be removing WMA and RTMP streams for live and on-demand audio in favour of Apple HLS (HTTP Live Streaming).  They are already using HLS for live/on-demand radio and on-demand TV, and Adobe HDS (HTTP Dynamic Streaming) for live TV, so it's not inconceivable that all RMTP streams may disappear in the near future.  HLS streaming is not yet the default for get_iplayer, except for live TV (see below), but it will be the default - for radio at least - in the near future, so please give it a try so that any problems can be identified. HLS streaming requires `ffmpeg` or `avconv`.
@@ -206,7 +202,7 @@ get_iplayer now uses the live TV HLS streams employed for mobile devices.  The s
 
 Live TV HD streams via HDS workaround
 
-There are no HD or SD streams available for live TV using the mobile HLS streams described above.  However, it is currently possible to get HD/SD streams for 3 channels (BBC One/Two/Three) by using the `--hds-livetv` option.  Other HD/SD streams may be available in future releases.  The `--hds-livetv` option instructs get_iplayer to use a different data source (HDS manifests - files with stream information) to find the HD/SD streams, which are downloaded via HLS. get_iplayer does not support HDS itself - it merely uses HDS data to find the streams. With `--hds-livetv`, you can use the `hlshd` mode for a HD 1280x720 3500kbps HD stream, and the `hlssd` mode for a 1024x576 2000kbps SD stream. Or simply use the `best` alias. The `--hds-livetv` option requires the `XML::Simple` Perl module described above.  
+There are no HD or SD streams available for live TV using the mobile HLS streams described above.  However, it is currently possible to get HD/SD streams for 3 channels (BBC One/Two/Three) by using the `--hds-livetv` option.  Other HD/SD streams may be available in future releases.  The `--hds-livetv` option instructs get_iplayer to use a different data source (HDS manifests - files with stream information) to find the HD/SD streams, which are downloaded via HLS. get_iplayer does not support HDS itself - it merely uses HDS data to find the streams. With `--hds-livetv`, you can use the `hlshd` mode for a HD 1280x720 3500kbps HD stream, and the `hlssd` mode for a 1024x576 2000kbps SD stream. Or simply use the `best` alias. The `--hds-livetv` option requires the `XML::Simple` Perl module described above.
 
 NOTE: Consider the `--hds-livetv` feature as experimental and subject to removal in a future release.
 
@@ -224,27 +220,23 @@ As in earlier versions of get_iplayer, recording live TV on Windows is not recom
 
 Earlier versions of get_iplayer erroneously stripped apostrophes and quotes from `--file-prefix` and `--subdir-format` settings stored in the user options file.  This has been changed in 2.91.  The difference is shown below for this example setting with apostrophes:
 
-        fileprefix '<nameshort> <episodeshort> <pid>'
-
+    fileprefix '<nameshort> <episodeshort> <pid>'
 
 |version|filename
 |---------------|-----------
-|pre-2.91| /tmp/BBC_Radio_1s_Essential_Mix_Warp_25_b04t92qd.EXT
-|2.91+| /tmp/'BBC_Radio_1s_Essential_Mix_Warp_25_b04t92qd'.EXT
+|pre-2.91|/tmp/BBC_Radio_1s_Essential_Mix_Warp_25_b04t92qd.EXT
+|2.91+|/tmp/'BBC_Radio_1s_Essential_Mix_Warp_25_b04t92qd'.EXT
 
 The same applies for quotes:
 
-        fileprefix "<nameshort> <episodeshort> <pid>"
-
+    fileprefix "<nameshort> <episodeshort> <pid>"
 
 |version|filename
 |---------------|-----------
 |pre-2.91| /tmp/BBC_Radio_1s_Essential_Mix_Warp_25_b04t92qd.EXT
 |2.91+| /tmp/"BBC_Radio_1s_Essential_Mix_Warp_25_b04t92qd".EXT
 
-
 Do not use apostrophes or quotes in your options file as shown above.  They are unnecessary, and you almost certainly don't want them in your file or directory names.  Quotes are also illegal in Windows file names and from 2.91 will break get_iplayer downloads if stored in the user options file.  Unfortunately, get_iplayer doesn't prevent you from saving apostrophes or quotes in your options file if you are determined to do so.
-
 
 ### 7. Other changes in get_iplayer 2.91
 

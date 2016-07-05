@@ -28,6 +28,8 @@
 
     * [Misc Options](#misc-options)
 
+    * [Deprecated Options](#deprecated-options)
+
 * [AUTHOR](#author)
 
 * [COPYRIGHT NOTICE](#copyright-notice)
@@ -84,11 +86,11 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 ## Search Options
 
 
-**--before**
-: Limit search to programmes added to the cache before N hours ago
+**--available-since &lt;hours&gt;**
+: Limit search to programmes that have become available in the last N hours
 
-**--category &lt;string&gt;**
-: Narrow search to matched categories (regex or comma separated values). Supported only for podcasts (not tv or radio programmes).
+**--before &lt;hours&gt;**
+: Limit search to programmes added to the cache before N hours ago
 
 **--channel &lt;string&gt;**
 : Narrow search to matched channel(s) (regex or comma separated values)
@@ -96,11 +98,11 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--exclude &lt;string&gt;**
 : Narrow search to exclude matched programme names (regex or comma separated values)
 
-**--exclude-category &lt;string&gt;**
-: Narrow search to exclude matched categories (regex or comma separated values). Supported only for podcasts (not tv or radio programmes).
-
 **--exclude-channel &lt;string&gt;**
 : Narrow search to exclude matched channel(s) (regex or comma separated values)
+
+**--expires-before &lt;hours&gt;**
+: Limit search to programmes that will expire in the next N hours
 
 **--fields &lt;field1&gt;,&lt;field2&gt;,..**
 : Searches only in the specified comma separated fields
@@ -117,14 +119,11 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--search &lt;search term&gt;**
 : GetOpt compliant way of specifying search args
 
-**--since**
+**--since &lt;hours&gt;**
 : Limit search to programmes added to the cache in the last N hours
 
 **--type &lt;type&gt;**
-: Only search in these types of programmes: liveradio,livetv,radio,tv,all (tv is default)
-
-**--versions &lt;versions&gt;**
-: Version of programme to search or record.  List is processed from left to right and first version found is downloaded.  Example: &#39;--versions signed,audiodescribed,default&#39; will prefer signed and audiodescribed programmes if available.  Default: &#39;default,signed,audiodescribed&#39;
+: Only search in these types of programmes: liveradio,livetv,localfiles,podcast,radio,tv,all (tv is default)
 
 <a id="display-options"></a>
 
@@ -153,16 +152,10 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 : Hide previously recorded programmes
 
 **--info, -i**
-: Show full programme metadata and availability of modes and subtitles (max 50 matches)
-
-**--list &lt;categories|channel&gt;**
-: Show a list of available categories/channels for the selected type and exit
+: Show full programme metadata and availability of modes and subtitles (max 40 matches)
 
 **--listformat &lt;format&gt;**
 : Display programme data based on a user-defined format string (such as &lt;pid&gt;, &lt;name&gt; etc)
-
-**--listplugins**
-: Display a list of currently available plugins or programme types
 
 **--long, -l**
 : Show long programme info
@@ -182,9 +175,6 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--quiet, -q**
 : Reduce logging output
 
-**--series**
-: Display Programme series names only with number of episodes
-
 **--show-cache-age**
 : Displays the age of the selected programme caches then exit
 
@@ -203,12 +193,6 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--streaminfo**
 : Returns all of the media stream urls of the programme(s)
 
-**--terse**
-: Only show terse programme info (does not affect searching)
-
-**--tree**
-: Display Programme listings in a tree view
-
 **--verbose, -v**
 : Verbose
 
@@ -226,29 +210,8 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--attempts &lt;number&gt;**
 : Number of attempts to make or resume a failed connection.  --attempts is applied per-stream, per-mode.  TV modes typically have two streams available.
 
-**--bandwidth**
-: In radio realaudio mode specify the link bandwidth in bps for rtsp streaming (default 512000)
-
-**--check-duration**
-: Print message showing recorded duration, expected duration and difference between them.
-
-**--ddl-radio-opts &lt;options&gt;**
-: Add custom options to ffmpeg DDL download re-muxing for radio
-
 **--exclude-supplier &lt;suppliers&gt;**
-: Comma-delimited list of media stream suppliers to skip.  Possible values: akamai,limelight,level3,bidi
-
-**--ffmpeg-liveradio-opts &lt;options&gt;**
-: Add custom options to ffmpeg re-muxing for liveradio
-
-**--ffmpeg-livetv-opts &lt;options&gt;**
-: Add custom options to ffmpeg re-muxing for livetv
-
-**--ffmpeg-radio-opts &lt;options&gt;**
-: Add custom options to ffmpeg re-muxing for radio
-
-**--ffmpeg-tv-opts &lt;options&gt;**
-: Add custom options to ffmpeg re-muxing for tv
+: Comma-delimited list of media stream suppliers to skip.  Possible values: level3,akamai,limelight,bidi
 
 **--force**
 : Ignore programme history (unsets --hide option also). Forces a script update if used with -u
@@ -259,47 +222,14 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--hash**
 : Show recording progress as hashes
 
-**--hls-liveradio-opts &lt;options&gt;**
-: Add custom options to ffmpeg HLS download re-muxing for liveradio
-
-**--hls-livetv-opts &lt;options&gt;**
-: Add custom options to ffmpeg HLS download encoding for livetv
-
-**--hls-radio-opts &lt;options&gt;**
-: Add custom options to ffmpeg HLS download re-muxing for radio
-
-**--hls-tv-opts &lt;options&gt;**
-: Add custom options to ffmpeg HLS download re-muxing for tv
-
-**--liveradio-intl**
-: Force use of hard-coded international streams for HLS live radio.  Ignored for World Service
-
-**--liveradio-uk**
-: Force use of hard-coded UK streams for HLS live radio (overrides --liveradio-intl). Ignored for World Service
-
-**--liveradiomode &lt;mode&gt;,&lt;mode&gt;,..**
-: Live Radio recording modes: hlsaachigh,hlsaacstd,hlsaacmed,hlsaaclow,shoutcastmp3std,shoutcastaachigh(R3 only, UK only). Shortcuts: default,good,better(=default),best,hls. (&#39;default&#39;=hlsaachigh,hlsaacstd,hlsaacmed,hlsaaclow)
-
-**--livetv-uk**
-: Force use of hard-coded UK streams for HLS live tv
-
-**--livetvmode &lt;mode&gt;,&lt;mode&gt;,...**
-: Live TV recording modes: hlshd,hlssd,hlsvhigh,hlshigh,hlsstd,hlslow. Shortcuts: default,good,better(=default),vbetter,best,hls. (&#39;default&#39;=hlsvhigh,hlshigh,hlsstd,hlslow)
-
-**--mediaselector &lt;identifier&gt;**
-: Identifier of mediaselector API to use when searching for media streams. One of: 4,5 Default: 5
+**--include-supplier &lt;suppliers&gt;**
+: Comma-delimited list of media stream suppliers to use if not included by default.  Possible values: level3,akamai,limelight,bidi
 
 **--metadata-only**
 : Create specified metadata info file without any recording or streaming (can also be used with thumbnail option).
 
-**--mmsnothread**
-: Disable parallel threaded recording for mms
-
 **--modes &lt;mode&gt;,&lt;mode&gt;,...**
-: Recording modes.  See --tvmode and --radiomode for available modes and defaults. Shortcuts: default,good,better(=default),best. Use --modes=best to select highest quality available (incl. HD TV).
-
-**--multimode**
-: Allow the recording of more than one mode for the same programme - WARNING: will record all specified/default modes!!
+: Recording modes.  See --tvmode and --radiomode (with --long-help) for available modes and defaults. Shortcuts: worst,worse,good,better,best
 
 **--no-proxy**
 : Ignore --proxy setting in preferences
@@ -311,43 +241,28 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 : Only uses web proxy where absolutely required (try this extra option if your proxy fails). If specified, value of http_proxy environment variable (if any) in parent process is retained and passed to child processes.
 
 **--pid &lt;pid&gt;**
-: Record an arbitrary pid that does not necessarily appear in the index.
+: Record an arbitrary PID that does not necessarily appear in the index.
 
 **--pid-recursive**
-: When used with --pid record all the embedded pids if the pid is a series or brand pid.
+: Record all related episodes if value of --pid is a series or brand PID. Requires --pid.
+
+**--pid-recursive-noclips**
+: When used with --pid and --pid-recursive, skip all associated programme clips if the value of --pid is a brand PID. Requires --pid and --pid-recursive.
 
 **--proxy, -p &lt;url&gt;**
 : Web proxy URL e.g. &#39;http://USERNAME:PASSWORD@SERVER:PORT&#39; or &#39;http://SERVER:PORT&#39;. Sets http_proxy environment variable for child processes (e.g., ffmpeg) unless --partial-proxy is specified.
 
 **--radiomode &lt;mode&gt;,&lt;mode&gt;,...**
-: Radio recording modes: flashaachigh,flashaacstd,flashaudio,flashaaclow,wma. Shortcuts: default,good,better(=default),best,rtmp,flash,flashaac. (&#39;default&#39;=flashaachigh,flashaacstd,flashaudio,flashaaclow)
+: Radio recording modes (overrides --modes): dashhigh,dashstd,dashmed,dashlow,flashhigh,flashstd,flashlow,hlshigh,hlsstd,hlsmed,hlslow. Shortcuts: worst,worse,good,better,best,dash,flash,hls. (default=hlshigh,dashhigh,hlsstd,dashstd,hlsmed,dashmed,hlslow,dashlow)
 
 **--raw**
-: Don&#39;t transcode or change the recording/stream in any way (i.e. radio/realaudio, rtmp/flv)
-
-**--rtmp-liveradio-opts &lt;options&gt;**
-: Add custom options to rtmpdump for liveradio
-
-**--rtmp-livetv-opts &lt;options&gt;**
-: Add custom options to rtmpdump for livetv
-
-**--rtmp-radio-opts &lt;options&gt;**
-: Add custom options to rtmpdump for radio
-
-**--rtmp-tv-opts &lt;options&gt;**
-: Add custom options to rtmpdump for tv
-
-**--rtmpport &lt;port&gt;**
-: Override the RTMP port (e.g. 443)
-
-**--shoutcast-liveradio-opts &lt;options&gt;**
-: Add custom options to ffmpeg Shoutcast download re-muxing for liveradio
+: Don&#39;t transcode or change the recording/stream in any way (i.e. RTMP-&gt;FLV, HLS-&gt;MPEG-TS)
 
 **--start &lt;secs|hh:mm:ss&gt;**
-: Recording/streaming start offset (rtmp and realaudio only)
+: Recording/streaming start offset
 
 **--stop &lt;secs|hh:mm:ss&gt;**
-: Recording/streaming stop offset (can be used to limit live rtmp recording length) rtmp and realaudio only
+: Recording/streaming stop offset
 
 **--suboffset &lt;offset&gt;**
 : Offset the subtitle timestamps by the specified number of milliseconds
@@ -367,11 +282,11 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--subtitles-required**
 : Do not download TV programme if subtitles are not available.
 
-**--swfurl &lt;URL&gt;**
-: URL of Flash player used by rtmpdump for verification.  Only use if default Flash player URL is not working.
-
 **--tag-only**
-: Only update the programme tag and not download the programme (can also be used with --history)
+: Only update the programme metadata tag and not download the programme (can also be used with --history)
+
+**--tag-only-filename &lt;filename&gt;**
+: Add metadata tags to specified file (ignored unless used with --tag-only)
 
 **--test, -t**
 : Test only - no recording (will show programme type)
@@ -383,102 +298,30 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 : Only Download Thumbnail image if available, not the programme
 
 **--tvmode &lt;mode&gt;,&lt;mode&gt;,...**
-: TV recording modes: flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow. Shortcuts: default,good,better(=default),best,rtmp,flash. (Use &#39;best&#39; for HD TV. &#39;default&#39;=flashvhigh,flashhigh,flashstd,flashnormal,flashlow)
+: TV recording modes (overrides --modes): flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow,hlshd,hlsvhigh,hlshigh,hlsstd,hlslow,flashlow,hvfhd,hvfsd,hvfvhigh,hvfhigh,hvfstd,hvflow. Shortcuts: worst,worse,good,better,best,flash,hls,hvf. (default=hlshd,hlsvhigh,hlshigh,hlsstd,hlslow)
 
 **--url &quot;&lt;url&gt;&quot;**
 : Record the embedded media player in the specified URL. Use with --type=&lt;type&gt;.
 
-**--wav**
-: In radio realaudio mode output as wav and don&#39;t transcode to mp3
+**--versions &lt;versions&gt;**
+: Version of programme to record. List is processed from left to right and first version found is downloaded. Example: &#39;--versions=audiodescribed,default&#39; will prefer audiodescribed programmes if available.
 
 <a id="output-options"></a>
 
 ## Output Options
 
 
-**--aactomp3**
-: Transcode AAC audio to MP3 with ffmpeg/avconv (CBR 128k unless --mp3vbr is specified).  Applied only to radio programmes. (Synonyms: --mp3)
-
-**--avi**
-: Output video in AVI container instead of MP4. There is no metadata tagging support for AVI output.
-
 **--command, -c &lt;command&gt;**
 : Run user command after successful recording using args such as &lt;pid&gt;, &lt;name&gt; etc
-
-**--email &lt;address&gt;**
-: Email HTML index of matching programmes to specified address
-
-**--email-password &lt;password&gt;**
-: Email password
-
-**--email-port &lt;port number&gt;**
-: Email port number (default: appropriate port for --email-security)
-
-**--email-security &lt;TLS|SSL&gt;**
-: Email security TLS, SSL (default: none)
-
-**--email-sender &lt;address&gt;**
-: Optional email sender address
-
-**--email-smtp &lt;hostname&gt;**
-: SMTP server IP address to use to send email (default: localhost)
-
-**--email-user &lt;username&gt;**
-: Email username
-
-**--fatfilename**
-: Remove FAT forbidden characters in file and directory names.  Always applied on Windows. Overrides --punctuation.
 
 **--file-prefix &lt;format&gt;**
 : The filename prefix (excluding dir and extension) using formatting fields. e.g. &#39;&lt;name&gt;-&lt;episode&gt;-&lt;pid&gt;&#39;
 
-**--fxd &lt;file&gt;**
-: Create Freevo FXD XML of matching programmes in specified file
-
-**--hfsfilename**
-: Remove colons in file and directory names. Prevents OS X Finder displaying colon as forward slash. Always applied on OS X. Overrides --punctuation.
-
-**--html &lt;file&gt;**
-: Create basic HTML index of matching programmes in specified file
-
-**--isodate**
-: Use ISO8601 dates (YYYY-MM-DD) in filenames and subdirectory paths
-
-**--keep-all**
-: Keep whitespace, all possible punctuation and non-ASCII characters in file and directory names. Shortcut for: --whitespace --non-ascii --punctuation.
-
 **--metadata &lt;type&gt;**
 : Create metadata info file after recording. Valid types are: xbmc (or kodi), xbmc_movie (or kodi_movie), freevo, generic
 
-**--mkv**
-: Output video in MKV container instead of MP4. There is no metadata tagging support for MKV output.
-
-**--mp3vbr**
-: Set LAME VBR mode to N (0 to 9) for AAC transcoding. 0 = target bitrate 245 Kbit/s, 9 = target bitrate 65 Kbit/s (requires --aactomp3). Applied only to radio programmes.
-
-**--mythtv &lt;file&gt;**
-: Create Mythtv streams XML of matching programmes in specified file
-
-**--non-ascii, --na**
-: Keep non-ASCII characters in file and directory names. Default behaviour is to remove all non-ASCII characters.
-
-**--nowrite, -n**
-: No writing of file to disk (use with -x to prevent a copy being stored on disk)
-
 **--output, -o &lt;dir&gt;**
 : Recording output directory
-
-**--outputliveradio &lt;dir&gt;**
-: Output directory for live radio recordings (overrides --output)
-
-**--outputlivetv &lt;dir&gt;**
-: Output directory for live tv recordings (overrides --output)
-
-**--outputlocalfiles &lt;dir&gt;**
-: Output directory for localfiles recordings (overrides --output)
-
-**--outputpodcast &lt;dir&gt;**
-: Output directory for podcast recordings (overrides --output)
 
 **--outputradio &lt;dir&gt;**
 : Output directory for radio recordings (overrides --output)
@@ -486,29 +329,11 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--outputtv &lt;dir&gt;**
 : Output directory for tv recordings (overrides --output)
 
-**--player &#39;&lt;command&gt; &lt;options&gt;&#39;**
-: Use specified command to directly play the stream
-
-**--punctuation, --pu**
-: Keep punctuation characters and symbols in file and directory names, with ellipsis always replaced by underscore. Default behaviour is to remove all punctuation and symbols except underscore, hyphen and full stop. Overridden by --fatfilename and --hfsfilename.
-
-**--stdout, -x**
-: Additionally stream to STDOUT (so you can pipe output to a player)
-
-**--stream**
-: Stream to STDOUT (so you can pipe output to a player)
-
 **--subdir, -s**
 : Put Recorded files into Programme name subdirectory
 
 **--subdir-format &lt;format&gt;**
 : The format to be used for the subdirectory naming using formatting fields. e.g. &#39;&lt;nameshort&gt;-&lt;seriesnum&gt;&#39;
-
-**--symlink &lt;file&gt;**
-: Create symlink to &lt;file&gt; once we have the header of the recording
-
-**--thumb-ext &lt;ext&gt;**
-: Thumbnail filename extension to use
 
 **--thumbsize &lt;index|width&gt;**
 : Default thumbnail size/index to use for the current recording and metadata. index: 1-11 or width: 86,150,178,512,528,640,832,1024,1280,1600,1920
@@ -518,15 +343,6 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 
 **--whitespace, -w**
 : Keep whitespace in file and directory names. Default behaviour is to replace whitespace with underscores.
-
-**--xml-alpha**
-: Create freevo/Mythtv menu sorted alphabetically by programme name
-
-**--xml-channels**
-: Create freevo/Mythtv menu of channels -&gt; programme names -&gt; episodes
-
-**--xml-names**
-: Create freevo/Mythtv menu of programme names -&gt; episodes
 
 <a id="pvr-options"></a>
 
@@ -558,7 +374,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 : Show the PVR search list. Synonyms: --pvrlist
 
 **--pvr-queue**
-: Add currently matched programmes to queue for later one-off recording using the --pvr option. Search terms required unless --pid specified. Use --search=.* to force download of all available programmes. Synonyms: --pvrqueue
+: Add currently matched programmes to queue for later one-off recording using the --pvr option. Search terms required unless --pid specified. Synonyms: --pvrqueue
 
 **--pvr-scheduler &lt;seconds&gt;**
 : Runs the PVR using all saved PVR searches every &lt;seconds&gt;. Synonyms: --pvrscheduler
@@ -571,23 +387,17 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 ## Config Options
 
 
+**--cache-reset**
+: Reset cache to retain only latest update and discard previous contents.
+
 **--expiry, -e &lt;secs&gt;**
 : Cache expiry in seconds (default 4hrs)
 
 **--limit-matches &lt;number&gt;**
 : Limits the number of matching results for any search (and for every PVR search)
 
-**--localfilesdirs &lt;dir&gt;[,dir,]**
-: Directories/Folders to scan for new files
-
 **--nopurge**
 : Don&#39;t ask to delete programmes recorded over 30 days ago
-
-**--packagemanager &lt;string&gt;**
-: Tell the updater that we were installed using a package manager and don&#39;t update (use either: apt,rpm,deb,yum,disable)
-
-**--plugins-update**
-: Update get_iplayer plugins to the latest versions. get_iplayer main script also will be updated if a newer version is available.)
 
 **--prefs-add**
 : Add/Change specified saved user or preset options
@@ -613,11 +423,8 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--refresh, --flush, -f**
 : Refresh cache
 
-**--refresh-abortonerror**
-: Abort cache refresh for programme type if data for any channel fails to download. Use --refresh-exclude to temporarily skip failing channels.
-
 **--refresh-exclude &lt;string&gt;**
-: Exclude matched channel(s) when refreshing cache (regex or comma separated values)
+: Exclude matched channel(s) when refreshing cache (regex or comma separated values). Overrides --refresh-include-groups[-{tv,radio}] status for specified channel(s)
 
 **--refresh-exclude-groups**
 : Exclude channel groups when refreshing radio or tv cache (comma-separated values).  Valid values: &#39;national&#39;, &#39;regional&#39;, &#39;local&#39;
@@ -628,35 +435,23 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--refresh-exclude-groups-tv**
 : Exclude channel groups when refreshing tv cache (comma-separated values).  Valid values: &#39;national&#39;, &#39;regional&#39;, &#39;local&#39;
 
-**--refresh-feeds &lt;string&gt;**
-: Alternate source for programme data.  Valid values: &#39;ion&#39;,&#39;ion2&#39;,&#39;schedule&#39;
-
-**--refresh-feeds-radio &lt;string&gt;**
-: Alternate source for radio programme data.  Valid values: &#39;ion&#39;,&#39;ion2&#39;,&#39;schedule&#39;
-
-**--refresh-feeds-tv &lt;string&gt;**
-: Alternate source for TV programme data.  Valid values: &#39;ion&#39;,&#39;ion2&#39;,&#39;schedule&#39;
-
 **--refresh-future**
-: Obtain future programme schedule when refreshing cache (between 7-14 days)
+: Obtain future programme schedule when refreshing cache
 
 **--refresh-include &lt;string&gt;**
-: Include matched channel(s) when refreshing cache (regex or comma separated values)
+: Include matched channel(s) when refreshing cache (regex or comma separated values). Overrides --refresh-exclude-groups[-{tv,radio}] status for specified channel(s)
 
-**--refresh-limit &lt;integer&gt;**
-: Number of days of programmes to cache. Only applied with --refresh-feeds=schedule. Makes cache updates VERY slow. Default: 7 Min: 1 Max: 30
+**--refresh-include-groups**
+: Include channel groups when refreshing radio or tv cache (comma-separated values).  Valid values: &#39;national&#39;, &#39;regional&#39;, &#39;local&#39;
 
-**--refresh-limit-radio &lt;integer&gt;**
-: Number of days of radio programmes to cache. Only applied with --refresh-feeds=schedule. Makes cache updates VERY slow. Default: 7 Min: 1 Max: 30
+**--refresh-include-groups-radio**
+: Include channel groups when refreshing radio cache (comma-separated values).  Valid values: &#39;national&#39;, &#39;regional&#39;, &#39;local&#39;
 
-**--refresh-limit-tv &lt;integer&gt;**
-: Number of days of TV programmes to cache. Only applied with --refresh-feeds=schedule. Makes cache updates VERY slow. Default: 7 Min: 1 Max: 30
+**--refresh-include-groups-tv**
+: Include channel groups when refreshing tv cache (comma-separated values).  Valid values: &#39;national&#39;, &#39;regional&#39;, &#39;local&#39;
 
 **--skipdeleted**
 : Skip the download of metadata/thumbs/subs if the media file no longer exists. Use with --history &amp; --metadataonly/subsonly/thumbonly.
-
-**--update, -u**
-: Update get_iplayer if a newer version is available. If so, plugins also will be updated if newer versions available.
 
 **--webrequest &lt;urlencoded string&gt;**
 : Specify all options as a urlencoded string of &quot;name=val&amp;name=val&amp;...&quot;
@@ -667,7 +462,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 
 
 **--atomicparsley &lt;path&gt;**
-: Location of AtomicParsley tagger binary
+: Location of AtomicParsley binary
 
 **--ffmpeg &lt;path&gt;**
 : Location of ffmpeg or avconv binary. Synonyms: --avconv
@@ -675,58 +470,25 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--ffmpeg-obsolete**
 : Indicates you are using an obsolete version of ffmpeg (&lt;0.7) that does not support the -loglevel option, so  --quiet, --verbose and --debug will not be applied to ffmpeg. Synonym: --avconv-obsolete
 
-**--id3v2 &lt;path&gt;**
-: Location of id3v2 or id3tag binary
-
-**--lame &lt;path&gt;**
-: Location of lame binary
-
-**--mplayer &lt;path&gt;**
-: Location of mplayer binary
-
-**--rtmpdump &lt;path&gt;**
-: Location of rtmpdump binary. Synonyms: --flvstreamer
-
-**--vlc &lt;path&gt;**
-: Location of vlc or cvlc binary
-
 <a id="tagging-options"></a>
 
 ## Tagging Options
 
 
 **--no-artwork**
-: Do not embed thumbnail image in output file.  All other metadata values will be written.
+: Do not embed thumbnail image in output file. Also removes existing artwork. All other metadata values will be written.
 
 **--no-tag**
 : Do not tag downloaded programmes
 
-**--tag-cnid**
-: Use AtomicParsley --cnID argument (if supported) to add catalog ID used for combining HD and SD versions in iTunes
+**--tag-format-show**
+: Format template for programme name in metadata (use substitution parameters). Default: none
 
-**--tag-fulltitle**
-: Prepend album/show title to track title
-
-**--tag-hdvideo**
-: AtomicParsley accepts --hdvideo argument for HD video flag
-
-**--tag-id3sync**
-: Save ID3 tags for MP3 files in synchronised form. Provides workaround for corruption of thumbnail images in Windows. Has no effect unless using MP3::Tag Perl module.
+**--tag-format-title**
+: Format template for episode title in metadata (use substitution parameters). Default: none
 
 **--tag-isodate**
 : Use ISO8601 dates (YYYY-MM-DD) in album/show names and track titles
-
-**--tag-longdesc**
-: AtomicParsley accepts --longdesc argument for long description text
-
-**--tag-longdescription**
-: AtomicParsley accepts --longDescription argument for long description text
-
-**--tag-longepisode**
-: Use &lt;episode&gt; (incl. episode number) instead of &lt;episodeshort&gt; for track title
-
-**--tag-longtitle**
-: Prepend &lt;series&gt; (if available) to track title. Ignored with --tag-fulltitle.
 
 **--tag-podcast**
 : Tag downloaded radio and tv programmes as iTunes podcasts (requires MP3::Tag module for AAC/MP3 files)
@@ -737,11 +499,8 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--tag-podcast-tv**
 : Tag only downloaded tv programmes as iTunes podcasts
 
-**--tag-shortname**
-: Use &lt;nameshort&gt; instead of &lt;name&gt; for album/show title
-
 **--tag-utf8**
-: AtomicParsley accepts UTF-8 input
+: Use UTF-8 encoding for non-ASCII characters in AtomicParsley parameter values (Linux/Unix/OS X only). Use only if auto-detect fails.
 
 <a id="misc-options"></a>
 
@@ -760,14 +519,259 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--encoding-locale-fs &lt;name&gt;**
 : Character encoding used to encode file and directory names. Encoding name must be known to Perl Encode module. Default (only if auto-detect fails): Linux/Unix/OSX = UTF-8, Windows = cp1252
 
-**--no-scrape-versions**
-: Do not scrape episode web pages as extra measure to find audiodescribed/signed versions (only applies with --playlist-metadata).
+**--index-concurrent**
+: Perform fork()-based concurrent (i.e., faster) indexing when web scraping TV schedules only. Requires --ybbcy and Parallel::ForkManager Perl module. Not supported on Windows.
 
-**--playlist-metadata (IGNORED)**
-: Force use of playlists (XML and JSON) for programme metadata instead of /programmes data endpoints.
+**--index-maxconn &lt;number&gt;**
+: Maximum number of forks (connections) to use for concurrent indexing. Requires --index-concurrent. Default: 4 Max: 10
+
+**--no-scrape-versions**
+: Do not scrape episode web pages as extra measure to find audiodescribed/signed versions.
 
 **--trim-history &lt;# days to retain&gt;**
 : Remove download history entries older than number of days specified in option value.  Cannot specify 0 - use &#39;all&#39; to completely delete download history
+
+**--ybbcy**
+: Use alternate programme indexing and metadata retrieval if the BBC removes its XML data sources. TV programme indexing will be extremely slow. Some metadata will be missing or incorrect.
+
+<a id="deprecated-options"></a>
+
+## Deprecated Options
+
+
+**--aactomp3**
+: Transcode AAC audio to MP3 with ffmpeg/avconv (CBR 128k unless --mp3vbr is specified).  Applied only to radio programmes. (Synonyms: --mp3)
+
+**--avi**
+: Output video in AVI container instead of MP4. There is no metadata tagging support for AVI output.
+
+**--category &lt;string&gt;**
+: Narrow search to matched categories (regex or comma separated values). Supported only for podcasts (not tv or radio programmes).
+
+**--check-duration**
+: Print message showing recorded duration, expected duration and difference between them. Ignored when recording live streams.
+
+**--email &lt;address&gt;**
+: Email HTML index of matching programmes to specified address
+
+**--email-password &lt;password&gt;**
+: Email password
+
+**--email-port &lt;port number&gt;**
+: Email port number (default: appropriate port for --email-security)
+
+**--email-security &lt;TLS|SSL&gt;**
+: Email security TLS, SSL (default: none)
+
+**--email-sender &lt;address&gt;**
+: Optional email sender address
+
+**--email-smtp &lt;hostname&gt;**
+: SMTP server IP address to use to send email (default: localhost)
+
+**--email-user &lt;username&gt;**
+: Email username
+
+**--exclude-category &lt;string&gt;**
+: Narrow search to exclude matched categories (regex or comma separated values). Supported only for podcasts (not tv or radio programmes).
+
+**--fatfilename**
+: Remove FAT forbidden characters in file and directory names.  Always applied on Windows. Overrides --punctuation.
+
+**--ffmpeg-liveradio-opts &lt;options&gt;**
+: Add custom options to ffmpeg re-muxing for liveradio
+
+**--ffmpeg-livetv-opts &lt;options&gt;**
+: Add custom options to ffmpeg re-muxing for livetv
+
+**--ffmpeg-radio-opts &lt;options&gt;**
+: Add custom options to ffmpeg re-muxing for radio
+
+**--ffmpeg-tv-opts &lt;options&gt;**
+: Add custom options to ffmpeg re-muxing for tv
+
+**--fxd &lt;file&gt;**
+: Create Freevo FXD XML of matching programmes in specified file
+
+**--hfsfilename**
+: Remove colons in file and directory names. Prevents OS X Finder displaying colon as forward slash. Always applied on OS X. Overrides --punctuation.
+
+**--hls-ffmpeg**
+: Use ffmpeg/avconv instead of built-in HLS downloader. Ignored for downloading on-demand radio programmes, which use DASH downloader. 320k on-demand radio programmes cannot be streamed with --hls-ffmpeg.
+
+**--hls-ffmpeg-encode**
+: Make ffmpeg HLS downloader re-encode streams. For avconv and old versions of ffmpeg (&lt;2.5). May record slower than real time and may not be able to stream higher-quality media.
+
+**--hls-liveradio-opts &lt;options&gt;**
+: Add custom options to ffmpeg HLS download re-muxing for liveradio
+
+**--hls-livetv-opts &lt;options&gt;**
+: Add custom options to ffmpeg HLS download encoding for livetv
+
+**--hls-radio-opts &lt;options&gt;**
+: Add custom options to ffmpeg HLS download re-muxing for radio
+
+**--hls-tv-opts &lt;options&gt;**
+: Add custom options to ffmpeg HLS download re-muxing for tv
+
+**--html &lt;file&gt;**
+: Create basic HTML index of matching programmes in specified file
+
+**--id3v2 &lt;path&gt;**
+: Location of id3v2 or id3tag binary
+
+**--isodate**
+: Use ISO8601 dates (YYYY-MM-DD) in filenames and subdirectory paths. Default: true
+
+**--keep-all**
+: Keep whitespace, all possible punctuation and non-ASCII characters in file and directory names. Shortcut for: --whitespace --non-ascii --punctuation.
+
+**--list &lt;categories|channel&gt;**
+: Show a list of available categories/channels for the selected type and exit
+
+**--listplugins**
+: Display a list of currently available plugins or programme types
+
+**--liveradio-intl**
+: Force use of hard-coded international streams for HLS live radio.  Ignored for World Service
+
+**--liveradio-uk**
+: Force use of hard-coded UK streams for HLS live radio (overrides --liveradio-intl). Ignored for World Service
+
+**--liveradiomode &lt;mode&gt;,&lt;mode&gt;,..**
+: Live Radio recording modes (overrides --modes): hlshigh,hlsstd,hlsmed,hlslow,shoutcastmp3std,shoutcastaachigh (R3 only, UK only). Shortcuts: worst,worse,good,better,best,hls,shoutcast. (default=hlshigh,hlsstd,hlsmed,hlslow)
+
+**--livetvmode &lt;mode&gt;,&lt;mode&gt;,...**
+: Live TV recording modes (overrides --modes): hvfhd,hvfsd,hvfvhigh,hvfhigh,hvfstd,hvflow. Shortcuts: worst,worse,good,better,best,hvf. (default=hvfhd,hvfsd,hvfvhigh,hvfhigh,hvfstd,hvflow)
+
+**--localfilesdirs &lt;dir&gt;[,dir,]**
+: Directories/Folders to scan for new files
+
+**--mediaselector &lt;identifier&gt;**
+: Identifier of mediaselector API to use when searching for media streams. One of: 4,5 Default: 5
+
+**--mkv**
+: Output video in MKV container instead of MP4. There is no metadata tagging support for MKV output.
+
+**--mp3vbr**
+: Set LAME VBR mode to N (0 to 9) for AAC transcoding. 0 = target bitrate 245 Kbit/s, 9 = target bitrate 65 Kbit/s (requires --aactomp3). Applied only to radio programmes.
+
+**--multimode**
+: Allow the recording of more than one mode for the same programme - WARNING: will record all specified/default modes!!
+
+**--mythtv &lt;file&gt;**
+: Create Mythtv streams XML of matching programmes in specified file
+
+**--non-ascii, --na**
+: Keep non-ASCII characters in file and directory names. Default behaviour is to remove all non-ASCII characters.
+
+**--nowrite, -n**
+: No writing of file to disk (use with -x to prevent a copy being stored on disk)
+
+**--outputliveradio &lt;dir&gt;**
+: Output directory for live radio recordings (overrides --output)
+
+**--outputlivetv &lt;dir&gt;**
+: Output directory for live tv recordings (overrides --output)
+
+**--outputlocalfiles &lt;dir&gt;**
+: Output directory for localfiles recordings (overrides --output)
+
+**--outputpodcast &lt;dir&gt;**
+: Output directory for podcast recordings (overrides --output)
+
+**--player &#39;&lt;command&gt; &lt;options&gt;&#39;**
+: Use specified command to directly play the stream
+
+**--punctuation, --pu**
+: Keep punctuation characters and symbols in file and directory names, with ellipsis always replaced by underscore. Default behaviour is to remove all punctuation and symbols except underscore, hyphen and full stop. Overridden by --fatfilename and --hfsfilename.
+
+**--refresh-abortonerror**
+: Abort cache refresh for programme type if data for any channel fails to download. Use --refresh-exclude to temporarily skip failing channels.
+
+**--refresh-limit &lt;days&gt;**
+: Minimum number of days of programmes to cache (max: 30)
+
+**--refresh-limit-radio &lt;integer&gt;**
+: Number of days of radio programmes to cache. Makes cache updates VERY slow. Default: 7 Min: 1 Max: 30
+
+**--refresh-limit-tv &lt;days&gt;**
+: Number of days of TV programmes to cache. Makes cache updates VERY slow. Default: 7 Min: 1 Max: 30
+
+**--rtmp-radio-opts &lt;options&gt;**
+: Add custom options to rtmpdump for radio
+
+**--rtmp-tv-opts &lt;options&gt;**
+: Add custom options to rtmpdump for tv
+
+**--rtmpdump &lt;path&gt;**
+: Location of rtmpdump binary. Synonyms: --flvstreamer
+
+**--rtmpport &lt;port&gt;**
+: Override the RTMP port (e.g. 443)
+
+**--series**
+: Display programme series names only with number of episodes
+
+**--shoutcast-liveradio-opts &lt;options&gt;**
+: Add custom options to ffmpeg Shoutcast download re-muxing for liveradio
+
+**--stdout, -x**
+: Additionally stream to STDOUT (so you can pipe output to a player)
+
+**--stream**
+: Stream to STDOUT (so you can pipe output to a player)
+
+**--swfurl &lt;URL&gt;**
+: URL of Flash player used by rtmpdump for verification.  Only use if default Flash player URL is not working.
+
+**--symlink &lt;file&gt;**
+: Create symlink to &lt;file&gt; once we have the header of the recording
+
+**--tag-cnid**
+: Use AtomicParsley --cnID argument (if supported) to add catalog ID used for combining HD and SD versions in iTunes
+
+**--tag-fulltitle**
+: Prepend album/show title to track title
+
+**--tag-hdvideo**
+: AtomicParsley accepts --hdvideo argument for HD video flag
+
+**--tag-id3sync**
+: Save ID3 tags for MP3 files in synchronised form. Provides workaround for corruption of thumbnail images in Windows. Has no effect unless using MP3::Tag Perl module.
+
+**--tag-longdesc**
+: AtomicParsley accepts --longdesc argument for long description text
+
+**--tag-longdescription**
+: AtomicParsley accepts --longDescription argument for long description text
+
+**--tag-longepisode**
+: Use &lt;episode&gt; (incl. episode number) instead of &lt;episodeshort&gt; for track title
+
+**--tag-longtitle**
+: Prepend &lt;series&gt; (if available) to track title. Ignored with --tag-fulltitle.
+
+**--tag-shortname**
+: Use &lt;nameshort&gt; instead of &lt;name&gt; for album/show title
+
+**--terse**
+: Only show terse programme info (does not affect searching)
+
+**--thumb-ext &lt;ext&gt;**
+: Thumbnail filename extension to use
+
+**--tree**
+: Display Programme listings in a tree view
+
+**--xml-alpha**
+: Create freevo/Mythtv menu sorted alphabetically by programme name
+
+**--xml-channels**
+: Create freevo/Mythtv menu of channels -&gt; programme names -&gt; episodes
+
+**--xml-names**
+: Create freevo/Mythtv menu of programme names -&gt; episodes
 
 <a id="author"></a>
 
@@ -781,7 +785,7 @@ This manual page was originally written by Jonathan Wiltshire &lt;jmw@debian.org
 
 # COPYRIGHT NOTICE
 
-get_iplayer v2.93, Copyright (C) 2008-2010 Phil Lewis
+get_iplayer v2.95, Copyright (C) 2008-2010 Phil Lewis
   This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
   This is free software, and you are welcome to redistribute it under certain
   conditions; use --conditions for details.
