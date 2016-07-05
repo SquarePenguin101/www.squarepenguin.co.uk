@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+<div class="page-container">
+	<div class="page-content">
+    <div class="page-title">
+    		<h1>{{ .Params.pagetitle }}</h1>
+    		<h2>{{ .Params.pagesubtitle }}</h2>
+    </div>
+    <ol class="breadcrumbs">
+      <li><a href="/">home</a></li>
+	    <li><a href="/downloads/">downloads</a></li>
+	    {{ if .Params.breadcrumb }}<li>{{ .Params.breadcrumb }}</li>{{ else }}<li>{{ .Title }}</li>{{ end }}
+    </ol>
+    <div class="install-message">
+      <h3>Install guides are provided on a 'best effort' basis only!</h3>
+      <p>Installation instructions may change. I do not have access to all these systems to test installations so if you see something wrong, start a support thread in the forum.</p>
+      <p>Package maintainers are encouraged to submit instructions/changes either via the <a href="/forums/">forums</a>, <a href="https://github.com/PuffinBlue/squarepenguin/tree/master/content/downloads">GitHub</a> or via <a href="/email/">email</a>.</p>
+    </div>
+    {{ .Content }}
+  </div>
+</div>
+{{ partial "footer.html" . }}
