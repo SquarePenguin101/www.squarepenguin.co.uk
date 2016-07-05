@@ -5,10 +5,10 @@ description = "A quick installation guide to get get_iplayer installed on your M
 draft = false
 pageimage = ""
 pagesubtitle = "COMPREHENSIVE GUIDES TO GET YOU STARTED QUICKLY"
-pagetitle = "get_iplayer Guides and Tutorials"
+pagetitle = "get_iplayer installation guides"
 slug = "mac-os-x"
 title = "Mac OS X Quick Install Guide • get_iplayer"
-Type = "guides"
+Type = "downloads"
 breadcrumb = "get_iplayer Mac OS X Quick Install Guide"
 +++
 

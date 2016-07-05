@@ -17,21 +17,13 @@ You need a UK IP address to use get_iplayer, just like you would if you used the
 
 ### Does get_iplayer circumvent DRM?
 
-No. get_iplayer does not circumvent any digital rights management security (see the [BBC’s website](http://news.bbc.co.uk/1/hi/technology/6944830.stm) on how to do that with the Windows-only DRM content they provide).
-
-get_iplayer does not circumvent any effective technological measures as the BBC does not implement any such measures.
-
-The BBC uses RTMP, which is a streaming protocol now publicly published by Adobe. Sometimes they use RTMP ‘SWF verification’ which has proven to be ineffective in its current BBC implementation (flvstreamer cannot handle such verification requests so the stream is dropped and is then automatically resumed).
-
-The WMA and RealAudio streams and likewise unprotected. The BBC may at some point choose to effectively protect their streams with DRM or some ‘effective technological measure’ in which case get_iplayer will no longer be a useful tool for those streams.
-
-The BBC do implement DRM on their iPhone and Adobe Air downloadable files and therefore get_iplayer is not useful with those. The BBC iPlayer TV only works in the UK so that they can limit the reach of their output to UK TV Licence fee payers who fund iPlayer (although legally you do not require a licence to watch non-live iPlayer output).
+No. get_iplayer does not circumvent any digital rights management security (see the [BBC’s website](http://news.bbc.co.uk/1/hi/technology/6944830.stm) on how to do that with the Windows-only DRM content they provide).
 
 ## Installing get_iplayer
 
-1.  [How do I install get_iplayer on Mac OS X?](/guides/mac-os-x-quick-install-guide/)
-2.  [How do I install get_iplayer on Windows?](/guides/windowsinstall/)
-3.  [How do I install get_iplayer on Ubuntu based Linux?](/wiki/ubuntu/)
+1.  [How do I install get_iplayer on Mac OS X?](/downloads/mac-os-x/)
+2.  [How do I install get_iplayer on Windows?](/downloads/windows/)
+3.  [How do I install get_iplayer on Ubuntu based Linux?](/downloads/ubuntu/)
 4.  [How do I install get_iplayer on other Linux or BSD distros?](/downloads/#more-installation-guides)
 
 ## Downloading TV programmes
@@ -57,31 +49,119 @@ The BBC do implement DRM on their iPhone and Adobe Air downloadable files and th
 1. [How do I change or specify where get_iplayer saves downloaded radio programmes?](/guides/radio-download-guide/#how-do-i-change-or-specify-where-get-iplayer-saves-downloaded-radio-programmes)
 1. [How do I permanently change where get_ipayer saves downloaded radio programmes?](/guides/radio-download-guide/#how-do-i-permanently-change-where-get-ipayer-saves-downloaded-radio-programmes)
 
-## Example commands
+## Lots more common questions...
 
-1.  [get_iplayer Example Commands](/wiki/documentation/)
+### How do I record TV programmes with audio description?
 
-## <a name="faq1"></a> I see a programme that is available on the iPlayer web site, but I can't find it with a get_iplayer search.  What's wrong?
+See: [Usage and Examples](/wiki/documentation#recording-versions)
 
-First ascertain:
+Also see: [Audio Described Programmes Guide](https://squarepenguin.co.uk/guides/downloading-audio-described-version-programmes/)
 
-1. If you're looking for a radio programme, did you use `--type=radio` in your get_iplayer command?
-2. Are you searching for a TV programme with audio description or signing? That functionality is no longer available in get_iplayer, though you can still use `--versions=audiodescribed` or `--versions=signed` when downloading to select the desired version (if available).
-3. Are you searching for programmes by category (`--category=...`)? That functionality is no longer available in get_iplayer, though category information is still included in the metadata added to programmes after download.
-4. Was the programme actually broadcast on a BBC channel within the last 7 days?  If so, feel free to post a query with the relevant information in the [forums](/forums/).  In the likely event that it was **NOT** actually broadcast on a BBC channel within the last 7 days, read on.
+### How do I record TV programmes with signing?
 
-In early October 2014, the BBC made some changes to the iPlayer service and web site that affected get_iplayer.  This is what you need to know:
+See: [Usage and Examples](/wiki/documentation#recording-versions)
 
-- If a programme you're looking for does not appear in get_iplayer search results, check it on the iPlayer or iPlayer Radio site **BEFORE** reporting it as an error.
-- Web-only and red button programmes are **NOT** available for indexing by get_iplayer and therefore will **NOT** appear in search results. Only programmes scheduled for broadcast on a BBC channel will be indexed.
-- Programmes broadcast more than 7 days ago generally are **NOT** available for indexing by get_iplayer and therefore will **NOT** appear in search results.  
-- It **DOES NOT MATTER** that a programme is still available on the iPlayer site up to its 30-day expiry.  Once 7 days pass from its last broadcast, it is generally no longer available for indexing by get_iplayer.
-- There are a few exceptions to the 7-day rule, such as series like Doctor Who that have a full series catch-up policy. The episodes of those series remain available until the final episode reaches its expiry date.  But again, once 7 days pass from the broadcast of the final episode you should expect those episodes to disappear from the get_iplayer search results.
-- From get_iplayer 2.94, some TV programmes > 7 days old and < 14 days old may also appear in search results due to changes in indexing.
-- You **MUST** download **ANY** other programme not found in search results directly via PID or URL. If you don't know what that means, it's time to refresh yourself [here](documentation#recording).
-- get_iplayer 2.87 or higher is **REQUIRED** to download programmes more than 7 days old via PID or URL.  If you're using your own hacked version of get_iplayer, you'll need to do some more hacking.
-- When in doubt, use the programme PID.  All available programmes can be downloaded via PID regardless of whether or not they are in the get_iplayer cache.
+Also see: [Signed Programmes Guide](https://squarepenguin.co.uk/guides/download-signed-programmes-get_iplayer/)
 
-        TV: get_iplayer --pid=<PID> ...
+### How do I record a programme using its episode URL?
 
-        Radio: get_iplayer --pid=<PID> --type=radio ...
+See: [Usage and Examples](/wiki/documentation#recording-url)
+
+Also see: [TV Guide](https://squarepenguin.co.uk/guides/tv-download-guide/), [Radio Guide](https://squarepenguin.co.uk/guides/radio-download-guide/)
+
+### How do I record a programme using its episode PID?
+
+See: [Usage and Examples](/wiki/documentation#recording-pid)
+
+Also see: [TV Guide](https://squarepenguin.co.uk/guides/tv-download-guide/), [Radio Guide](https://squarepenguin.co.uk/guides/radio-download-guide/)
+
+### What is a PID?
+
+See: [Usage and Examples](/wiki/documentation#recording-pid)
+
+### How do I use the PVR functionality in get_iplayer?
+
+See: [Usage and Examples](/wiki/documentation#pvr-usage)
+
+Also see: [PVR Guide](https://squarepenguin.co.uk/guides/get_iplayer-pvr-guide/)
+
+### I am outside the UK and I can't download a programme. What can I do?
+
+Use of get_iplayer outside the UK is not supported, with the exception of downloading lower-quality (96k and 48k) radio programmes that are available to international users. Do not ask for help downloading TV programmes or higher-quality (320k and 128k) radio programmes from outside the UK. Do not discuss methods to circumvent BBC geoblocking in get_iplayer forums. It doesn't matter what VPN, VPS, HTTP proxy or DNS proxy you use - you may find yourself blocked by the BBC, and get_iplayer can do nothing about it.
+
+### I am in the UK, but I am using a VPN, VPS, HTTP proxy or DNS proxy and I can't download a programme. What can I do?
+
+Use of get_iplayer with any VPN, VPS, HTTP proxy or DNS proxy - even if you are in the UK - is not supported. If the BBC has blocked you even though you are in the UK, there is nothing get_iplayer can do about. If your VPN/VPS/proxy is causing download problems, there is nothing get_iplayer can do to work around them.
+
+### How do I download HD video for TV programmes?
+
+get_iplayer downloads HD video by default if it is available for a TV programme. See [get_iplayer Recording Modes](/wiki/modes) for examples and more information on recording quality settings.
+
+### I have a poor internet connection and I can't download HD video. How can I download lower-quality video?
+
+Specify lower-quality recording mode(s). See [get_iplayer Recording Modes](/wiki/modes) for examples and more information on recording quality settings.
+
+### I can't find a programme with a get_iplayer search.  What am I doing wrong?
+
+- Did you correctly spell the programme name (or partial name) in your search string?
+
+- Are you searching for a radio programme? If so, did you use `--type=radio` in your get_iplayer command? It is required for searching radio programmes.
+
+- Are you searching for a TV programme with audio description or signing? That search functionality is no longer available in get_iplayer, though you can still use `--versions=audiodescribed` or `--versions=signed` when downloading to select the desired version (if available).
+
+- Are you searching for programmes by category? That search functionality is no longer available in get_iplayer, though category information is still included in the metadata added to programmes after download.
+
+- Was the programme actually broadcast on a BBC linear service? iPlayer Exclusives, archive programmes, red button programmes and BBC Three programmes are not indexed by get_iplayer and thus cannot be searched.
+
+- Was the programme broadcast within the past 30 days? get_iplayer only caches programme index entries for a maximum of 30 days.
+
+- Is the programme a film, newscast or weather forecast? Such programmes, among others, expire in less than 30 days. Films may expire after 1 week and newscasts may expire after 1 day.
+
+- Is the programme actually available on the iPlayer site? Not every programme will be available, or there may be a delay of several days before a programme is made available.
+
+- Have you just installed get_iplayer for the first time? After your first installation of get_iplayer, you much refresh the programme index cache each calendar week for a month in order to build up 30 days of listings. Once that is done, the 30-day buffer will be maintained as long as you refresh once per calendar week.
+
+- Some programmes lack the metadata get_iplayer needs for indexing. These programmes cannot be searched.
+
+- When in doubt, use the programme PID or URL to download a programme directly.  All available programmes can be downloaded via PID or URL regardless of whether or not they are in the get_iplayer index cache.
+
+get_iplayer --pid=<PID> [...]
+get_iplayer --url=<URL> [...]
+
+### I can't record a programme with get_iplayer. What am I doing wrong?
+
+- If you are recording programmes individually, did you enter the correct episode URL or episode PID?
+
+- Is the programme actually available on the iPlayer site? Not every programme will be available, or there may be a delay of several days before a programme is made available.
+
+- Can you actually play the programme on the iPlayer site? Sometimes a programme may be listed on the iPlayer site but cannot be played. If a programme is not playable on the iPlayer site, it is probably also not available to get_iplayer.
+
+- Are you outside the UK? Only lower-quality radio programmes are available to international users. Even if you have a VPS, VPN, HTTP proxy or DNS proxy, you may still be blocked by the BBC.
+
+- Are you downloading an RTMP (Flash) stream with rtmpdump?. This method can be unreliable and has been deprecated. Use the default settings (which utilise HLS streams) instead. See [get_iplayer Recording Modes](/wiki/modes) for information on stream types.
+
+### What does it mean when I get the message "WARNING: No media streams found for requested programme versions and recording modes."?
+
+- Are you outside the UK? get_iplayer attempts to detect when the BBC is blocking you, but it doesn't always work. If not, get_iplayer will see that no streams are available, but it cannot know the reason, so only the above message will be displayed.
+
+- It may also mean that the programme is listed on the iPlayer site, but the media streams used by get_iplayer have not been configured on the partner CDN sites.
+
+### How do I extract audio from a TV or radio programme into an MP3 file?
+
+The best solution is to use a separate media converter utility on your downloaded files. You can also use the deprecated `--aactomp3` option (**radio programmes only** - not recommended) or see [custom command examples](/wiki/documentation#custom-commands) in documentation.
+
+### How do I repackage audio and video from a TV programme into an MKV file?
+
+The best solution is to use a separate media converter utility on your downloaded files. You can also use the deprecated `--mkv` option (not recommended) or see [custom command examples](/wiki/documentation#custom-commands) in documentation.
+
+### How do I repackage audio and video from a TV programme into an AVI file?
+
+The best solution is to use a separate media converter utility on your downloaded files. You can also use the deprecated `--avi` option (not recommended) or see [custom command examples](/wiki/documentation#custom-commands) in documentation.
+
+### How do I create .nfo files for Kodi?
+
+Use the deprecated `--metadata=kodi` option (not recommended) or see [custom command examples](/wiki/documentation#custom-commands) in documentation.
+
+### How do I record an entire series?
+
+If the series is still ongoing and episodes are available in get_iplayer search results, then catch up by downloading episodes normally. You can also use the PVR functionality to record an ongoing series. You can download episodes individually via PID or URL if they do not appear in search results. If the series is still available on iPlayer but a large number of episodes have expired from the get_iplayer index cache, see [recursive recording examples](/wiki/documentation#recording-recursive) for information on using `--pid-recursive` to perform recursive downloading of all episodes in a series.

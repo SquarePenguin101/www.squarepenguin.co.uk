@@ -6,7 +6,7 @@ draft = false
 pageimage = ""
 pagesubtitle = "COMPREHENSIVE GUIDES TO GET YOU STARTED QUICKLY"
 pagetitle = "get_iplayer installation guides"
-slug = "archlinux"
+slug = "arch"
 title = "get_iplayer Arch Linux installation guide"
 Type = "downloads"
 +++
