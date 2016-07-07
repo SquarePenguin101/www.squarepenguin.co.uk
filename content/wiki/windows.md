@@ -1,6 +1,6 @@
-<a name="installer"></a>
 ## Windows Installation
 
+<a name="installer"></a>
 Windows users should install get_iplayer with the provided installer.  Download the latest version from:
 
 <https://github.com/get-iplayer/get_iplayer_win32/releases/latest>
