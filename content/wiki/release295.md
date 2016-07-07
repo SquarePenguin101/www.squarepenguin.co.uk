@@ -67,10 +67,11 @@ You no longer need to use `--tvmode=best` or `--modes=best` to get HD video for 
 
 Since the release of get_iplayer 2.94, the BBC has completed the rollout of its Video Factory streams for on-demand TV programmes. These are HLS streams with slightly different bitrates and video resolutions from the default HLS streams (see [recording modes documentation](modes) for details). They are the same as the streams available for live TV. The Video Factory streams are available with the **hvf** prefix (e.g., `--tvmode=hvf`) - think "**H**LS **V**ideo **F**actory".
 
-There are two significant differences to be aware of:
+There are three significant differences to be aware of:
 
-- The Video Factory HD streams are 5Mbps 1280x720 50fps (frames per second), which means downloads are roughly double the size (2 GB per hour of video) of the default 2.5Mbps 1280x720 25fps HD streams. You will have to judge for yourself if **hvf** HD streams are worth the doubled download size and bandwidth usage.
+- The Video Factory HD streams are 5Mbps 1280x720 50fps (frames per second), which means downloads are roughly double the size (2 GB per hour of video) of the default 2.5Mbps 1280x720 25fps HD streams. The 50fps streams appear to be frame-doubled deinterlaced 25fps, so you will have to judge for yourself if **hvf** HD streams are worth the doubled download size and bandwidth usage.
 - There is an additional 3Mbps 960x540 50fps stream available, designated as `hvfsd`.
+- The 50fps streams have 128kbps AAC audio, compared to 96kbps AAC audio in the default HD streams.
 
 There is one very important limitation: Downloads from Video Factory streams cannot be re-muxed to MP4 by avconv or ffmpeg <2.5. Only ffmpeg 2.5+ appears to work. This is of particular note to users still on old LTS versions of Ubuntu (12.04, 14.04) and Mint (13, 17), and Mageia 5. If you are unable or unwilling to upgrade your system, you will need to acquire a modern version of ffmpeg if you wish create MP4 files from Video Factory streams (you can still download with `--raw`). There may be several alternatives available, but one possible solution is to use a static build of ffmpeg from:
 
@@ -80,12 +81,14 @@ There is one very important limitation: Downloads from Video Factory streams can
 
 The get_iplayer Windows installer has been rewritten and simplified:
 
-- The installer is now self-contained. It does not download additional components, nor does it access the network while running. This should hopefully avoid some problems with anti-virus and anti-spyware packages.
+- The installer is now self-contained. It does not download additional components, nor does it access the network while running. This should hopefully avoid some problems with anti-virus and anti-spyware packages. 
+- Some anti-virus software may still flag the installer itself, the generated uninstaller (`uninstall.exe`) or other components as infected, and thus may quarantine or auto-delete those files. Historically, these have always been false positives, but you must check with your anti-virus vendor to be certain. **Do not install get_iplayer if you are at all unsure about the contents of its Windows installer**.
+- Checksums are now provided along with the installer so that you can verify the download.
 - There are no user-selectable options for installation. The installer performs an "All Users" installation to `C:\Program Files\get_iplayer` [32-bit systems] or `C:\Program Files\get_iplayer (x86)` [64-bit systems]. This should hopefully help to avoid users creating permissions problems when installing under a different user account.
 - The installer will append the get_iplayer installation directory to the value of the system PATH environment variable (`%PATH%`). This will allow you to run get_iplayer from any location in a normal command prompt window.
-- The path for the embedded Perl distribution (`perl` subdirectory) and the path to the included atomicparsley, ffmpeg and rtmpdump utilities (`utils` subdirectory) are not permanently added to `%PATH%`. They are temporarily added to `%PATH%` only when get_iplayer batch scripts are running.
+- The path for the embedded Perl distribution (`perl` subdirectory) and the path to the included atomicparsley, ffmpeg and rtmpdump utilities (`utils` subdirectory) are not permanently added to `%PATH%`. They are temporarily prepended to `%PATH%` only when get_iplayer batch scripts are running. If `%PATH%` is already quite large, e.g. because of other software packages that did not properly update %PATH% on install or uninstall, you may experience problems launching perl or external programs. In that case, you will need to clean obsolete entries from your PATH environment variable settings. Run `echo %PATH%` from a command prompt to check the value. This should affect few users.
 - The get_iplayer menu shortcut now opens a console window in your home directory (`%HOMEDRIVE%%HOMEPATH%`) rather than in the installation directory.
-- The major and minor version of the Windows installation (as shown in control panel) will now track the version of the embedded get_iplayer script.
+- The major and minor version of the Windows installer (as shown in control panel) will now track the version of the embedded get_iplayer script. For example, the Windows installer may be released over time in several versions: 2.95.0, 2.95.1, 2.95.2. All those releases would include the same get_iplayer 2.95 Perl scripts, as denoted by the major and minor version ("2.95").
 - The new installer attempts to clean up after flaws in the original installer that could lead to broken installations on multi-user systems, among other things. The cleanup process is described here:
 
     <https://github.com/get-iplayer/get_iplayer_win32/wiki/cleanup>
@@ -195,11 +198,15 @@ As far as is known, get_iplayer, its dependencies and the Windows installer stil
 
 ### Installation documentation reduced
 
-The wiki pages describing package installation for Unix distros have been removed. That documentation can no longer be supported by the maintainer. Similar pages for for MacPorts and Cygwin have also been removed. get_iplayer was never packaged for those platforms.
+The wiki pages describing package installation for Unix distros have been removed. That documentation can no longer be supported by the maintainer. Similar pages for MacPorts and Cygwin have also been removed. get_iplayer was never packaged for those platforms.
 
 There is now a summary page listing the available Unix packages, with links to package and repo sites. If you wish to maintain installation documentation on your own site for a Unix distro feel free to insert a link to it at an appropriate place in:
 
 <https://github.com/get-iplayer/get_iplayer/wiki/unixpkg>
+
+SquarePenguin has kindly resurrected the Unix distro pages removed from the GitHub wiki at:
+
+<https://squarepenguin.co.uk/downloads/>
 
 ## Deprecations
 

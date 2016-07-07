@@ -116,6 +116,6 @@ Upgrade to future releases with:
 
     If not, click the link above or enter the URL in your web browser.
 
-3. After the WPM has opened, click the `Refresh Cache` button.  A new tab or window will open that shows the cache being refreshed.  Leave that tab or window open to have the cache refreshed automatically every hour.  You can also manually refresh the cache at any time. 
+3. After the WPM has opened in your browser, select the programme types (e.g., BBC TV, BBC Radio) you wish to index, then click the `Refresh Cache` button. Leave that tab or window open to have the cache refreshed automatically every hour. You can also manually refresh the cache at any time. 
 
 4. Stop the WPM by typing Ctrl-C.

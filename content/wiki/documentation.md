@@ -223,7 +223,7 @@ Multiple `--pid` options
 <a name="recording-force"></a>
 #### Re-recording a programme
 
-When a programme is successfully recorded, it is logged in the `download_history` file in get_iplayer's profile directory. If a programme is in the download history it cannot be re-downloaded unless you explicitly use the `--force` option, e.g.:
+When a programme is successfully recorded, it is logged in the `download_history` file in get_iplayer's [profile directory](#saving-settings). If a programme is in the download history it cannot be re-downloaded unless you explicitly use the `--force` option, e.g.:
 
     get_iplayer --pid=b01sc0wf --force
 
@@ -271,7 +271,7 @@ PIDs can also reference brands or series as well as individual programme episode
 
 <http://www.bbc.co.uk/programmes/b006m8wd>
 
-so the brand PID is 'b006m8wd'. The brand home page can usually be accessed via the "Programme website" link on iPlayer episode pages for TV programmes or the the "Home" link on iPlayer Radio episode pages for radio programmes.
+so the brand PID is 'b006m8wd'. The brand home page can usually be accessed via the "Programme website" link on iPlayer episode pages for TV programmes or the "Home" link on iPlayer Radio episode pages for radio programmes.
 
 get_iplayer can use brand/series PIDs to recursively download all episodes in the brand or series: 
 

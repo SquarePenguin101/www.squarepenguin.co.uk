@@ -106,7 +106,7 @@ Below are representative values for recordings made with each of the TV recordin
 
 |Recording Mode|Stream Format|Video Codec|Video Resolution|Video Bitrate|Audio Codec|Audio Bitrate|Overall Bitrate
 |--------------|-------------|-----------|----------------|-------------|-----------|-------------|---------------
-|**hlshd**|HLS|H.264|1280 x 720|2800 kbps|AAC|128 kbps|2128 kbps
+|**hlshd**|HLS|H.264|1280 x 720|2280 kbps|AAC|96 kbps|2379 kbps
 |**hlsvhigh**|HLS|H.264|832 x 468|1404 kbps|AAC|96 kbps|1496 kbps
 |**hlshigh**|HLS|H.264|640 x 360|700 kbps|AAC|96 kbps|801 kbps
 |**hlsstd**|HLS|H.264|640 x 360|416 kbps|AAC|96 kbps|516 kbps

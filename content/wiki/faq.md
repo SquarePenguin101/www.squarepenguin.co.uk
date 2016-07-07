@@ -90,7 +90,7 @@
 
 18. **I am in the UK, but I am using a VPN, VPS, HTTP proxy or DNS proxy and I can't download a programme. What can I do?**
 
-    Use of get_iplayer with any VPN, VPS, HTTP proxy or DNS proxy - even if you are in the UK - is not supported. If the BBC has blocked you even though you are in the UK, there is nothing get_iplayer can do about. If your VPN/VPS/proxy is causing download problems, there is nothing get_iplayer can do to work around them.
+    Use of get_iplayer with any VPN, VPS, HTTP proxy or DNS proxy - even if you are in the UK - is not supported. If the BBC has blocked you even though you are in the UK, there is nothing get_iplayer can do about it. If your VPN/VPS/proxy is causing download problems, there is nothing get_iplayer can do to work around them.
 
 19. **How do I download HD video for TV programmes?**
 
@@ -139,17 +139,17 @@
     
     - Are you downloading an RTMP (Flash) stream with rtmpdump?. This method can be unreliable and has been deprecated. Use the default settings (which utilise HLS streams) instead. See [get_iplayer Recording Modes](/wiki/modes) for information on stream types.
     
-24. **What does it mean when I get the message "WARNING: No media streams found for requested programme versions and recording modes."?**
+23. **What does it mean when I get the message "WARNING: No media streams found for requested programme versions and recording modes."?**
 
     - Are you outside the UK? get_iplayer attempts to detect when the BBC is blocking you, but it doesn't always work. If not, get_iplayer will see that no streams are available, but it cannot know the reason, so only the above message will be displayed.
     
     - It may also mean that the programme is listed on the iPlayer site, but the media streams used by get_iplayer have not been configured on the partner CDN sites.
     
-25. **How do I extract audio from a TV or radio programme into an MP3 file?**
+24. **How do I extract audio from a TV or radio programme into an MP3 file?**
 
     The best solution is to use a separate media converter utility on your downloaded files. You can also use the deprecated `--aactomp3` option (**radio programmes only** - not recommended) or see [custom command examples](/wiki/documentation#custom-commands) in documentation.
 
-26. **How do I repackage audio and video from a TV programme into an MKV file?**
+25. **How do I repackage audio and video from a TV programme into an MKV file?**
 
     The best solution is to use a separate media converter utility on your downloaded files. You can also use the deprecated `--mkv` option (not recommended) or see [custom command examples](/wiki/documentation#custom-commands) in documentation.
 
@@ -157,10 +157,14 @@
 
     The best solution is to use a separate media converter utility on your downloaded files. You can also use the deprecated `--avi` option (not recommended) or see [custom command examples](/wiki/documentation#custom-commands) in documentation.
 
-28. **How do I create .nfo files for Kodi?**
+27. **How do I create .nfo files for Kodi?**
 
     Use the deprecated `--metadata=kodi` option (not recommended) or see [custom command examples](/wiki/documentation#custom-commands) in documentation.
     
-29. **How do I record an entire series?**
+28. **How do I record an entire series?**
 
-    If the series is still ongoing and episodes are available in get_iplayer search results, then catch up by downloading episodes normally. You can also use the PVR functionality to record an ongoing series. You can download episodes individually via PID or URL if they do not appear in search results. If the series is still available on iPlayer but a large number of episodes have expired from the get_iplayer index cache, see [recursive recording examples](/wiki/documentation#recording-recursive) for information on using `--pid-recursive` to perform recursive downloading of all episodes in a series.
+    If the series is still ongoing and episodes are available in get_iplayer search results, then catch up by downloading episodes normally. You can also use the PVR functionality to record an ongoing series. You can download episodes individually via PID or URL if they do not appear in search results. If the series is still available on iPlayer but a large number of episodes have expired from the get_iplayer index cache, see [recursive recording examples](wiki/documentation#recording-recursive) for information on using `--pid-recursive` to perform recursive downloading of all episodes in a series.
+
+29. **What do I do if my anti-virus software identifies the get_iplayer Windows installer, or one of its components, as being infected?**
+
+    Some anti-virus software may flag the installer itself, the generated uninstaller (`uninstall.exe`) or other components as infected, and thus may quarantine or auto-delete those files. Historically, these have always been false positives, but you must check with your anti-virus vendor to be certain. **Do not install get_iplayer if you are at all unsure about the contents of its Windows installer**.

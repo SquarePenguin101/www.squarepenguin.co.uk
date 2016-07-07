@@ -165,3 +165,7 @@ Use the deprecated `--metadata=kodi` option (not recommended) or see [custom com
 ### How do I record an entire series?
 
 If the series is still ongoing and episodes are available in get_iplayer search results, then catch up by downloading episodes normally. You can also use the PVR functionality to record an ongoing series. You can download episodes individually via PID or URL if they do not appear in search results. If the series is still available on iPlayer but a large number of episodes have expired from the get_iplayer index cache, see [recursive recording examples](/wiki/documentation#recording-recursive) for information on using `--pid-recursive` to perform recursive downloading of all episodes in a series.
+
+### What do I do if my anti-virus software identifies the get_iplayer Windows installer, or one of its components, as being infected?
+
+Some anti-virus software may flag the installer itself, the generated uninstaller (`uninstall.exe`) or other components as infected, and thus may quarantine or auto-delete those files. Historically, these have always been false positives, but you must check with your anti-virus vendor to be certain. **Do not install get_iplayer if you are at all unsure about the contents of its Windows installer**.

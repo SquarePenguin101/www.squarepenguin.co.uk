@@ -9,7 +9,7 @@ The packages are maintained by volunteers and may not be updated for a short tim
 - Arch (from [ArchLinux User Repository](https://aur.archlinux.org), [multiple packages](https://aur.archlinux.org/packages/?K=get_iplayer))
 - CentOS/RHEL (from [Nux Dextop](http://li.nux.ro/repos.html))
 - Debian (from [Debian testing](https://wiki.debian.org/DebianTesting), [package info](https://packages.debian.org/testing/get-iplayer))
-- Fedora (from [RPMFusion](http://rpmfusion.org), [package info](http://download1.rpmfusion.org/free/fedora/releases/23/Everything/source/SRPMS/repoview/get_iplayer.html))
+- Fedora (from [RPMFusion](http://rpmfusion.org), [package info](https://www.rpmfind.net/linux/rpm2html/search.php?query=get_iplayer&system=rpmfusion))
 - FreeBSD/PC-BSD (in default repos, [package info](https://www.freshports.org/net/get_iplayer/))
 - Mageia (in default repos, [package info](https://madb.mageia.org/package/show/application/0/name/get_iplayer))
 - NetBSD (in default repos, [package info](http://pkgsrc.se/net/get_iplayer))
@@ -21,3 +21,11 @@ The packages are maintained by volunteers and may not be updated for a short tim
 - Slackware (from [SlackBuilds](https://slackbuilds.org), [package info](https://slackbuilds.org/result/?search=get_iplayer&sv=))
 - Ubuntu/Mint (from [get-player PPA](https://launchpad.net/~jon-hedgerows/+archive/get-iplayer))
     - Ubuntu/Mint users should **NOT** install the get-iplayer package in the default Ubuntu/Mint repos. It will likely be obsolete and at least partially broken. It is particularly likely to be broken in LTS releases. Use the get-iplayer PPA.
+
+### Old instructions
+
+Unix package installation instructions once maintained in this wiki have been copied to:
+
+https://squarepenguin.co.uk/downloads/
+
+These instructions are not supported by the get_iplayer maintainer and may be obsolete. 

@@ -1,5 +1,19 @@
 ## Contribute to get_iplayer
 
+### Support
+
+You are encouraged to help answer queries in the support forums:
+
+<https://squarepenguin.co.uk/forums/>
+
+### Documentation
+
+If you would like to contribute new documentation or make changes in existing documentation, you can edit the project wiki  (GitHub account required). The get_iplayer project wiki is:
+
+<https://github.com/get-iplayer/get_iplayer/wiki>
+
+Markdown content is required.
+
 ### Code
 
 If you would like to contribute to get_iplayer development, fork the repository on GitHub and submit a pull request with your changes (GitHub account required). See GitHub help documentation for basic information on [forking a repo](https://help.github.com/articles/fork-a-repo/) and [creating a pull request](https://help.github.com/articles/creating-a-pull-request/). The get_iplayer project repo is:
@@ -21,16 +35,3 @@ Follow a few basic guidelines for pull requests:
 - Make sure your patches apply cleanly to the current **develop** branch in the get_iplayer repo, otherwise they may be rejected. Don't expect committers to fix your code.
 - If you are not able to test your code on at least one version each of Linux/Unix, OS X and Windows, say so in your pull request description. If that is the case, your pull request is less likely to be accepted, but it is necessary for committers to know what testing may be required.
 
-### Documentation
-
-If you would like to contribute new documentation or make changes in existing documentation, you can edit the project wiki  (GitHub account required). The get_iplayer project wiki is:
-
-<https://github.com/get-iplayer/get_iplayer/wiki>
-
-Markdown content is required.
-
-### Support
-
-You are encouraged to help answer queries in the support forums:
-
-<https://squarepenguin.co.uk/forums/>
