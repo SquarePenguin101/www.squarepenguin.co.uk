@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [Source Code](#source-code)
 - Requirements
 	- [Perl](#perl)
 	- [External Programs](#external-programs)
@@ -11,6 +12,14 @@
 - [OS X](/wiki/osx)
 - [Windows](/wiki/windows)
 - [Development Version](/wiki/gipdev)
+
+
+<a name="source-code"></a>
+## Source Code
+
+The source code for the latest get_iplayer release can be downloaded as a tarball or zip archive from:
+
+<https://github.com/get-iplayer/get_iplayer/releases/latest>
 
 <a name="requirements"></a>
 ## Requirements

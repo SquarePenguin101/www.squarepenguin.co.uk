@@ -169,3 +169,15 @@ If the series is still ongoing and episodes are available in get_iplayer search 
 ### What do I do if my anti-virus software identifies the get_iplayer Windows installer, or one of its components, as being infected?
 
 Some anti-virus software may flag the installer itself, the generated uninstaller (`uninstall.exe`) or other components as infected, and thus may quarantine or auto-delete those files. Historically, these have always been false positives, but you must check with your anti-virus vendor to be certain. **Do not install get_iplayer if you are at all unsure about the contents of its Windows installer**.
+
+### Why does the download progress display show a percentage complete >100%?
+
+The file sizes provided in media stream metadata do not match the actual sizes of the downloaded files. Therefore, the calculated percentage complete will be >100% when the actual size is greater than the size in metadata. You should ignore this. If get_iplayer cannot download part of a programme, you will see an error message. Flash streams are not affected.
+
+### Should I be concerned when I see the message `non-existing SPS 0 referenced in buffering period` in get_iplayer output?
+
+This message comes from the H.264 video decoder in ffmpeg and is printed when re-muxing MPEG-TS files to MP4. As far as is known, the condition flagged by ffmpeg does not have any effect on get_iplayer re-muxing, so you can ignore this message. It can be suppressed with `--quiet`, but you are strongly recommended not to do so because that may suppress other error messages from ffmpeg.
+
+### Why does `sudo apt-get install get-iplayer` install an obsolete version of get_iplayer on Ubuntu/Mint?
+
+The get-iplayer packages in Ubuntu/Mint repositories usually include obsolete and partially broken versions of get_iplayer. You must use the [get_iplayer PPA](https://launchpad.net/~jon-hedgerows/+archive/get-iplayer) to install get_iplayer on Ubuntu/Mint. See: [Ubuntu installation guide](https://squarepenguin.co.uk/downloads/ubuntu/).

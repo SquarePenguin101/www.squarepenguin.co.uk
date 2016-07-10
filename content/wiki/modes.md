@@ -73,7 +73,11 @@ You wish to record medium-quality radio, e.g., for speech programmes:
 
 You are using the Web PVR Manager and you wish to record medium-quality TV programmes, but you also wish to record the best quality radio programmes:
 
-> The WPM effectively uses `--modes` behind the scenes, so you will need two shortcuts, one that applies only to radio and one that applies to TV. Enter `radiobest,good` - **the order is important** - in the *Recording Modes* field and click *Apply Settings*, then record your programmes. If you want that to be your new default setting, click *Save As Default* after updating the *Recording Modes* field.
+> The WPM effectively uses `--modes` behind the scenes, so you will need two shortcuts, one that applies only to radio and one that applies to TV. Enter `radiobest,good` - **the order is important, with radio modes going before TV modes** - in the *Recording Modes* field and click *Apply Settings*, then record your programmes. If you want that to be your new default setting, click *Save As Default* after updating the *Recording Modes* field.
+
+You are using the Web PVR Manager and you wish to record medium-quality radio programmes, but you also wish to record the best quality TV programmes:
+
+> The WPM effectively uses `--modes` behind the scenes, so you will need two shortcuts, one that applies only to radio and one that applies to TV. Enter `radiobetter,best` - **the order is important, with radio modes going before TV modes** - in the *Recording Modes* field and click *Apply Settings*, then record your programmes. If you want that to be your new default setting, click *Save As Default* after updating the *Recording Modes* field.
 
 <a name="mode-options"></a>
 ## Recording Mode Options
@@ -202,6 +206,11 @@ The tables below detail how recording mode shortcuts are expanded into lists of 
 |**good**|hlsmed,dashmed,hlslow,dashlow
 |**better**|hlsstd,dashstd,hlsmed,dashmed,hlslow,dashlow
 |**best**|hlshigh,dashhigh,hlsstd,dashstd,hlsmed,dashmed,hlslow,dashlow
+|**radioworst**|synonym for **worst** applied only to radio
+|**radioworse**|synonym for **worse** applied only to radio
+|**radiogood**|synonym for **good** applied only to radio
+|**radiobetter**|synonym for **better** applied only to radio
+|**radiobest**|synonym for **best** applied only to radio
 |**dashworst**|dashlow
 |**dashworse**|dashlow
 |**dashgood**|dashmed,dashlow
