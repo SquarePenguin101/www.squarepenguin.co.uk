@@ -11,7 +11,7 @@ title = "get_iplayer Windows installation guide"
 Type = "downloads"
 
 +++
-<div style="float:right;text-align:center;padding:20px;max-width:300px;"><a href="https://github.com/get-iplayer/get_iplayer_win32/releases/download/2.95.1/get_iplayer-2.95.1.exe" title="get_iplayer download link for Windows installer"><h1 style="color:#aa0066;">Download Windows installer</h1><img src="/icons/download.png" style="max-width:150px;margin-top:20px;" alt="get_iplayer download link for Windows installer"/></a></div>
+<div style="float:right;text-align:center;padding:20px;max-width:300px;"><a href="https://github.com/get-iplayer/get_iplayer_win32/releases/tag/2.95.2" title="get_iplayer download link for Windows installer"><h1 style="color:#aa0066;">Download Windows installer</h1><img src="/icons/download.png" style="max-width:150px;margin-top:20px;" alt="get_iplayer download link for Windows installer"/></a></div>
 
 # get_iplayer Windows installer
 
