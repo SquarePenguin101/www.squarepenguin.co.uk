@@ -20,7 +20,7 @@ Type = "guides"
 
 You can still download audiodescribed versions, but you'll have to search for them on the iPlayer site to find the PIDs.
 
-For more information, read the [get_iplayer version 2.94 release notes](/wiki/release293/ "get_iplayer 2.89-2.90 Release Notes").
+For more information, read the [get_iplayer version 2.94 release notes](https://github.com/get-iplayer/get_iplayer/wiki/release293/ "get_iplayer 2.89-2.90 Release Notes").
 
 * * *
 
@@ -28,7 +28,7 @@ For more information, read the [get_iplayer version 2.94 release notes](/wiki/re
 
 ## Using the `--versions` command
 
-From the [Options Wiki page](/wiki/options/ "Options") we see that in order to obtain signed versions of TV programmes we need to use the `--versions` command. get_iplayer doesn't download these versions of the show by default, so we need to manually tell it to do so.
+From the [Options Wiki page](https://github.com/get-iplayer/get_iplayer/wiki/options/ "Options") we see that in order to obtain signed versions of TV programmes we need to use the `--versions` command. get_iplayer doesn't download these versions of the show by default, so we need to manually tell it to do so.
 
 With this command you then use the argument 'signed' in order to tell get_iplayer to download the signed version of the programme. It doesn't really matter where in the full download command you place this `--versions` command and its arguements but I usually place it at the end.
 

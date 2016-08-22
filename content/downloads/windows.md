@@ -23,8 +23,8 @@ If you have security or curiosity on your mind then we've got you covered. You c
 
 ## Some more info?
 
-You can check out a very quick getting started guide in the wiki [here](/wiki/windows/) and you can get up to speed with downloading programmes very quickly by visiting the [guides section](/guides/).
+You can check out a very quick getting started guide in the wiki [here](https://github.com/get-iplayer/get_iplayer/wiki/windows/) and you can get up to speed with downloading programmes very quickly by visiting the [guides section](/guides/).
 
 ## Windows custom installation
 
-If you are a bit of a ninja or just have particular requirement or constraints, you can customise your installation. Check out the [Windows custom installation](/wiki/windows#custom) wiki section for full information.
+If you are a bit of a ninja or just have particular requirement or constraints, you can customise your installation. Check out the [Windows custom installation](https://github.com/get-iplayer/get_iplayer/wiki/windows#custom) wiki section for full information.

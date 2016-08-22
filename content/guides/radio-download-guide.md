@@ -19,7 +19,7 @@ This guide has been written in a step by step manner for beginners. If this is y
 
 However, if you are coming back here to use this guide as a reference or just have a specific question, feel free to click on any of the links in the contents below to jump to the relevant section you need.
 
-**NOTE** - Need the full get_iplayer documentation? Find it in the [Wiki Documentation](/wiki/documentation/).
+**NOTE** - Need the full get_iplayer documentation? Find it in the [Wiki Documentation](https://github.com/get-iplayer/get_iplayer/wiki/documentation/).
 
 ## Guide Contents
 
@@ -33,7 +33,7 @@ However, if you are coming back here to use this guide as a reference or just ha
 
 ## How do I search for radio programmes using get_iplayer?
 
-See: [get_iplayer v2.90 release notes](/wiki/release289// "get_iplayer 2.89-2.90 Release Notes") to see how recent changes have impacted get_iplayer before searching for any programmes.
+See: [get_iplayer v2.90 release notes](https://github.com/get-iplayer/get_iplayer/wiki/release289// "get_iplayer 2.89-2.90 Release Notes") to see how recent changes have impacted get_iplayer before searching for any programmes.
 
 If you don't know the name of the show your would like to download I would recommend using the BBC iPlayer website to browse for programmes you might enjoy. When you know the name of the show you'd like, we can begin searching.
 
@@ -189,7 +189,7 @@ wma
 
 **NOTE** - don't be concerned that the word 'flash' is used. This is purely for technical purposes to differentiate between the streams BBC iPlayer offers. When you download an file, it is automatically converted to AAC format.
 
-The top four options are known as 'mode shortcuts'. You can read a full explanation of these recording modes and their associated quality levels in the [Recording Modes](/wiki/modes/) wiki.
+The top four options are known as 'mode shortcuts'. You can read a full explanation of these recording modes and their associated quality levels in the [Recording Modes](https://github.com/get-iplayer/get_iplayer/wiki/modes/) wiki.
 
 The explanation is beyond the scope of this beginners guide and I recommend you simply use the default settings where you are not required to specify the quality level.
 
@@ -231,7 +231,7 @@ The file path should go within the quotation marks. You are free to type out the
 
 ## How do I permanently change where get_ipayer saves downloaded radio programmes?
 
-It's quite common to want to permanently change the location get_iplayer saves its downloaded files. For a complete overview of all output options take a look at the [Output Options](/wiki/options/#output-options) in the wiki, but lets take a look at a few simple and common options you can use.
+It's quite common to want to permanently change the location get_iplayer saves its downloaded files. For a complete overview of all output options take a look at the [Output Options](https://github.com/get-iplayer/get_iplayer/wiki/options/#output-options) in the wiki, but lets take a look at a few simple and common options you can use.
 
 ### Change download location for all files
 
@@ -267,4 +267,4 @@ You can set specific locations for the different types of files with the followi
 --outputtv
 ```
 
-Full info in the [Output Options section](/wiki/options/#output-options) of the Options wiki page.
+Full info in the [Output Options section](https://github.com/get-iplayer/get_iplayer/wiki/options/#output-options) of the Options wiki page.

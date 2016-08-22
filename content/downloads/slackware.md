@@ -11,7 +11,7 @@ title = "get_iplayer Slackware / Salix installation guide"
 Type = "downloads"
 +++
 
-**Before you begin**: Linux/Unix packages are maintained by volunteers and may not be updated for some time after a new release of get_iplayer, thus the version of get_iplayer packaged for your system may be obsolete. You can find the version number of the latest get_iplayer release [here](https://github.com/get-iplayer/get_iplayer/releases). If the version packaged for your system is older than the latest release, it is likely that some functionality is broken. After following the instructions below, you may wish to uninstall the get_iplayer package and use the [manual installation instructions](/wiki/unix) to install the latest get_iplayer CLI and Web PVR Manager. 
+**Before you begin**: Linux/Unix packages are maintained by volunteers and may not be updated for some time after a new release of get_iplayer, thus the version of get_iplayer packaged for your system may be obsolete. You can find the version number of the latest get_iplayer release [here](https://github.com/get-iplayer/get_iplayer/releases). If the version packaged for your system is older than the latest release, it is likely that some functionality is broken. After following the instructions below, you may wish to uninstall the get_iplayer package and use the [manual installation instructions](https://github.com/get-iplayer/get_iplayer/wiki/unix) to install the latest get_iplayer CLI and Web PVR Manager. 
 
 ## Slackware / Salix
 
@@ -114,7 +114,7 @@ These instructions are for Slackware / Salix 14.1. Differences between the two a
       
 5. Install additional Perl modules
 
-    If you wish to use the MP3::Tag module for better MP3 tagging, or you require the Net::SMTP::TLS::ButMaintained module for TLS email, additional Perl modules may be installed using the [local::lib method](/wiki/unix#perl-locallib).	
+    If you wish to use the MP3::Tag module for better MP3 tagging, or you require the Net::SMTP::TLS::ButMaintained module for TLS email, additional Perl modules may be installed using the [local::lib method](https://github.com/get-iplayer/get_iplayer/wiki/unix#perl-locallib).	
 
 6. Run CLI with:
 

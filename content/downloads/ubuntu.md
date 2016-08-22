@@ -17,9 +17,9 @@ These instructions are for Ubuntu (all versions that have not reached end-of-lif
 
 The get_iplayer versions incorporated in Ubuntu repositories are all out of date or broken, so Ubuntu/Mint users should install from the get-iplayer PPA.
 
-Ubuntu packages are maintained by volunteers and may not be updated for a short time after a new release of get_iplayer, thus the version of get_iplayer packaged for your system may be obsolete. You can find the version number of the latest get_iplayer release [here](https://github.com/get-iplayer/get_iplayer/releases). If the version packaged for your system is older than the latest release, it is likely that some functionality is broken. You may either wait a short while for a new release, usually less than 24 hours, or use the [manual installation instructions](/wiki/unix) to install the latest get_iplayer CLI and Web PVR Manager.
+Ubuntu packages are maintained by volunteers and may not be updated for a short time after a new release of get_iplayer, thus the version of get_iplayer packaged for your system may be obsolete. You can find the version number of the latest get_iplayer release [here](https://github.com/get-iplayer/get_iplayer/releases). If the version packaged for your system is older than the latest release, it is likely that some functionality is broken. You may either wait a short while for a new release, usually less than 24 hours, or use the [manual installation instructions](https://github.com/get-iplayer/get_iplayer/wiki/unix) to install the latest get_iplayer CLI and Web PVR Manager.
 
-Users of Ubuntu/Mint editions that have reached end-of-life ([Ubuntu](https://wiki.ubuntu.com/Releases), [Mint](http://www.linuxmint.com/oldreleases.php)), or that do not have a PPA build available, should use the [manual installation procedure](/wiki/unix).
+Users of Ubuntu/Mint editions that have reached end-of-life ([Ubuntu](https://wiki.ubuntu.com/Releases), [Mint](http://www.linuxmint.com/oldreleases.php)), or that do not have a PPA build available, should use the [manual installation procedure](https://github.com/get-iplayer/get_iplayer/wiki/unix).
 
 ### get-iplayer PPA
 

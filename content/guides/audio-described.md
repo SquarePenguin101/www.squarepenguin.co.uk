@@ -19,7 +19,7 @@ title = "Downloading Audio Described version of programmes"
 
 You can still download audiodescribed versions, but you'll have to search for them on the iPlayer site to find the PIDs.
 
-For more information, read the [get_iplayer version 2.94 release notes](/wiki/release293/ "get_iplayer 2.89-2.90 Release Notes").
+For more information, read the [get_iplayer version 2.94 release notes](https://github.com/get-iplayer/get_iplayer/wiki/release293/ "get_iplayer 2.89-2.90 Release Notes").
 
 * * *
 
@@ -27,7 +27,7 @@ Downloading an Audio Described programme with get_iplayer is almost identical to
 
 ## Using the `--versions` command
 
-From the [Options Wiki](/wiki/options/) page we see that in order to obtain Audio Described versions of TV programmes we need to use the `--versions` command. get_iplayer doesn't download these versions of the show by default, so we need to manually tell it to do so.
+From the [Options Wiki](https://github.com/get-iplayer/get_iplayer/wiki/options/) page we see that in order to obtain Audio Described versions of TV programmes we need to use the `--versions` command. get_iplayer doesn't download these versions of the show by default, so we need to manually tell it to do so.
 
 With this command you then use the argument 'audiodescribed' in order to tell get_iplayer to download the signed version of the programme.
 

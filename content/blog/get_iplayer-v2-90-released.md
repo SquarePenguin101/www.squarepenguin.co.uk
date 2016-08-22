@@ -13,7 +13,7 @@ Thanks to the hard work of get_iplayer maintainer Dinkypumpkin get_iplayer has b
 
 ## Read the release notes!
 
-This is an extensive update and you should read the [release notes](/wiki/release289/) to get yourself up to speed.
+This is an extensive update and you should read the [release notes](https://github.com/get-iplayer/get_iplayer/wiki/release289) to get yourself up to speed.
 
 ### Lets try that again...
 
@@ -21,7 +21,7 @@ READ THE [RELEASE NOTES!!!](/wiki/release289/) Thank you!
 
 ### Getting the latest update
 
-Installation information can be found within the [release notes](/wiki/release289/). Windows users will need to use the latest installer and linux/unix users will need to use the manual installation method until updates are made to the packages that are maintained for you particular system.
+Installation information can be found within the [release notes](https://github.com/get-iplayer/get_iplayer/wiki/release289). Windows users will need to use the latest installer and linux/unix users will need to use the manual installation method until updates are made to the packages that are maintained for you particular system.
 
 ### Users guides and other info
 

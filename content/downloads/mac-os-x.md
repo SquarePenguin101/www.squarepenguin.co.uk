@@ -39,11 +39,11 @@ Once you've installed Homebrew, it's just a one more line to get get_iplayer ins
 
 There is loads of info in the [guides](/guides/) section to get you downloading programmes in a snap. Make sure you read the whole guide to understand what's happening and why you need to do things a certain way.
 
-Find the [release notes](/wiki/releasenotes) in the wiki. Read at least the notes for the latest release. Things can change quite a lot between releases and you'll find explanations there as to why get_iplayer is working the way it is. 
+Find the [release notes](https://github.com/get-iplayer/get_iplayer/wiki/releasenotes) in the wiki. Read at least the notes for the latest release. Things can change quite a lot between releases and you'll find explanations there as to why get_iplayer is working the way it is. 
 
 ## More info?
 
-You can take a look at the [Mac OS X installation page](/wiki/osx/) in the wiki for a bit more info and for instructions on performing a manual installation. 
+You can take a look at the [Mac OS X installation page](https://github.com/get-iplayer/get_iplayer/wiki/osx/) in the wiki for a bit more info and for instructions on performing a manual installation. 
 
 ## Stuck?
 

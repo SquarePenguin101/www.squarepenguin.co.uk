@@ -20,7 +20,7 @@ get_iplayer can be easily configured to automatically download your favourite BB
 
 You even get seven days grace when you've forgotten to set up the PVR.
 
-Here is a quick guide to setting it up. I'm assuming you have downloaded and installed get_iplayer as described [here](/wiki/installation/).
+Here is a quick guide to setting it up. I'm assuming you have downloaded and installed get_iplayer as described [here](https://github.com/get-iplayer/get_iplayer/wiki/installation/).
 
 ## Setting up a PVR Search
 
@@ -69,7 +69,7 @@ If you want to list all the searches that you have saved just run:
 get_iplayer --pvrlist
 ```
 
-If you want to do some more advanced searches you might want to read [this guide](/wiki/documentation/) for examples.
+If you want to do some more advanced searches you might want to read [this guide](https://github.com/get-iplayer/get_iplayer/wiki/documentation/) for examples.
 
 ## Getting the PVR to run Automatically
 

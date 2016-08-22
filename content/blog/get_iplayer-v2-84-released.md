@@ -11,7 +11,7 @@ title = "get_iplayer v2.84 released"
 
 get_iplayer has been updated to version 2.84
 
-A full list of changes can be found in the <a href="/wiki/release284/">get_iplayer v2.84 Release Notes</a>.
+A full list of changes can be found in the <a href="https://github.com/get-iplayer/get_iplayer/wiki/release284">get_iplayer v2.84 Release Notes</a>.
 
 Summary of changes:
 
@@ -25,17 +25,15 @@ Summary of changes:
 
 ## Installation
 
-Installation information for all platforms may be found here:
-
-<a href="/wiki/installation">/wiki/installation</a>
+Installation information for all platforms may be found <a href="https://github.com/get-iplayer/get_iplayer/wiki/installation">here</a> and [here](downloads).
 
 Please note that it may take some time for get_iplayer 2.84 to be packaged for your particular system.
 <!--more-->
-#### Windows Installer
+### Windows Installer
 
-A new version of the get_iplayer Windows installer is available:
+All Windows users should use the get_iplayer installer to upgrade to latest get_iplayer release:
 
-<a href="http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe">http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe</a>
+[get_iplayer Windows installer](https://github.com/get-iplayer/get_iplayer/releases/latest)
 
 All Windows users should use this installer to upgrade to get_iplayer 2.84. The installer will update the following components to the indicated versions:
 

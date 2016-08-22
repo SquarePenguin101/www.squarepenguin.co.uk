@@ -98,3 +98,15 @@ _Top left > bottom right_
 10. [Written paper](http://www.flaticon.com/free-icon/written-paper_69926)
 
 Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> are licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
+
+## FAQ page
+
+<img src="/icons/getting-started.png" style="max-width:125px;" alt="Settings Tool"/>
+<img src="/icons/github-faq.png" style="max-width:125px;" alt="Settings Tool"/>
+
+_Left > right_
+
+1.  [Right arrow play Bbutton](http://www.flaticon.com/free-icon/right-arrow-play-button_61653)
+2.  [List layout with checkboxes](http://www.flaticon.com/free-icon/list-layout-with-check-boxes_61886)
+
+Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> are licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>

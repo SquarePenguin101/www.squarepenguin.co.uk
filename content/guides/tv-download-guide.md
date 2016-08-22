@@ -18,7 +18,7 @@ This guide has been written in a step by step manner for beginners. If this is y
 
 However, if you are coming back here to use this guide as a reference or just have a specific question, feel free to click on any of the links in the contents below to jump to the relevant section you need.
 
-**NOTE** - Need the full get_iplayer documentation? Find it in the [Wiki Documentation](/wiki/documentation/) page.
+**NOTE** - Need the full get_iplayer documentation? Find it in the [Wiki Documentation](https://github.com/get-iplayer/get_iplayer/wiki/documentation/) page.
 
 ## Guide Contents
 
@@ -35,7 +35,7 @@ However, if you are coming back here to use this guide as a reference or just ha
 
 ## How do I search for programmes using get_iplayer?
 
-See: [get_iplayer v2.90 release notes](/wiki/releasenotes/ "get_iplayer 2.89-2.90 Release Notes") and onwards to see how recent changes have impacted get_iplayer before searching for any programmes.
+See: [get_iplayer v2.90 release notes](https://github.com/get-iplayer/get_iplayer/wiki/releasenotes/ "get_iplayer 2.89-2.90 Release Notes") and onwards to see how recent changes have impacted get_iplayer before searching for any programmes.
 
 To begin using get_iplayer, we should first search for the programme we want to watch. Once you have the programme in mind that you would like to see, we simply search for a programme using get_iplayer by typing the following:
 
@@ -181,7 +181,7 @@ This is especially true if you use the PVR function (which I will explain later 
 
 ## How do I specify or change the quality level of programmes downloaded in get_iplayer?
 
-For a full explanation of get_iplayers recrding modes, check out the [Recording Modes](/wiki/modes/) wiki entry. It is easy to follow and gives some important background info.
+For a full explanation of get_iplayers recrding modes, check out the [Recording Modes](https://github.com/get-iplayer/get_iplayer/wiki/modes/) wiki entry. It is easy to follow and gives some important background info.
 
 If you're still here then know that as a default, get_iplayer will download the highest quality SD version of each programme but it's perfectly possible to tell get_iplayer the quality level you wish to download the programme in (if you want to make get_iplayer download in HD for example).
 
@@ -290,7 +290,7 @@ get_iplayer --get "Top Gear" --modes=best --type=tv --channel="BBC Two"
 
 To make get_iplayer rename downloaded programmes to a scheme of our choice, we use the "File Prefix" command coupled with the "Substitution Parameters" of our choice to 'build' the file name we want.
 
-A full list of available Substitution Parameters can be found in the [Substitution Parameters Wiki entry](/wiki/documentation/#substitution-parameters).
+A full list of available Substitution Parameters can be found in the [Substitution Parameters Wiki entry](https://github.com/get-iplayer/get_iplayer/wiki/documentation/#substitution-parameters).
 
 For our purposes, we will be using the following three Substitution Parameters:
 
@@ -376,7 +376,7 @@ This complete code will be made available again in the Example Section, but you 
 
 ## How do I permanently change where get_ipayer saves downloaded tv programmes?
 
-It's quite common to want to permanently change the location get_iplayer saves its downloaded files. For a complete overview of all output options take a look at the [Output Options](/wiki/options/#output-options) in the wiki, but lets take a look at a few simple and common options you can use.
+It's quite common to want to permanently change the location get_iplayer saves its downloaded files. For a complete overview of all output options take a look at the [Output Options](https://github.com/get-iplayer/get_iplayer/wiki/options/#output-options) in the wiki, but lets take a look at a few simple and common options you can use.
 
 ### Change download location for all files
 
@@ -412,6 +412,6 @@ You can set specific locations for the different types of files with the followi
 --outputtv
 ```
 
-Full info in the [Output Options section](/wiki/options/#output-options) of the Options wiki page.
+Full info in the [Output Options section](https://github.com/get-iplayer/get_iplayer/wiki/options/#output-options) of the Options wiki page.
 
 If you have skipped down to this section, go back up to the [How do I search for programmes using get_iplayer?](#how-do-i-search-for-programmes-using-get-iplayer) section learn how to perform a simple search.

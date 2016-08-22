@@ -23,13 +23,13 @@ The latest errors will be posted in the [Forums](/forums/) and in the [Known Iss
 
 The BBC is undertaking a series of alterations to how they deliver their digital content and this can often affect get_iplayer. It's essential that you read the latest release notes in order to understand how get_iplayer is dealing with these changes. The Release Notes for the latest version of get_iplayer are linked below:
 
-[get_iplayer Release Notes](/wiki/releasenotes/)
+[get_iplayer Release Notes](https://github.com/get-iplayer/get_iplayer/wiki/releasenotes/)
 
 ## Basic Troubleshooting Steps
 
 If you find you can't download a programme with get_iplayer, first make sure you are issuing the correct commands. The [TV Download Guide](/guides/tv-download-guide/) or [Radio Download Guide](/guides/radio-download-guide/) have most of the detail you need to get up and running, complete with example commands, so make sure you check it to be sure you are using the correct commands.
 
-Alternatively, you can view the <a href="/wiki/documentation/">complete get_iPlayer usage guide</a> in the [Wiki section](/wiki/) to check you are using the more advanced codes correctly.
+Alternatively, you can view the <a href="https://github.com/get-iplayer/get_iplayer/wiki/documentation/">complete get_iPlayer usage guide</a> in the [Wiki section](https://github.com/get-iplayer/get_iplayer/wiki/) to check you are using the more advanced codes correctly.
 
 If you have done that and are still having trouble, try each of these steps which have worked for other users:
 

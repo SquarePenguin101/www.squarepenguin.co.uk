@@ -21,7 +21,7 @@ Installation guides are now hosted directly on this website and no longer appear
 
 It's important you take the time to read the release notes. Find them at the link below:
 
-[get_iplayer v2.95 release notes](/wiki/release295/)
+[get_iplayer v2.95 release notes](https://github.com/get-iplayer/get_iplayer/wiki/release295)
 
 ### Headline changes
 
@@ -32,5 +32,5 @@ It's important you take the time to read the release notes. Find them at the lin
 5. New default streaming formats
 6. Fallback indexing (for loss of feeds from BBC)
 
-There are a raft of other changes and fixes so make sure to go and read the [release notes](/wiki/release295/) before you use the new release. 
+There are a raft of other changes and fixes so make sure to go and read the [release notes](https://github.com/get-iplayer/get_iplayer/wiki/release295) before you use the new release. 
 <!--more-->

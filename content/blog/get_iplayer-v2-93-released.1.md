@@ -21,13 +21,13 @@ EDIT 2 - get_iplayer v2.94 released - release notes as v2.93.
 
 It's important you take the time to read the release notes. Find them at the link below:
 
-[get_iplayer v2.93 release notes](/wiki/release293/)
+[get_iplayer v2.93 release notes](https://github.com/get-iplayer/get_iplayer/wiki/release293)
 
 ### Headline changes
 
 Dinkypumpkin has made great efforts over the past 6 months to minimise the effect of the ongoing removal of listings feeds by the BBC, but this time we aren't spared as we were before.
 
-The biggest change in this release is the time now taken to refresh the TV cache, along with the removal of the ability to search via category. Please take the time to read the [release notes](/wiki/release293/) for a full breakdown of the changes and what to expect thanks to the latest actions by Aunty.
+The biggest change in this release is the time now taken to refresh the TV cache, along with the removal of the ability to search via category. Please take the time to read the [release notes](https://github.com/get-iplayer/get_iplayer/wiki/release293) for a full breakdown of the changes and what to expect thanks to the latest actions by Aunty.
 
 ### A note to visually impared and hearing impaired users
 

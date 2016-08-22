@@ -31,11 +31,11 @@ Installation information for all platforms may be found here:
 
 Please note that it may take some time for get_iplayer 2.85 to be packaged for your particular system.
 
-#### Windows Installer
+### Windows Installer
 
-A new version (4.8) of the get_iplayer Windows installer is available:
+All Windows users should use the get_iplayer installer to upgrade to latest get_iplayer release:
 
-<http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
+[get_iplayer Windows installer](https://github.com/get-iplayer/get_iplayer/releases/latest)
 
 All Windows users should use this installer to upgrade to get_iplayer 2.85. The installer will update the following components to the indicated versions:
 
