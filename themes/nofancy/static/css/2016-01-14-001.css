@@ -28,11 +28,11 @@ html {
 body {
 	background-image: url(/icons/random_grey_variations.png);
 	color:#3a3a3a;
-	font-weight: 400;
 	font-family: Georgia, serif;
 	margin:0px;
 	font-size: 1.7em; /* currently ems cause chrome bug misinterpreting rems on body element */
  	line-height: 1.7;
+ 	background-color:#464c56;
 }
 /* Spacing */
 blockquote, dl, figure, form, ol, p, pre, table, ul{margin-bottom:2rem; list-style-type: disc;}
@@ -45,7 +45,6 @@ blockquote, dl, figure, form, ol, p, pre, table, ul{margin-bottom:2rem; list-sty
 .page-content {padding:0 6em;}
 p {
 	color: #3a3a3a;
-	font-weight: 400;
 	margin-top: 0;
 }
 /* Links */
