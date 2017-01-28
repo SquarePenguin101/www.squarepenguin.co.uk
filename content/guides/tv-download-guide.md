@@ -35,7 +35,7 @@ However, if you are coming back here to use this guide as a reference or just ha
 
 ## How do I search for programmes using get_iplayer?
 
-See: [get_iplayer v2.90 release notes](https://github.com/get-iplayer/get_iplayer/wiki/releasenotes/ "get_iplayer 2.89-2.90 Release Notes") and onwards to see how recent changes have impacted get_iplayer before searching for any programmes.
+See the [Searching section](https://github.com/get-iplayer/get_iplayer/wiki/documentation#searching) of the wiki documentation for information on get_iplayer search limitations before searching for any programmes.
 
 To begin using get_iplayer, we should first search for the programme we want to watch. Once you have the programme in mind that you would like to see, we simply search for a programme using get_iplayer by typing the following:
 
@@ -54,9 +54,9 @@ Programme Name
 
 ![get_iplayer-_Programme-Search_](/img/2015/06/get_iplayer-_Programme-Search_.png)
 
-**HINT** - "0 matching programmes" is written on the second from bottom line of the terminal window, the text you see above is a read out of all the available streams that BBC iPlayer is currently making available for download.
+**HINT** - "0 matching programmes" is written on the second from bottom line of the terminal window, the text you see above is a read out of all the TV programmes that BBC iPlayer is currently making available for download.
 
-get_iplayer has to update its list of these before it can match you search query to them. You can effectively ignore this text.
+get_iplayer has to update its list of these before it can match your search query to them. You can effectively ignore this text.
 
 ![get_iplayer-_Programme-Search_](/img/2015/06/get_iplayer-_Programme-Search_.png)
 
@@ -127,9 +127,9 @@ get_iplayer --pid=b04n9p9c
 
 ### Downloading multiple PIDs
 
-From get_iplayer v2.90 you can now download multiple PIDs in a single command.
+You can download multiple PIDs in a single command.
 
-You can now enter multiple PIDs in two ways:
+You can enter multiple PIDs in two ways:
 
 #### Comma-separated list
 
@@ -181,66 +181,40 @@ This is especially true if you use the PVR function (which I will explain later 
 
 ## How do I specify or change the quality level of programmes downloaded in get_iplayer?
 
-For a full explanation of get_iplayers recrding modes, check out the [Recording Modes](https://github.com/get-iplayer/get_iplayer/wiki/modes/) wiki entry. It is easy to follow and gives some important background info.
+For a full explanation of get_iplayer recording quality, check out the [Recording Quality](https://github.com/get-iplayer/get_iplayer/wiki/modes/) wiki entry.
 
-If you're still here then know that as a default, get_iplayer will download the highest quality SD version of each programme but it's perfectly possible to tell get_iplayer the quality level you wish to download the programme in (if you want to make get_iplayer download in HD for example).
+As a default, get_iplayer will download the highest quality version of each TV programme, so you DO NOT need to change anything or use any of the commands below if you are happy with having the highest quality version. By "highest quality" I mean the version with the largest video size.
 
-To do so, we should use the "--modes" command. This command tells get_iplayer whether or not you want to download the programme in HD or Standard definition and at what 'bit-rate'. The code is written like this
+If you want to make get_iplayer download a lower quality you should use the "--tvmode" command. The code is written like this
 
 ```bash
---modes=
+--tvmode=
 ```
 
-...followed by the desired quality level. The full list of available settings to add to the above command is below:
+...followed by the desired quality level. The list of available settings to add to the above command is below:
 
 ```bash
-default  
-good
-better
 best
-flashhd
-flashvhigh
-flashhigh
-flashstd
-flashnormal
-flashlow
+better
+vgood
+good
+worse  
+worst
 ```
 
-**NOTE** - don't be concerned that the word 'flash' is used. This is purely for technical purposes to differentiate between the streams BBC iPlayer offers. When you download an file, it is automatically converted to MP4 format and so is compatible with an entire galaxy of devices, video players and media systems. The top four options are known as 'mode shortcuts'.
+The default is `--tvmode=best`, so you do not need to specify it. However, for the purposes of this guide I will include it in the example commands. 
+
+Quality levels are treated as **maximum** values. If only lower quality versions are available, get_iplayer will download the best available from those versions.
+
+**NOTE** - Regardless of recording quality, when you download a file it is automatically converted to MP4 format and so is compatible with an entire galaxy of devices, video players and media systems.
 
 ### Want get_iplayer to download in HD?
 
-You are free to use the settings you like - but I recommend, and my examples contain, the very simple 'best' command. This simply tells get_iplayer to download the highest (or 'best') quality stream available. So, to expand on the download command to specify the download quality, we'd write this:
-
-```bash
-get_iplayer --get "Top Gear" --modes=best
-```
-
-This is telling get_iplayer to get all programmes that match the search "Top Gear" and get the 'best' quality stream available. If the programme is available in HD, get_iplayer will automatically download it in HD. If HD is unavailable, get_iplayer will download the next highest quality stream automatically. Simple!
-
-You can add this option permanently (well, until you remove it) to your preferences file with the following command:
-
-```bash
-get_iplayer --prefs-add --modes=best
-```
+get_iplayer will attempt to download the best available quality by default. If an HD version of a TV programme is available, get_iplayer will download it.
 
 ### On a restricted bandwidth connection?
 
-If you are on a restricted bandwidth internet connection with usage limits, please feel free to replace my 'best' command with those that are suitable for you, most likely 'flashstd' and 'flashnormal'.
-
-This should help keep your downloads small but still of reasonable quality and help stop you going over your bandwidth allowance.
-
-When specifying the `--modes=` command for quality levels, it must be written without spaces otherwise an error could be returned or the command may only recognise the first specified quality mode. This make more sense when written:
-
-```bash
-get_iplayer --get "Top Gear" --modes=flashstd,flashnormal,flashlow
-```
-
-**NOTE** - see how there are no spaces in `--modes=flashstd,flashnormal,flashlow`
-
-With the above command, if the programme is not available in 'flashstd' this should not cause us a problem. Because we have specified the 'flashnormal' and 'flashlow' modes, get_iplayer will cycle through each setting and try to download the programme at these settings rather than just throw up an error.
-
-This is why, if you are not using the 'best' command, it is very important to add a number of preferred quality settings so that if one is unavailable get_iplayer can cycle through the rest and successfully download the programme.
+If you are on a restricted bandwidth internet connection with usage limits, use a lower quality level. Try `--tvmode=good` to start. This should help keep your downloads small but still of reasonable quality and help stop you going over your bandwidth allowance.
 
 ## How do I make sure get_iplayer downloads a TV show and not a Radio programme?
 
@@ -259,7 +233,7 @@ This tells get_iplayer to download the TV show matching the search string. You c
 To add this code to the previous examples as we build towards our final example code, it would look like this:
 
 ```bash
-get_iplayer --get "Top Gear" --modes=best --type=tv
+get_iplayer --get "Top Gear" --tvmode=best --type=tv
 ```
 
 ## How do I make sure get_iplayer downloads from the correct channel?
@@ -283,7 +257,7 @@ An example of the command in use would be:
 **DON'T FORGET THE QUOTATION MARKS!** If we add this to our code so far, we get:
 
 ```bash
-get_iplayer --get "Top Gear" --modes=best --type=tv --channel="BBC Two"
+get_iplayer --get "Top Gear" --tvmode=best --type=tv --channel="BBC Two"
 ```
 
 ## How do I make get_iplayer automatically rename downloaded programmes?
@@ -329,7 +303,7 @@ Jonathan_Creek-s01e01-The_Clue_of_the_Savants_Thumb
 ...which is just how XBMC and Plex require you to name your files. Adding the command to our earlier examples gives us:
 
 ```bash
-get_iplayer --get "Top Gear" --modes=best --type=tv --channel="BBC Two" --file-prefix="<nameshort><-senum><-episodeshort>"
+get_iplayer --get "Top Gear" --tvmode=best --type=tv --channel="BBC Two" --file-prefix="<nameshort><-senum><-episodeshort>"
 ```
 
 ## How do I change or specify where get_iplayer saves downloaded programmes?
@@ -345,7 +319,7 @@ To specify the directory/folder get_iplayer outputs downloaded files to, we use 
 ...to which we simply add the folder path:
 
 ```bash
---output "/path/to/output/folder/goes/here/"
+--output "/path/to/output/folder/goes/here/" [...]
 ```
 
 **DON'T FORGET THE QUOTATION MARKS!**
@@ -369,7 +343,7 @@ To find the full path of a folder on Mac OS X, use this handy guide:
 So, adding the output folder path to our code so far gives us our final command:
 
 ```bash
-get_iplayer --get "Top Gear" --modes=best --type=tv --channel="BBC Two" --file-prefix="<nameshort><-senum><-episodeshort>" --output "/media/TV Shows 1/2 - TV Shows/Top Gear/Season 19"
+get_iplayer --get "Top Gear" --type=tv --channel="BBC Two" --file-prefix="<nameshort><-senum><-episodeshort>" --output "/media/TV Shows 1/2 - TV Shows/Top Gear/Season 19"
 ```
 
 This complete code will be made available again in the Example Section, but you can use it from here to download, rename and output the file to a directory of your choice. Just make sure to replace the relevant search string, channel and output destination to suit you.
@@ -383,7 +357,7 @@ It's quite common to want to permanently change the location get_iplayer saves i
 Firstly, to save a download location for all files, use the `--prefs-add` command like so:
 
 ```bash
---prefs-add --output "/media/TV Shows 1/2 - TV Shows/"
+get_iplayer --prefs-add --output "/media/TV Shows 1/2 - TV Shows/"
 ```
 
 This will have get_iplayer save all downloaded shows in the "2 - TV Shows" directory in the "TV Shows 1" disc. On Windows, the exact path will look a little different but I don't have a Windows install to show you directly.
@@ -393,21 +367,16 @@ This will have get_iplayer save all downloaded shows in the "2 - TV Shows" direc
 Instead of downloading everything to one location, you might only want TV shows to go to a particular directory. It that's the case you can use the `--outputtv` command like so:
 
 ```bash
---prefs-add --outputtv "/media/TV Shows 1/2 - TV Shows/"
+get_iplayer --prefs-add --outputtv "/media/TV Shows 1/2 - TV Shows/"
 ```
 
 This will have get_iplayer save **ONLY** TV shows in the "2 - TV Shows" directory in the "TV Shows 1" disc.
 
 The `--outputtv` option overrides the `--output` command, which means if you set the `--output` command, all downloads *apart from tv shows* will go to that location and all TV shows will go wherever `--outputtv` is set.
 
-You can set specific locations for the different types of files with the following commands. Each one will override the `--output` command for their specific file type, so you have a lot of flexibility in where you can save files:
+You can set specific locations for the different types of files with the following options. Each one will override the `--output` command for their specific file type, so you have some flexibility in where you can save files:
 
 ```
---output
---outputliveradio
---outputlivetv
---outputlocalfiles
---outputpodcast
 --outputradio
 --outputtv
 ```

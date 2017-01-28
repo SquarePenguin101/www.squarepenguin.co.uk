@@ -33,7 +33,7 @@ However, if you are coming back here to use this guide as a reference or just ha
 
 ## How do I search for radio programmes using get_iplayer?
 
-See: [get_iplayer v2.90 release notes](https://github.com/get-iplayer/get_iplayer/wiki/release289// "get_iplayer 2.89-2.90 Release Notes") to see how recent changes have impacted get_iplayer before searching for any programmes.
+See the [Searching section](https://github.com/get-iplayer/get_iplayer/wiki/documentation#searching) of the wiki documentation for information on get_iplayer search limitations before searching for any programmes.
 
 If you don't know the name of the show your would like to download I would recommend using the BBC iPlayer website to browse for programmes you might enjoy. When you know the name of the show you'd like, we can begin searching.
 
@@ -113,9 +113,9 @@ Don't forget to add `--type=radio` when downloading a radio programme.
 
 ### Downloading multiple PIDs
 
-From get_iplayer v2.90 you can now download multiple PIDs in a single command.
+You can download multiple PIDs in a single command.
 
-You can now enter multiple PIDs in two ways:
+You can enter multiple PIDs in two ways:
 
 #### Comma-separated list
 
@@ -165,7 +165,9 @@ Click the link to jump there now if you need to, or if this is your first time u
 
 ## How do I specify or change the quality level of radio programmes downloaded in get_iplayer?
 
-As a default, get_iplayer will download the highest quality version of each radio programme, so you DO NOT need to change anything or use any of the commands below if you are happy with having the highest quality version.
+For a full explanation of get_iplayer recording quality, check out the [Recording Quality](https://github.com/get-iplayer/get_iplayer/wiki/modes/) wiki entry.
+
+As a default, get_iplayer will download the highest quality version of each radio programme, so you DO NOT need to change anything or use any of the commands below if you are happy with having the highest quality version. By "highest quality" I mean the version with the highest audio bit rate.
 
 If you want to make get_iplayer download a lower quality you should use the "--radiomode" command. The code is written like this
 
@@ -176,38 +178,19 @@ If you want to make get_iplayer download a lower quality you should use the "--r
 ...followed by the desired quality level. The full list of available settings to add to the above command is below:
 
 ```bash
-default
 best
 better
+vgood
 good
-flashaachigh
-flashaacstd
-flashaudio
-flashaaclow
-wma
+worse
+worst
 ```
 
-**NOTE** - don't be concerned that the word 'flash' is used. This is purely for technical purposes to differentiate between the streams BBC iPlayer offers. When you download an file, it is automatically converted to AAC format.
+For example, you may wish to use `--radiomode=good` for speech programmes and reserve the default (`--radiomode=best`) for music programmes.
 
-The top four options are known as 'mode shortcuts'. You can read a full explanation of these recording modes and their associated quality levels in the [Recording Modes](https://github.com/get-iplayer/get_iplayer/wiki/modes/) wiki.
+Quality levels are treated as **maximum** values. If only lower quality versions are available, get_iplayer will download the best available from those versions.
 
-The explanation is beyond the scope of this beginners guide and I recommend you simply use the default settings where you are not required to specify the quality level.
-
-## How do I make get_iplayer automatically convert radio programmes to MP3?
-
-You can have get_iplayer automatically convert downloaded radio programmes to .mp3 format by adding the following command when you download a show:
-
-```bash
---aactomp3
-```
-
-If you don't want have to add this every time you do a download, you can set it as a global preference that will auto convert every download automatically by simply entering the command below into the command line:
-
-```bash
-get_iplayer --prefs-add --aactomp3
-```
-
-This is adding the command to your preferences so it will remember to always perform the conversion, automatically, for every radio download you make.
+**NOTE** - Regardless of quality level, when you download an file, it is automatically converted to M4A (MP4 file containing AAC audio).
 
 ## How do I change or specify where get_iplayer saves downloaded radio programmes?
 
@@ -238,7 +221,7 @@ It's quite common to want to permanently change the location get_iplayer saves i
 Firstly, to save a download location for all files, use the `--prefs-add` command like so:
 
 ```bash
---prefs-add --output "/media/Radio Shows 1/2 - Radio Shows/"
+get_iplayer --prefs-add --output "/media/Radio Shows 1/2 - Radio Shows/"
 ```
 
 This will have get_iplayer save all downloaded shows in the "2 - Radio Shows" directory in the "Radio Shows 1" disc. On Windows, the exact path will look a little different but I don't have a Windows install to show you directly.
@@ -248,7 +231,7 @@ This will have get_iplayer save all downloaded shows in the "2 - Radio Shows" di
 Instead of downloading everything to one location, you might only want radio shows to go to a particular directory. It that's the case you can use the `--outputradio` command like so:
 
 ```bash
---prefs-add --outputradio "/media/Radio Shows 1/2 - Radio Shows/"
+get_iplayer --prefs-add --outputradio "/media/Radio Shows 1/2 - Radio Shows/"
 ```
 
 This will have get_iplayer save **ONLY** radio shows in the "2 - Radio Shows" directory in the "Radio Shows 1" disc.
@@ -258,13 +241,12 @@ The `--outputradio` option overrides the `--output` command, which means if you 
 You can set specific locations for the different types of files with the following commands. Each one will override the `--output` command for their specific file type, so you have a lot of flexibility in where you can save files:
 
 ```
---output
---outputliveradio
---outputlivetv
---outputlocalfiles
---outputpodcast
 --outputradio
 --outputtv
 ```
 
 Full info in the [Output Options section](https://github.com/get-iplayer/get_iplayer/wiki/options/#output-options) of the Options wiki page.
+
+## How do I make get_iplayer automatically convert radio programmes to MP3?
+
+It is possible for get_iplayer to automatically post-process your files after download and convert them MP3. This is an advanced topic beyond the scope of this introductory guide. See the [Custom Commands wiki entry](https://github.com/get-iplayer/get_iplayer/wiki/documentation#custom-commands) for examples.

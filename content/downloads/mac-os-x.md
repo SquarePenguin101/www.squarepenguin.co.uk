@@ -7,12 +7,12 @@ pageimage = ""
 pagesubtitle = "COMPREHENSIVE GUIDES TO GET YOU STARTED QUICKLY"
 pagetitle = "get_iplayer installation guides"
 slug = "mac-os-x"
-title = "Mac OS X Quick Install Guide • get_iplayer"
+title = "macOS Quick Install Guide • get_iplayer"
 Type = "downloads"
-breadcrumb = "get_iplayer Mac OS X Quick Install Guide"
+breadcrumb = "get_iplayer macOS Quick Install Guide"
 +++
 
-# Mac OS X Quick Install Guide
+# macOS Quick Install Guide
 
 ## Option 1 - Get iPlayer Automator (Very easy)
 
@@ -24,7 +24,7 @@ I have not used Get iPlayer Automator, so I can't help you with it, but you can 
 
 ## Option 2 - Homebrew (easy)
 
-Homebrew is a package management solution for Mac OS X. It's very easy to install, just go to the [Homebrew website](http://brew.sh/) and copy and paste the one line installation code into your terminal window. 
+Homebrew is a package management solution for macOS. It's very easy to install, just go to the [Homebrew website](http://brew.sh/) and copy and paste the one line installation code into your terminal window. 
 
 Once you've installed Homebrew, it's just a one more line to get get_iplayer installed:
 
@@ -43,7 +43,7 @@ Find the [release notes](https://github.com/get-iplayer/get_iplayer/wiki/release
 
 ## More info?
 
-You can take a look at the [Mac OS X installation page](https://github.com/get-iplayer/get_iplayer/wiki/osx/) in the wiki for a bit more info and for instructions on performing a manual installation. 
+You can take a look at the [macOS installation page](https://github.com/get-iplayer/get_iplayer/wiki/osx/) in the wiki for a bit more info and for instructions on performing a manual installation. 
 
 ## Stuck?
 
