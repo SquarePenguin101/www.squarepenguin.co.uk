@@ -76,7 +76,7 @@ I'll show you how to list and remove extraneous PVR recordings shortly. So, to c
 
     get_iplayer --pvr-add=Top_Gear "Top Gear" --tvmode=best --type=tv --channel="BBC Two" --file-prefix="<nameshort>-<senum>-<episodeshort>" --output "/media/TV Shows 1/2 - TV Shows/Top Gear/Season 19"
 
-The above code will add a PVR record for Top_Gear, attempt to download the programme in HD (followed by high quality flash streams - don't worry it'll output as an MP4 automatically for compatibility), make sure that the programme is a TV show, makes sure that the channel the programme is available from is BBC Two, renames the file to match the Plex/XBMC naming conventions and outputs the file to the folder "path/to/Top Gear Folder".
+The above code will add a PVR record for Top_Gear, attempt to download the programme in HD (followed by lower-quality streams - don't worry it'll output as an MP4 automatically), make sure that the programme is a TV show, makes sure that the channel the programme is available from is BBC Two, renames the file to match the Plex/XBMC naming conventions and outputs the file to the folder "path/to/Top Gear Folder".
 
 ## How do I list all PVR records in get_iplayer?
 

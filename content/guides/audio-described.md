@@ -43,4 +43,4 @@ If there is no signed version available you will likely see the following error:
 WARNING: No programmes are available for this pid with version(s): audiodescribed (available versions: default)
 ```
 
-This is not get_iplayers fault - there simply isn't an Audio Described version of this programme available from the BBC.
+This is not get_iplayer's fault - there simply isn't an Audio Described version of this programme available from the BBC.
