@@ -4,3 +4,7 @@
 # Hugo directories
 /public
 
+# Vim temp
+*~
+*.swp
+*.swo
