@@ -36,10 +36,11 @@ Users who logged in to their accounts between 13/02/2017 and 18/02/2017 are pote
 1. session cookies (including authorization tokens permitting login)
 2. User IP addresses
 3. User email addresses
+4. Passwords
 
-### What about passwords?
+### Umm...passwords?
 
-It's possible (though incredibly, astronomically unlikely) that encrypted passwords for some users who logged in during the times above were exposed by Cloudflare's bug and potentially cached on the public internt for a short time.
+It's possible (though incredibly, astronomically unlikely) that passwords for some users who logged in during the times above were exposed by Cloudflare's bug and potentially cached on the public internt for a short time.
 
 What else I know:
 
@@ -47,23 +48,27 @@ There has been no server breach. squarepenguin.co.uk has not been hacked. Databa
 
 myBB encrypts user passwords using the MD5 hashing algorithm paired with a unique randomly generated 'salt'. MD5 is a weak hashing algorithm vulnerable to brute force attacks, even with the addition of a salt, but it's what's available when using this forum software. 
 
-It's possible that users who logged in since 13/02/2017 until 18/02/2017 had their encrypted passwords put at risk of exposure upon requesting login. The exact nature of the leak means that no actual hack took place and encrypted passwords were not stolen but there was the potential for them to be made accessible to the public internet for a limited time. 
+But when logging in it's necessary to transmit your password for hashing and comparison with the value stored in the database. It's possible that users who logged in since 13/02/2017 until 18/02/2017 had their passwords put at risk of exposure upon requesting login. 
+
+The exact nature of the leak means that no actual hack took place and encrypted passwords were not stolen but there was the potential for the plaini text password to be caputure by Cloudflare, erroneously written to an HTML page and then to be made accessible to the public internet for a limited time. 
 
 Full details of the mechanism of the leak are at the links in the first paragraph of this post and below.
 
-I am reviewing the myBB source code to determine the exact handling of logins/passwords and will provide further edits below if needed once I have more info.
-
-Once again, no plain text passwords have been exposed at any point, only the encrypted/hashed password was *potentially* publically exposed. 
+Potential exposure of a plain text password is a catastrophic possibility and there will be no 'playing down' of this fact. This is why I'm forcing password changes and recommending the following:
 
 #### Out of an abundance of caution - if you reuse your squarepenguin password on any other site and you logged into squarepenguin.co.uk between 13/02/2017 and 18/02/2017 you should change it on that site too. 
 
 A little perspective:
 
-The chances of any user here having their password exposed is vanishingly small **particularly as squarepenguin.co.uk is now known to not be amongst the core of affected sites**.
+I would like to reiterate in my defence here that at no point was squarepenguin.co.uk insecure or breached and the issue lay with a third party partner - but that doesn't change the fact that your password *could* have been exposed, no matter how unimaginably small that chance was, or who is to 'blame'.
+
+I take the security of this site very seriously. 
+
+I will reiterate the chances of any user here having their password exposed is vanishingly small **particularly as squarepenguin.co.uk is now known to not be amongst the core of affected sites**.
 
 But, at the scale of the internet the chance for the vanishingly small to actually occur is always a possibility. 
 
-I am acting out of an abundance of caution and with due respect to the wider scale of this breach which affects *millions* of site that sit behind Cloudflare's reverse proxy feature. 
+So I am acting out of an abundance of caution and with due respect to the wider scale of this breach which affects *millions* of site that sit behind Cloudflare's reverse proxy feature. 
 
 ## OK, so what actually happened?
 
