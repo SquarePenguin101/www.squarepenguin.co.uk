@@ -17,7 +17,7 @@ Having problems or need help with get_iplayer? If get_iplayer is not working and
 
 ## get_iplayer Known Issues
 
-The latest errors will be posted in the [Forums](/forums/) and in the [Known Issues](https://github.com/get-iplayer/get_iplayer/issues) pages. Make sure you check there for the latest errors to see if there is a simple fix for your problem.
+The latest errors will be posted in the [Forums](/forums/) and in the [Known Issues](https://github.com/get-iplayer/get_iplayer/wiki/issues) pages. Make sure you check there for the latest errors to see if there is a simple fix for your problem.
 
 ## Check the latest Release Notes
 
