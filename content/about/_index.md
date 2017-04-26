@@ -1,5 +1,5 @@
 +++
-Description = "About"
+description = "About squarepenguin and some other words to see if this is rendered."
 date = "2016-09-29T01:42:47+01:00"
 draft = false
 title = "About Squarepenguin"
