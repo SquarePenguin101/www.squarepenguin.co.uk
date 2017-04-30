@@ -14,19 +14,13 @@ breadcrumb = "get_iplayer macOS Quick Install Guide"
 
 # macOS Quick Install Guide
 
-## Option 1 - Get iPlayer Automator (Very easy)
+**NOTE: macOS 10.10 (Yosemite) or higher is required to install get_iplayer with Homebrew. See the "More Info?" section below for a link to instructions for manual installation.**
 
-There are a couple of options on Mac. The easiest of the two is to use Get iPlayer Automator, a free tool that greatly simplifies the process of downloading content from the BBC (and now ITV) and have it deposited straight into iTunes.
-
-Most Mac users enjoy this 'just works' setup and are not interested in the details underlying the programme. If you fit this description you can [download Get iPlayer Automator](https://github.com/GetiPlayerAutomator/get-iplayer-automator/releases/) or find out more on the [Get iPlayer Automator site](https://github.com/GetiPlayerAutomator/get-iplayer-automator).
-
-I have not used Get iPlayer Automator, so I can't help you with it, but you can visit the [Get iPlayer Automator issue tracker](https://github.com/GetiPlayerAutomator/get-iplayer-automator/issues) if you get stuck.
-
-## Option 2 - Homebrew (easy)
+## Install with Homebrew
 
 Homebrew is a package management solution for macOS. It's very easy to install, just go to the [Homebrew website](http://brew.sh/) and copy and paste the one line installation code into your terminal window. 
 
-Once you've installed Homebrew, it's just a one more line to get get_iplayer installed:
+Once you've installed Homebrew, it's just one more line to get get_iplayer installed:
 
     brew install dinkypumpkin/get_iplayer/get_iplayer
 
@@ -40,6 +34,14 @@ Once you've installed Homebrew, it's just a one more line to get get_iplayer ins
 There is loads of info in the [guides](/guides/) section to get you downloading programmes in a snap. Make sure you read the whole guide to understand what's happening and why you need to do things a certain way.
 
 Find the [release notes](https://github.com/get-iplayer/get_iplayer/wiki/releasenotes) in the wiki. Read at least the notes for the latest release. Things can change quite a lot between releases and you'll find explanations there as to why get_iplayer is working the way it is. 
+
+#### Web PVR Manager
+
+The get_iplayer Homebrew installation provides a script to launch the Web PVR Manager. Start it from your terminal window with:
+
+    get_iplayer_web_pvr
+
+The Web PVR Manager will be opened in your default web browser.
 
 ## More info?
 
