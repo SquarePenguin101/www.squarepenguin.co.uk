@@ -292,7 +292,7 @@ To tell get_iplayer to rename files to the relevant naming convention, we use th
 
 **YOU MUST REMEMBER TO USE THE QUOTATION MARKS!**
 
-**NOTE** - See those "-" dashes inside the Substitution Parameters? Check out the [Advanced File Naming Guide](/guides/advanced-file-naming-guide/) for an explanation as to why they are added INSIDE the parameter and not in between.
+**NOTE** - See those "-" dashes inside the Substitution Parameters? Check out the [Output File Naming Guide](https://github.com/get-iplayer/get_iplayer/wiki/documentation#filenames-and-directories) for an explanation as to why they are added INSIDE the parameter and not in between.
 
 This tells get_iplayer to name the file like the example below...
 
