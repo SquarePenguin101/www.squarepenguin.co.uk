@@ -22,9 +22,9 @@ breadcrumb = "get_iplayer macOS Quick Install Guide"
 
 Homebrew is a package management solution for macOS. It's very easy to install, just go to the [Homebrew website](http://brew.sh/) and copy and paste the one line installation code into your terminal window. 
 
-Once you've installed Homebrew, it's just one more line to get get_iplayer installed:
+Once you've installed Homebrew, it's just one more line to install get_iplayer:
 
-    brew install dinkypumpkin/get_iplayer/get_iplayer
+    brew install get_iplayer
 
 ### Upgrade to future releases with:
 
@@ -39,12 +39,14 @@ Find the [release notes](https://github.com/get-iplayer/get_iplayer/wiki/release
 
 #### Web PVR Manager
 
-The get_iplayer Homebrew installation provides a script to launch the Web PVR Manager. Start it from your terminal window with:
+Start the Web PVR Manager from your terminal window with:
 
-    get_iplayer_web_pvr
+    get_iplayer.cgi --listen 127.0.0.1 --port 1935
 
-The Web PVR Manager will be opened in your default web browser.
+Connect to the Web PVR Manager by opening the URL below in your web browser:
 
+<http://127.0.0.1:1935>
+    
 ## More info?
 
 You can take a look at the [macOS installation page](https://github.com/get-iplayer/get_iplayer/wiki/osx/) in the wiki for a bit more info and for instructions on performing a manual installation. 
