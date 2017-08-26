@@ -33,7 +33,7 @@ However, if you are coming back here to use this guide as a reference or just ha
 
 ## How do I search for radio programmes using get_iplayer?
 
-See the [Searching section](https://github.com/get-iplayer/get_iplayer/wiki/documentation#searching) of the wiki documentation for information on get_iplayer search limitations before searching for any programmes.
+See the [Searching section](https://github.com/get-iplayer/get_iplayer/wiki/search) of the wiki documentation for information on get_iplayer search limitations before searching for any programmes.
 
 If you don't know the name of the show your would like to download I would recommend using the BBC iPlayer website to browse for programmes you might enjoy. When you know the name of the show you'd like, we can begin searching.
 
@@ -249,4 +249,4 @@ Full info in the [Output Options section](https://github.com/get-iplayer/get_ipl
 
 ## How do I make get_iplayer automatically convert radio programmes to MP3?
 
-It is possible for get_iplayer to automatically post-process your files after download and convert them MP3. This is an advanced topic beyond the scope of this introductory guide. See the [Custom Commands wiki entry](https://github.com/get-iplayer/get_iplayer/wiki/documentation#custom-commands) for examples.
+It is possible for get_iplayer to automatically post-process your files after download and convert them MP3. This is an advanced topic beyond the scope of this introductory guide. See the [Custom Commands wiki entry](https://github.com/get-iplayer/get_iplayer/wiki/custcmd) for examples.
