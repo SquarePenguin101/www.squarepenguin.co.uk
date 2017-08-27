@@ -35,7 +35,7 @@ However, if you are coming back here to use this guide as a reference or just ha
 
 ## How do I search for programmes using get_iplayer?
 
-See the [Searching section](https://github.com/get-iplayer/get_iplayer/wiki/documentation#searching) of the wiki documentation for information on get_iplayer search limitations before searching for any programmes.
+See the [Searching section](https://github.com/get-iplayer/get_iplayer/wiki/search) of the wiki documentation for information on get_iplayer search limitations before searching for any programmes.
 
 To begin using get_iplayer, we should first search for the programme we want to watch. Once you have the programme in mind that you would like to see, we simply search for a programme using get_iplayer by typing the following:
 
@@ -264,7 +264,7 @@ get_iplayer --get "Top Gear" --tvmode=best --type=tv --channel="BBC Two"
 
 To make get_iplayer rename downloaded programmes to a scheme of our choice, we use the "File Prefix" command coupled with the "Substitution Parameters" of our choice to 'build' the file name we want.
 
-A full list of available Substitution Parameters can be found in the [Substitution Parameters Wiki entry](https://github.com/get-iplayer/get_iplayer/wiki/documentation/#substitution-parameters).
+A full list of available Substitution Parameters can be found in the [Substitution Parameters Wiki entry](https://github.com/get-iplayer/get_iplayer/wiki/subparams).
 
 For our purposes, we will be using the following three Substitution Parameters:
 
@@ -292,7 +292,7 @@ To tell get_iplayer to rename files to the relevant naming convention, we use th
 
 **YOU MUST REMEMBER TO USE THE QUOTATION MARKS!**
 
-**NOTE** - See those "-" dashes inside the Substitution Parameters? Check out the [Output File Naming Guide](https://github.com/get-iplayer/get_iplayer/wiki/documentation#filenames-and-directories) for an explanation as to why they are added INSIDE the parameter and not in between.
+**NOTE** - See those "-" dashes inside the Substitution Parameters? Check out the [Output File Naming Guide](https://github.com/get-iplayer/get_iplayer/wiki/filenames) for an explanation as to why they are added INSIDE the parameter and not in between.
 
 This tells get_iplayer to name the file like the example below...
 
