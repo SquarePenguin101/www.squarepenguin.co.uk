@@ -1,7 +1,7 @@
 baseurl = "https://www.squarepenguin.co.uk"
 title = "get_iPlayer • Forums • Guides • Help"
 theme = "nofancy"
-canonifyurls = true
+canonifyurls = false
 paginate = 7
 
 [params]
