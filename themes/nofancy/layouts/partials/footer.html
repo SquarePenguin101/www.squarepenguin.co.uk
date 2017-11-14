@@ -4,10 +4,14 @@
 		  {{ if .Site.Copyright }}
 		  {{ .Site.Copyright }}
 		  {{ else }}
-		  Copyright (c) 2017, Josh Archer; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a>
+		  Copyright &copy; 2017, Josh Archer; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a>
 		  {{ end }}
-		  {{ if or .Site.Author.github .Site.Author.twitter .Site.Author.facebook .Site.Author.linkedin }}
+		  {{ if or .Site.Author.gitlab .Site.Author.github .Site.Author.twitter .Site.Author.facebook .Site.Author.linkedin }}
 		  Find me at
+
+		  {{ if .Site.Author.gitlab }}
+		  <a href="https://gitlab.com/{{ .Site.Author.gitlab }}" >GitLab</a>
+		  {{ end }}
 
 		  {{ if .Site.Author.github }}
 		  <a href="https://github.com/{{ .Site.Author.github }}" >GitHub</a>

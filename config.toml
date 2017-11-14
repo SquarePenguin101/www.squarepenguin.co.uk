@@ -1,4 +1,4 @@
-baseurl = "https://squarepenguin.co.uk"
+baseurl = "https://www.squarepenguin.co.uk"
 title = "get_iPlayer • Forums • Guides • Help"
 theme = "nofancy"
 canonifyurls = true
@@ -13,6 +13,7 @@ paginate = 7
 	email = "getiplayer@squarepenguin.co.uk"
 	twitter = "josharcher"
 	github = "puffinblue"
+    gitlab = "josharcher"
 
 [permalinks]
 
