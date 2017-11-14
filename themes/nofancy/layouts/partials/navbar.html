@@ -1,16 +1,15 @@
 <nav class="navbar">
 	<div class="nav-container">
 		<ul class="">
-		  	{{ $burl := .Site.BaseURL }}
-		  		<li> <a href="/"> Home </a></li>
+		  <li> <a href="/"> Home </a></li>
           <li> <a href="/blog/" class=""> Blog </a></li>
           <li> <a href="/features/" class=""> Features </a></li>
           <li> <a href="/faqs/" class=""> FAQ </a></li>
           <li> <a href="/downloads/" class=""> Downloads </a></li>
-		  		<li> <a href="/wiki/" class=""> Wiki </a></li>
-		  		<li> <a href="/guides/" class=""> Guides </a></li>
-		  		<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Support </a></li>
-			</ul>
+		  <li> <a href="/wiki/" class=""> Wiki </a></li>
+		  <li> <a href="/guides/" class=""> Guides </a></li>
+		  <li> <a href="https://forums.squarepenguin.co.uk/" class=""> Support </a></li>
+	   </ul>
 	</div>
 </nav>
 {{ partial "notifications.html" . }}
