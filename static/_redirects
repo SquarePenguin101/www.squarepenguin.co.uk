@@ -30,3 +30,24 @@
 /wiki/unix              https://github.com/get-iplayer/get_iplayer/wiki/unixpkg                 301
 /wiki/unixpkg           https://github.com/get-iplayer/get_iplayer/wiki/unixpkg                 301
 /wiki/windows           https://github.com/get-iplayer/get_iplayer/wiki/windows                 301
+
+/wiki/arch             /downloads/linux/            301
+/wiki/centos           /downloads/linux/            301
+/wiki/debian6          /downloads/linux/            301
+/wiki/debian           /downloads/linux/            301
+/wiki/fedora           /downloads/linux/            301
+/wiki/freebsd          /downloads/linux/            301
+/wiki/mageia           /downloads/linux/            301
+/wiki/openbsd          /downloads/linux/            301
+/wiki/opensuse         /downloads/linux/            301
+/wiki/raspbian         /downloads/linux/            301
+/wiki/slackware        /downloads/linux/            301
+/wiki/ubuntu           /downloads/linux/            301
+/wiki/osxhomebrew      /downloads/mac-os-x/         301
+/wiki/osxmacports      /downloads/mac-os-x/         301
+/wiki/osxmanual        /downloads/mac-os-x/         301
+/wiki/winsetup         /downloads/windows/          301
+/wiki/winmanual        /downlaods/windows/          301
+/wiki/githeadwin       /downlaods/windows/          301
+
+/get_iplayer-features /features/                    301
