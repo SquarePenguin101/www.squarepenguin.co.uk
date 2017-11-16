@@ -1,5 +1,32 @@
 # Redirect forums to new subdomain
 
-/forums             https://forums.squarepenguin.co.uk/                 301
-/forums/            https://forums.squarepenguin.co.uk/                 301
-/forums/*           https://forums.squarepenguin.co.uk/:splat           301
+/forums                 https://forums.squarepenguin.co.uk/                 301
+/forums/                https://forums.squarepenguin.co.uk/                 301
+/forums/*               https://forums.squarepenguin.co.uk/:splat           301
+/wiki/release293        https://github.com/get-iplayer/get_iplayer/wiki/release293              301
+/wiki/release292        https://github.com/get-iplayer/get_iplayer/wiki/release292              301
+/wiki/release291        https://github.com/get-iplayer/get_iplayer/wiki/release291              301
+/wiki/release290        https://github.com/get-iplayer/get_iplayer/wiki/release290              301
+/wiki/release289        https://github.com/get-iplayer/get_iplayer/wiki/release289              301
+/wiki/release288        https://github.com/get-iplayer/get_iplayer/wiki/release288              301
+/wiki/release287        https://github.com/get-iplayer/get_iplayer/wiki/release287              301
+/wiki/release286        https://github.com/get-iplayer/get_iplayer/wiki/release286              301
+/wiki/release285        https://github.com/get-iplayer/get_iplayer/wiki/release285              301
+/wiki/release284        https://github.com/get-iplayer/get_iplayer/wiki/release284              301
+/wiki/release283        https://github.com/get-iplayer/get_iplayer/wiki/release283              301
+/wiki/manual            https://github.com/get-iplayer/get_iplayer/wiki/manual                  301
+/wiki/documentation     https://github.com/get-iplayer/get_iplayer/wiki/documentation           301
+/wiki/manpage           https://github.com/get-iplayer/get_iplayer/wiki/manpage                 301
+/wiki/options           https://github.com/get-iplayer/get_iplayer/wiki/options                 301
+/wiki/tagging           https://github.com/get-iplayer/get_iplayer/wiki/tagging                 301
+/wiki/modes             https://github.com/get-iplayer/get_iplayer/wiki/modes                   301
+/wiki/contribute        https://github.com/get-iplayer/get_iplayer/wiki/contribute              301
+/wiki/releasenotes      https://github.com/get-iplayer/get_iplayer/wiki/releasenotes            301
+/wiki/installation      https://github.com/get-iplayer/get_iplayer/wiki/installation            301
+/wiki/webpvr            https://github.com/get-iplayer/get_iplayer/wiki/webpvr                  301
+/guides/using-get_iplayer-pvr-cron  https://github.com/get-iplayer/get_iplayer/wiki/pvrcron     301
+/wiki/fileprefix        https://github.com/get-iplayer/get_iplayer/wiki/fileprefix              301
+/wiki/gipdev            https://github.com/get-iplayer/get_iplayer/wiki/gipdev                  301
+/wiki/unix              https://github.com/get-iplayer/get_iplayer/wiki/unixpkg                 301
+/wiki/unixpkg           https://github.com/get-iplayer/get_iplayer/wiki/unixpkg                 301
+/wiki/windows           https://github.com/get-iplayer/get_iplayer/wiki/windows                 301
