@@ -1,0 +1,5 @@
+# Redirect forums to new subdomain
+
+/forums             https://forums.squarepenguin.co.uk/                 301
+/forums/            https://forums.squarepenguin.co.uk/                 301
+/forums/*           https://forums.squarepenguin.co.uk/:splat           301
