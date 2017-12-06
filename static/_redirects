@@ -1,8 +1,8 @@
 # Redirect forums to new subdomain
 
-/forums                 https://forums.squarepenguin.co.uk/                 301
-/forums/                https://forums.squarepenguin.co.uk/                 301
-/forums/*               https://forums.squarepenguin.co.uk/:splat           301
+/forums                 https://forums.squarepenguin.co.uk/                                     301
+/forums/                https://forums.squarepenguin.co.uk/                                     301
+/forums/*               https://forums.squarepenguin.co.uk/:splat                               301
 /wiki/release293        https://github.com/get-iplayer/get_iplayer/wiki/release293              301
 /wiki/release292        https://github.com/get-iplayer/get_iplayer/wiki/release292              301
 /wiki/release291        https://github.com/get-iplayer/get_iplayer/wiki/release291              301
@@ -30,24 +30,51 @@
 /wiki/unix              https://github.com/get-iplayer/get_iplayer/wiki/unixpkg                 301
 /wiki/unixpkg           https://github.com/get-iplayer/get_iplayer/wiki/unixpkg                 301
 /wiki/windows           https://github.com/get-iplayer/get_iplayer/wiki/windows                 301
+/wiki/arch              /downloads/linux/            301
+/wiki/centos            /downloads/linux/            301
+/wiki/debian6           /downloads/linux/            301
+/wiki/debian            /downloads/linux/            301
+/wiki/fedora            /downloads/linux/            301
+/wiki/freebsd           /downloads/linux/            301
+/wiki/mageia            /downloads/linux/            301
+/wiki/openbsd           /downloads/linux/            301
+/wiki/opensuse          /downloads/linux/            301
+/wiki/raspbian          /downloads/linux/            301
+/wiki/slackware         /downloads/linux/            301
+/wiki/ubuntu            /downloads/linux/            301
+/wiki/osxhomebrew       /downloads/mac-os-x/         301
+/wiki/osxmacports       /downloads/mac-os-x/         301
+/wiki/osxmanual         /downloads/mac-os-x/         301
+/wiki/winsetup          /downloads/windows/          301
+/wiki/winmanual         /downlaods/windows/          301
+/wiki/githeadwin        /downlaods/windows/          301
+/wiki/installation/*    /downloads/                  301
+/downloads/arch         /downloads/linux/            301
+/downloads/centos       /downloads/linux/            301
+/downloads/debian6      /downloads/linux/            301
+/downloads/debian       /downloads/linux/            301
+/downloads/fedora       /downloads/linux/            301
+/downloads/freebsd      /downloads/linux/            301
+/downloads/mageia       /downloads/linux/            301
+/downloads/openbsd      /downloads/linux/            301
+/downloads/opensuse     /downloads/linux/            301
+/downloads/raspbian     /downloads/linux/            301
+/downloads/slackware    /downloads/linux/            301
+/downloads/ubuntu       /downloads/linux/            301
+/downloads/osxhomebrew  /downloads/mac-os-x/         301
+/downloads/osxmacports  /downloads/mac-os-x/         301
+/downloads/osxmanual    /downloads/mac-os-x/         301
+/downloads/winsetup     /downloads/windows/          301
+/downloads/winmanual    /downlaods/windows/          301
+/downloads/githeadwin   /downlaods/windows/          301
+/find-path-to-a-folder-on-mac                       https://www.josharcher.uk/code/find-path-to-folder-on-mac/              301
+/why-margaret-thatcher-is-hated/                    https://www.josharcher.uk/blog/why-margaret-thatcher-is-hated/          301
+/why-margaret-thatcher-is-hate                      https://www.josharcher.uk/blog/why-margaret-thatcher-is-hated/          301
+/whymargaret-thatcher-is-hated                      https://www.josharcher.uk/blog/why-margaret-thatcher-is-hated/          301
+/why-margaret-thatcher-is-hated/?replytocom=158     https://www.josharcher.uk/blog/why-margaret-thatcher-is-hated/          301
+/why-margaret-thatcher-is-hated/?replytocom=161     https://www.josharcher.uk/blog/why-margaret-thatcher-is-hated/          301
 
-/wiki/arch             /downloads/linux/            301
-/wiki/centos           /downloads/linux/            301
-/wiki/debian6          /downloads/linux/            301
-/wiki/debian           /downloads/linux/            301
-/wiki/fedora           /downloads/linux/            301
-/wiki/freebsd          /downloads/linux/            301
-/wiki/mageia           /downloads/linux/            301
-/wiki/openbsd          /downloads/linux/            301
-/wiki/opensuse         /downloads/linux/            301
-/wiki/raspbian         /downloads/linux/            301
-/wiki/slackware        /downloads/linux/            301
-/wiki/ubuntu           /downloads/linux/            301
-/wiki/osxhomebrew      /downloads/mac-os-x/         301
-/wiki/osxmacports      /downloads/mac-os-x/         301
-/wiki/osxmanual        /downloads/mac-os-x/         301
-/wiki/winsetup         /downloads/windows/          301
-/wiki/winmanual        /downlaods/windows/          301
-/wiki/githeadwin       /downlaods/windows/          301
+
+
 
 /get_iplayer-features /features/                    301
