@@ -18,7 +18,9 @@ breadcrumb = "get_iplayer macOS Quick Install Guide"
 
 ## Install with Homebrew
 
-**NOTE: macOS 10.10 (Yosemite) or higher is required to install get_iplayer with Homebrew.**
+**NOTE 1:** macOS 10.10 (Yosemite) or higher is required to install get_iplayer with Homebrew.
+
+**NOTE 2:** The get_iplayer Homebrew package is not supported by the get_iplayer developers, nor is it supported in the forums. If you encounter any problems installing or running get_iplayer from this package, [report them to Homebrew](https://discourse.brew.sh). If you encounter problems actually downloading programmes, use the [forums](/forums/).
 
 Homebrew is a package management solution for macOS. It's very easy to install, just go to the [Homebrew website](http://brew.sh/) and copy and paste the one line installation code into your terminal window. 
 
@@ -30,7 +32,7 @@ Once you've installed Homebrew, it's just one more line to install get_iplayer:
 
     brew update
     brew upgrade get_iplayer
-    
+     
 ### Get started by reading the guides and release notes
 
 There is loads of info in the [guides](/guides/) section to get you downloading programmes in a snap. Make sure you read the whole guide to understand what's happening and why you need to do things a certain way.
