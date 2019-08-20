@@ -13,7 +13,7 @@ pagesubtitle = "A LIST OF COMMON QUESTIONS..."
 
 ### I'm not in the UK, can I use get_iplayer?
 
-You need a UK IP address to use get_iplayer, just like you would if you used the BBC iPlayer service.
+You need a UK IP address to download TV programmes with get_iplayer, just like you would if you used the BBC iPlayer service. You can download lower-quality (96kbps or 48kbps) radio programmes from outside the UK. Any and all use of get_iplayer outside the UK is not supported.
 
 ### Does get_iplayer circumvent DRM?
 
