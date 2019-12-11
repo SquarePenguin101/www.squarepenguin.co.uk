@@ -180,9 +180,7 @@ If you want to make get_iplayer download a lower quality you should use the "--r
 ```bash
 best
 better
-vgood
 good
-worse
 worst
 ```
 
