@@ -6,7 +6,7 @@ paginate = 7
 
 [params]
 	DateForm = "Mon, Jan 2, 2006"
-	description = "Looking for get_iplayer? Look no further! Find beginners guides, downloads or get help and support in the get_iPlayer forums."
+	description = "Looking for get_iplayer? Look no further! Find beginners guides, downloads or get help in the get_iPlayer forums."
 
 [Author]
 	name = "Josh Archer"
