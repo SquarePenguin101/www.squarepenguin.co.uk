@@ -1,6 +1,11 @@
 {{ partial "header.html" . }}
 {{ partial "navbar.html" . }}
 <div class="page-container">
+	<div class="page-content">
+		<div class="page-title">
+			<h1>get_iplayer Forums blog</h1>
+			<h2>NOTICES | ANNOUNCEMENTS | UPDATES</h2>
+		</div>
 	  <ul class="posts">
 		{{ $baseurl := .Site.BaseURL }}
 		{{ range $name, $page := .Paginator.Pages }}
@@ -38,5 +43,6 @@
 	  </ul>
 	 {{ $paginator := .Paginator }}
 	 {{ partial "pagination.html" $paginator }}
+	 </div>
 </div>
 {{ partial "footer.html" . }}
