@@ -1,6 +1,10 @@
 # OS X files
 .DS_Store
 
+# File types
+
+*.exe
+
 # Hugo directories
 /public
 
