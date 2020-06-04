@@ -34,7 +34,7 @@ The forums are now simply a collection of static html files serving the content 
 ### Can I log in and post still though?
 
 No. The forums are no longer interactive. There are no user accounts or posting capabilities.
-
+<!--more-->
 ### I'm mad about this!
 
 I envy your ability to feel anything at all. 
