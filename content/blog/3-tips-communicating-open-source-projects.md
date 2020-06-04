@@ -69,11 +69,15 @@ In fact, with many open source projects being a labour of love slotted around th
 
 So what do you do? DO expect communication with developers and maintainers to be short, sharp, to the point and devoid of pleasantries. DON'T cry yourself to sleep over it or feel insulted, the key is information exchange and not small talk - see point one above and Simon's essay again.
 
-Also, don't ascribe tone or intent to text on a screen. It's tempting to interpret text as actually spoken aloud to you.
+Also, don't ascribe tone or intent to text on a screen.
 
 Don't do it, just don't do it.
 
-Doing so inevitably causes you to append your own prejudices and perceptions as to tone and some arbitrary level of respect those words somehow convey. There is no metadata available for plain text so the the application of these prejudices are entirely your own doing. Sometimes, some people will write to elicit a negative emotional response, they're called trolls and are easy to spot.
+Doing so inevitably causes you to append your own prejudices and perceptions as to tone and some arbitrary level of respect those words somehow convey. There is no metadata available for plain text so the the application of these prejudices are entirely your own doing. 
+
+Instead, try to simply take the words at face value and with the understanding that the other person has the best of intentions. 
+
+Sometimes, some people will write to elicit a negative emotional response, they're called trolls and are easy to spot. You can safely ignore such trolls!
 
 Thankfully developers often have no emotional ability that they're aware of and are thus incapable of intentionally eliciting responses in others (I jest again...?). Their text should instead be read in your favourite monotone robot voice. A speech to text programme should suffice here.
 
