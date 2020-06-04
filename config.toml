@@ -8,15 +8,11 @@ paginate = 7
 	DateForm = "Mon, Jan 2, 2006"
 	description = "Looking for get_iplayer? Look no further! Find beginners guides, downloads or get help in the get_iPlayer forums."
 
-[Author]
-	name = "Josh Archer"
-	email = "getiplayer@squarepenguin.co.uk"
-	twitter = "josharcher"
-	github = "puffinblue"
-    gitlab = "josharcher"
-
 [permalinks]
 
 [Blackfriday]
 plainIDAnchors = true
 smartypants = false
+
+[markup.goldmark.renderer]
+unsafe= true
