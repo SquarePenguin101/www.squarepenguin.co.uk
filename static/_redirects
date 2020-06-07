@@ -2,7 +2,7 @@
 
 https://squarepenguin.co.uk         https://www.squarepenguin.co.uk/                                     301
 https://squarepenguin.co.uk/        https://www.squarepenguin.co.uk/                                     301
-https://squarepenguin.co.uk/*       https://www.squarepenguin.co.uk/:splat:                              301
+https://squarepenguin.co.uk/*       https://www.squarepenguin.co.uk/:splat                              301
 /forums                 https://forums.squarepenguin.co.uk/                                     301
 /forums/                https://forums.squarepenguin.co.uk/                                     301
 /forums/*               https://forums.squarepenguin.co.uk/:splat                               301
